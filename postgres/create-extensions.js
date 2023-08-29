@@ -72,11 +72,14 @@ const rows = `
   .map((row) => row[0]);
 
 const schema = {
-  type: "string",
+  type: "array",
   $schema: "https://json-schema.org/draft/2020-12/schema",
   title:
     "List of Postgres regular extensions. see https://www.postgresql.org/docs/current/contrib.html",
-  enum: rows,
+  items: {
+    type: "string",
+    enum: rows,
+  },
 };
 
 console.log(JSON.stringify(schema, null, 2));

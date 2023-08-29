@@ -3,70 +3,317 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "List of Postgres regular extensions. see https://www.postgresql.org/docs/current/contrib.html",
   "items": {
-    "type": "string",
-    "enum": [
-      "dict_int",
-      "file_fdw",
-      "dblink",
-      "uuid-ossp",
-      "adminpack",
-      "pgcrypto",
-      "lo",
-      "citext",
-      "hstore",
-      "sslinfo",
-      "insert_username",
-      "seg",
-      "postgres_fdw",
-      "pg_stat_statements",
-      "intarray",
-      "pageinspect",
-      "pg_trgm",
-      "cube",
-      "amcheck",
-      "tsm_system_rows",
-      "fuzzystrmatch",
-      "pg_freespacemap",
-      "pg_surgery",
-      "pgrowlocks",
-      "ltree",
-      "earthdistance",
-      "old_snapshot",
-      "unaccent",
-      "autoinc",
-      "pg_buffercache",
-      "pgstattuple",
-      "plpgsql",
-      "isn",
-      "dict_xsyn",
-      "refint",
-      "tsm_system_time",
-      "pg_prewarm",
-      "intagg",
-      "btree_gin",
-      "tcn",
-      "tablefunc",
-      "pg_visibility",
-      "btree_gist",
-      "moddatetime",
-      "bloom",
-      "xml2",
-      "pgaudit",
-      "pgrouting",
-      "postgis-3",
-      "postgis_sfcgal",
-      "address_standardizer_data_us",
-      "postgis_topology",
-      "postgis_topology-3",
-      "address_standardizer-3",
-      "postgis_raster-3",
-      "postgis_raster",
-      "postgis",
-      "address_standardizer",
-      "address_standardizer_data_us-3",
-      "postgis_tiger_geocoder",
-      "postgis_sfcgal-3",
-      "postgis_tiger_geocoder-3"
+    "anyOf": [
+      {
+        "const": "dict_int",
+        "title": "dict_int",
+        "description": "text search dictionary template for integers"
+      },
+      {
+        "const": "file_fdw",
+        "title": "file_fdw",
+        "description": "foreign-data wrapper for flat file access"
+      },
+      {
+        "const": "dblink",
+        "title": "dblink",
+        "description": "connect to other PostgreSQL databases from within a database"
+      },
+      {
+        "const": "uuid-ossp",
+        "title": "uuid-ossp",
+        "description": "generate universally unique identifiers (UUIDs)"
+      },
+      {
+        "const": "adminpack",
+        "title": "adminpack",
+        "description": "administrative functions for PostgreSQL"
+      },
+      {
+        "const": "pgcrypto",
+        "title": "pgcrypto",
+        "description": "cryptographic functions"
+      },
+      {
+        "const": "lo",
+        "title": "lo",
+        "description": "Large Object maintenance"
+      },
+      {
+        "const": "citext",
+        "title": "citext",
+        "description": "data type for case-insensitive character strings"
+      },
+      {
+        "const": "hstore",
+        "title": "hstore",
+        "description": "data type for storing sets of (key, value) pairs"
+      },
+      {
+        "const": "sslinfo",
+        "title": "sslinfo",
+        "description": "information about SSL certificates"
+      },
+      {
+        "const": "insert_username",
+        "title": "insert_username",
+        "description": "functions for tracking who changed a table"
+      },
+      {
+        "const": "seg",
+        "title": "seg",
+        "description": "data type for representing line segments or floating-point intervals"
+      },
+      {
+        "const": "postgres_fdw",
+        "title": "postgres_fdw",
+        "description": "foreign-data wrapper for remote PostgreSQL servers"
+      },
+      {
+        "const": "pg_stat_statements",
+        "title": "pg_stat_statements",
+        "description": "track planning and execution statistics of all SQL statements executed"
+      },
+      {
+        "const": "intarray",
+        "title": "intarray",
+        "description": "functions, operators, and index support for 1-D arrays of integers"
+      },
+      {
+        "const": "pageinspect",
+        "title": "pageinspect",
+        "description": "inspect the contents of database pages at a low level"
+      },
+      {
+        "const": "pg_trgm",
+        "title": "pg_trgm",
+        "description": "text similarity measurement and index searching based on trigrams"
+      },
+      {
+        "const": "cube",
+        "title": "cube",
+        "description": "data type for multidimensional cubes"
+      },
+      {
+        "const": "amcheck",
+        "title": "amcheck",
+        "description": "functions for verifying relation integrity"
+      },
+      {
+        "const": "tsm_system_rows",
+        "title": "tsm_system_rows",
+        "description": "TABLESAMPLE method which accepts number of rows as a limit"
+      },
+      {
+        "const": "fuzzystrmatch",
+        "title": "fuzzystrmatch",
+        "description": "determine similarities and distance between strings"
+      },
+      {
+        "const": "pg_freespacemap",
+        "title": "pg_freespacemap",
+        "description": "examine the free space map (FSM)"
+      },
+      {
+        "const": "pg_surgery",
+        "title": "pg_surgery",
+        "description": "extension to perform surgery on a damaged relation"
+      },
+      {
+        "const": "pgrowlocks",
+        "title": "pgrowlocks",
+        "description": "show row-level locking information"
+      },
+      {
+        "const": "ltree",
+        "title": "ltree",
+        "description": "data type for hierarchical tree-like structures"
+      },
+      {
+        "const": "earthdistance",
+        "title": "earthdistance",
+        "description": "calculate great-circle distances on the surface of the Earth"
+      },
+      {
+        "const": "old_snapshot",
+        "title": "old_snapshot",
+        "description": "utilities in support of old_snapshot_threshold"
+      },
+      {
+        "const": "unaccent",
+        "title": "unaccent",
+        "description": "text search dictionary that removes accents"
+      },
+      {
+        "const": "autoinc",
+        "title": "autoinc",
+        "description": "functions for autoincrementing fields"
+      },
+      {
+        "const": "pg_buffercache",
+        "title": "pg_buffercache",
+        "description": "examine the shared buffer cache"
+      },
+      {
+        "const": "pgstattuple",
+        "title": "pgstattuple",
+        "description": "show tuple-level statistics"
+      },
+      {
+        "const": "plpgsql",
+        "title": "plpgsql",
+        "description": "PL/pgSQL procedural language"
+      },
+      {
+        "const": "isn",
+        "title": "isn",
+        "description": "data types for international product numbering standards"
+      },
+      {
+        "const": "dict_xsyn",
+        "title": "dict_xsyn",
+        "description": "text search dictionary template for extended synonym processing"
+      },
+      {
+        "const": "refint",
+        "title": "refint",
+        "description": "functions for implementing referential integrity (obsolete)"
+      },
+      {
+        "const": "tsm_system_time",
+        "title": "tsm_system_time",
+        "description": "TABLESAMPLE method which accepts time in milliseconds as a limit"
+      },
+      {
+        "const": "pg_prewarm",
+        "title": "pg_prewarm",
+        "description": "prewarm relation data"
+      },
+      {
+        "const": "intagg",
+        "title": "intagg",
+        "description": "integer aggregator and enumerator (obsolete)"
+      },
+      {
+        "const": "btree_gin",
+        "title": "btree_gin",
+        "description": "support for indexing common datatypes in GIN"
+      },
+      {
+        "const": "tcn",
+        "title": "tcn",
+        "description": "Triggered change notifications"
+      },
+      {
+        "const": "tablefunc",
+        "title": "tablefunc",
+        "description": "functions that manipulate whole tables, including crosstab"
+      },
+      {
+        "const": "pg_visibility",
+        "title": "pg_visibility",
+        "description": "examine the visibility map (VM) and page-level visibility info"
+      },
+      {
+        "const": "btree_gist",
+        "title": "btree_gist",
+        "description": "support for indexing common datatypes in GiST"
+      },
+      {
+        "const": "moddatetime",
+        "title": "moddatetime",
+        "description": "functions for tracking last modification time"
+      },
+      {
+        "const": "bloom",
+        "title": "bloom",
+        "description": "bloom access method - signature file based index"
+      },
+      {
+        "const": "xml2",
+        "title": "xml2",
+        "description": "XPath querying and XSLT"
+      },
+      {
+        "const": "pgaudit",
+        "title": "pgaudit",
+        "description": "provides auditing functionality"
+      },
+      {
+        "const": "pgrouting",
+        "title": "pgrouting",
+        "description": "pgRouting Extension"
+      },
+      {
+        "const": "postgis-3",
+        "title": "postgis-3",
+        "description": "PostGIS geometry and geography spatial types and functions"
+      },
+      {
+        "const": "postgis_sfcgal",
+        "title": "postgis_sfcgal",
+        "description": "PostGIS SFCGAL functions"
+      },
+      {
+        "const": "address_standardizer_data_us",
+        "title": "address_standardizer_data_us",
+        "description": "Address Standardizer US dataset example"
+      },
+      {
+        "const": "postgis_topology",
+        "title": "postgis_topology",
+        "description": "PostGIS topology spatial types and functions"
+      },
+      {
+        "const": "postgis_topology-3",
+        "title": "postgis_topology-3",
+        "description": "PostGIS topology spatial types and functions"
+      },
+      {
+        "const": "address_standardizer-3",
+        "title": "address_standardizer-3",
+        "description": "Used to parse an address into constituent elements. Generally used to support geocoding address normalization step."
+      },
+      {
+        "const": "postgis_raster-3",
+        "title": "postgis_raster-3",
+        "description": "PostGIS raster types and functions"
+      },
+      {
+        "const": "postgis_raster",
+        "title": "postgis_raster",
+        "description": "PostGIS raster types and functions"
+      },
+      {
+        "const": "postgis",
+        "title": "postgis",
+        "description": "PostGIS geometry and geography spatial types and functions"
+      },
+      {
+        "const": "address_standardizer",
+        "title": "address_standardizer",
+        "description": "Used to parse an address into constituent elements. Generally used to support geocoding address normalization step."
+      },
+      {
+        "const": "address_standardizer_data_us-3",
+        "title": "address_standardizer_data_us-3",
+        "description": "Address Standardizer US dataset example"
+      },
+      {
+        "const": "postgis_tiger_geocoder",
+        "title": "postgis_tiger_geocoder",
+        "description": "PostGIS tiger geocoder and reverse geocoder"
+      },
+      {
+        "const": "postgis_sfcgal-3",
+        "title": "postgis_sfcgal-3",
+        "description": "PostGIS SFCGAL functions"
+      },
+      {
+        "const": "postgis_tiger_geocoder-3",
+        "title": "postgis_tiger_geocoder-3",
+        "description": "PostGIS tiger geocoder and reverse geocoder"
+      }
     ]
   }
 }

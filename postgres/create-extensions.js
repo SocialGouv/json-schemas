@@ -68,8 +68,7 @@ const rows = `
  `
   .trim()
   .split("\n")
-  .map((row) => row.split("|").map((c) => c.trim()))
-  .map((row) => row[0]);
+  .map((row) => row.split("|").map((c) => c.trim()));
 
 const schema = {
   type: "array",
@@ -77,8 +76,11 @@ const schema = {
   title:
     "List of Postgres regular extensions. see https://www.postgresql.org/docs/current/contrib.html",
   items: {
-    type: "string",
-    enum: rows,
+    anyOf: rows.map((row) => ({
+      const: row[0],
+      title: row[0],
+      description: row[3],
+    })),
   },
 };
 

@@ -347,7 +347,7 @@ const keys = rows.reduce(
 
 const schema = {
   type: "object",
-  $schema: "https://json-schema.org/draft/2020-12/schema",
+  $schema: "http://json-schema.org/draft-07/schema",
   title:
     "List of PostgreSQL server parameters. see https://www.postgresql.org/docs/current/runtime-config.html and https://postgresqlco.nf",
   additionalProperties: false,

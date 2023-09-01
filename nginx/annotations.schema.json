@@ -1,0 +1,710 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "List of NGINX ingress annotations.",
+  "markdownDescription": "Nginx annotations lets you customize a bunch of things on your ingress, for example:\n\n- rate-limiting\n- http headers\n- redirections\n- authentication\n- ...\n\n👉 See [Nginx annotations documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations)",
+  "properties": {
+    "nginx.ingress.kubernetes.io/app-root": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/app-root",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rewrite",
+      "markdownDescription": "type: string. see [rewrite documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rewrite)"
+    },
+    "nginx.ingress.kubernetes.io/affinity": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/affinity",
+      "description": "type: cookie. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#session-affinity",
+      "markdownDescription": "type: cookie. see [session-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#session-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/affinity-mode": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/affinity-mode",
+      "description": "type: \"balanced\" or \"persistent\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#session-affinity",
+      "markdownDescription": "type: \"balanced\" or \"persistent\". see [session-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#session-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/affinity-canary-behavior": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/affinity-canary-behavior",
+      "description": "type: \"sticky\" or \"legacy\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#session-affinity",
+      "markdownDescription": "type: \"sticky\" or \"legacy\". see [session-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#session-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/auth-realm": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-realm",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#authentication",
+      "markdownDescription": "type: string. see [authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-secret": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-secret",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#authentication",
+      "markdownDescription": "type: string. see [authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-secret-type": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-secret-type",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#authentication",
+      "markdownDescription": "type: string. see [authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-type": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-type",
+      "description": "type: \"basic\" or \"digest\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#authentication",
+      "markdownDescription": "type: \"basic\" or \"digest\". see [authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-tls-secret": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-tls-secret",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication",
+      "markdownDescription": "type: string. see [client-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-tls-verify-depth": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/auth-tls-verify-depth",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication",
+      "markdownDescription": "type: number. see [client-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-tls-verify-client": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-tls-verify-client",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication",
+      "markdownDescription": "type: string. see [client-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-tls-error-page": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-tls-error-page",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication",
+      "markdownDescription": "type: string. see [client-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication",
+      "markdownDescription": "type: \"true\" or \"false\". see [client-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-tls-match-cn": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-tls-match-cn",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication",
+      "markdownDescription": "type: string. see [client-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-url": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-url",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: string. see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-cache-key": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-cache-key",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: string. see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-cache-duration": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-cache-duration",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: string. see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-keepalive": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/auth-keepalive",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: number. see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-keepalive-share-vars": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-keepalive-share-vars",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: \"true\" or \"false\". see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-keepalive-requests": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/auth-keepalive-requests",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: number. see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-keepalive-timeout": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/auth-keepalive-timeout",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: number. see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-proxy-set-headers": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-proxy-set-headers",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: string. see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/auth-snippet": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/auth-snippet",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: string. see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/enable-global-auth": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/enable-global-auth",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication",
+      "markdownDescription": "type: \"true\" or \"false\". see [external-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#external-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/backend-protocol": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/backend-protocol",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-protocol",
+      "markdownDescription": "type: string. see [backend-protocol documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-protocol)"
+    },
+    "nginx.ingress.kubernetes.io/canary": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/canary",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary",
+      "markdownDescription": "type: \"true\" or \"false\". see [canary documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary)"
+    },
+    "nginx.ingress.kubernetes.io/canary-by-header": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/canary-by-header",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary",
+      "markdownDescription": "type: string. see [canary documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary)"
+    },
+    "nginx.ingress.kubernetes.io/canary-by-header-value": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/canary-by-header-value",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary",
+      "markdownDescription": "type: string. see [canary documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary)"
+    },
+    "nginx.ingress.kubernetes.io/canary-by-header-pattern": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/canary-by-header-pattern",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary",
+      "markdownDescription": "type: string. see [canary documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary)"
+    },
+    "nginx.ingress.kubernetes.io/canary-by-cookie": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/canary-by-cookie",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary",
+      "markdownDescription": "type: string. see [canary documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary)"
+    },
+    "nginx.ingress.kubernetes.io/canary-weight": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/canary-weight",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary",
+      "markdownDescription": "type: number. see [canary documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary)"
+    },
+    "nginx.ingress.kubernetes.io/canary-weight-total": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/canary-weight-total",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary",
+      "markdownDescription": "type: number. see [canary documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#canary)"
+    },
+    "nginx.ingress.kubernetes.io/client-body-buffer-size": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/client-body-buffer-size",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-body-buffer-size",
+      "markdownDescription": "type: string. see [client-body-buffer-size documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#client-body-buffer-size)"
+    },
+    "nginx.ingress.kubernetes.io/configuration-snippet": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/configuration-snippet",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#configuration-snippet",
+      "markdownDescription": "type: string. see [configuration-snippet documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#configuration-snippet)"
+    },
+    "nginx.ingress.kubernetes.io/custom-http-errors": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/custom-http-errors",
+      "description": "type: []int. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-http-errors",
+      "markdownDescription": "type: []int. see [custom-http-errors documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-http-errors)"
+    },
+    "nginx.ingress.kubernetes.io/default-backend": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/default-backend",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#default-backend",
+      "markdownDescription": "type: string. see [default-backend documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#default-backend)"
+    },
+    "nginx.ingress.kubernetes.io/enable-cors": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/enable-cors",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors",
+      "markdownDescription": "type: \"true\" or \"false\". see [enable-cors documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors)"
+    },
+    "nginx.ingress.kubernetes.io/cors-allow-origin": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/cors-allow-origin",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors",
+      "markdownDescription": "type: string. see [enable-cors documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors)"
+    },
+    "nginx.ingress.kubernetes.io/cors-allow-methods": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/cors-allow-methods",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors",
+      "markdownDescription": "type: string. see [enable-cors documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors)"
+    },
+    "nginx.ingress.kubernetes.io/cors-allow-headers": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/cors-allow-headers",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors",
+      "markdownDescription": "type: string. see [enable-cors documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors)"
+    },
+    "nginx.ingress.kubernetes.io/cors-expose-headers": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/cors-expose-headers",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors",
+      "markdownDescription": "type: string. see [enable-cors documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors)"
+    },
+    "nginx.ingress.kubernetes.io/cors-allow-credentials": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/cors-allow-credentials",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors",
+      "markdownDescription": "type: \"true\" or \"false\". see [enable-cors documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors)"
+    },
+    "nginx.ingress.kubernetes.io/cors-max-age": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/cors-max-age",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors",
+      "markdownDescription": "type: number. see [enable-cors documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors)"
+    },
+    "nginx.ingress.kubernetes.io/force-ssl-redirect": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/force-ssl-redirect",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-side-https-enforcement-through-redirect",
+      "markdownDescription": "type: \"true\" or \"false\". see [server-side-https-enforcement-through-redirect documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-side-https-enforcement-through-redirect)"
+    },
+    "nginx.ingress.kubernetes.io/from-to-www-redirect": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/from-to-www-redirect",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#redirect-fromto-www",
+      "markdownDescription": "type: \"true\" or \"false\". see [redirect-fromto-www documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#redirect-fromto-www)"
+    },
+    "nginx.ingress.kubernetes.io/http2-push-preload": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/http2-push-preload",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#http2-push-preload",
+      "markdownDescription": "type: \"true\" or \"false\". see [http2-push-preload documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#http2-push-preload)"
+    },
+    "nginx.ingress.kubernetes.io/limit-connections": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/limit-connections",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rate-limiting",
+      "markdownDescription": "type: number. see [rate-limiting documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rate-limiting)"
+    },
+    "nginx.ingress.kubernetes.io/limit-rps": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/limit-rps",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rate-limiting",
+      "markdownDescription": "type: number. see [rate-limiting documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rate-limiting)"
+    },
+    "nginx.ingress.kubernetes.io/global-rate-limit": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/global-rate-limit",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#global-rate-limiting",
+      "markdownDescription": "type: number. see [global-rate-limiting documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#global-rate-limiting)"
+    },
+    "nginx.ingress.kubernetes.io/global-rate-limit-window": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/global-rate-limit-window",
+      "description": "type: duration. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#global-rate-limiting",
+      "markdownDescription": "type: duration. see [global-rate-limiting documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#global-rate-limiting)"
+    },
+    "nginx.ingress.kubernetes.io/global-rate-limit-key": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/global-rate-limit-key",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#global-rate-limiting",
+      "markdownDescription": "type: string. see [global-rate-limiting documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#global-rate-limiting)"
+    },
+    "nginx.ingress.kubernetes.io/global-rate-limit-ignored-cidrs": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/global-rate-limit-ignored-cidrs",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#global-rate-limiting",
+      "markdownDescription": "type: string. see [global-rate-limiting documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#global-rate-limiting)"
+    },
+    "nginx.ingress.kubernetes.io/permanent-redirect": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/permanent-redirect",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#permanent-redirect",
+      "markdownDescription": "type: string. see [permanent-redirect documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#permanent-redirect)"
+    },
+    "nginx.ingress.kubernetes.io/permanent-redirect-code": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/permanent-redirect-code",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#permanent-redirect-code",
+      "markdownDescription": "type: number. see [permanent-redirect-code documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#permanent-redirect-code)"
+    },
+    "nginx.ingress.kubernetes.io/temporal-redirect": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/temporal-redirect",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#temporal-redirect",
+      "markdownDescription": "type: string. see [temporal-redirect documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#temporal-redirect)"
+    },
+    "nginx.ingress.kubernetes.io/preserve-trailing-slash": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/preserve-trailing-slash",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-side-https-enforcement-through-redirect",
+      "markdownDescription": "type: \"true\" or \"false\". see [server-side-https-enforcement-through-redirect documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-side-https-enforcement-through-redirect)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-body-size": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-body-size",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-max-body-size",
+      "markdownDescription": "type: string. see [custom-max-body-size documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-max-body-size)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-cookie-domain": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-cookie-domain",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-cookie-domain",
+      "markdownDescription": "type: string. see [proxy-cookie-domain documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-cookie-domain)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-cookie-path": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-cookie-path",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-cookie-path",
+      "markdownDescription": "type: string. see [proxy-cookie-path documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-cookie-path)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-connect-timeout": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/proxy-connect-timeout",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts",
+      "markdownDescription": "type: number. see [custom-timeouts documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-send-timeout": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/proxy-send-timeout",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts",
+      "markdownDescription": "type: number. see [custom-timeouts documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-read-timeout": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/proxy-read-timeout",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts",
+      "markdownDescription": "type: number. see [custom-timeouts documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-next-upstream": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-next-upstream",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts",
+      "markdownDescription": "type: string. see [custom-timeouts documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-next-upstream-timeout": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/proxy-next-upstream-timeout",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts",
+      "markdownDescription": "type: number. see [custom-timeouts documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-next-upstream-tries": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/proxy-next-upstream-tries",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts",
+      "markdownDescription": "type: number. see [custom-timeouts documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-request-buffering": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-request-buffering",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts",
+      "markdownDescription": "type: string. see [custom-timeouts documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-timeouts)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-redirect-from": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-redirect-from",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-redirect",
+      "markdownDescription": "type: string. see [proxy-redirect documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-redirect)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-redirect-to": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-redirect-to",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-redirect",
+      "markdownDescription": "type: string. see [proxy-redirect documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-redirect)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-http-version": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-http-version",
+      "description": "type: \"1.0\" or \"1.1\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-http-version",
+      "markdownDescription": "type: \"1.0\" or \"1.1\". see [proxy-http-version documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-http-version)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-ssl-secret": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-ssl-secret",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication",
+      "markdownDescription": "type: string. see [backend-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-ssl-ciphers": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-ssl-ciphers",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication",
+      "markdownDescription": "type: string. see [backend-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-ssl-name": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-ssl-name",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication",
+      "markdownDescription": "type: string. see [backend-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-ssl-protocols": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-ssl-protocols",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication",
+      "markdownDescription": "type: string. see [backend-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-ssl-verify": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-ssl-verify",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication",
+      "markdownDescription": "type: string. see [backend-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-ssl-verify-depth": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/proxy-ssl-verify-depth",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication",
+      "markdownDescription": "type: number. see [backend-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-ssl-server-name": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-ssl-server-name",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication",
+      "markdownDescription": "type: string. see [backend-certificate-authentication documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-certificate-authentication)"
+    },
+    "nginx.ingress.kubernetes.io/enable-rewrite-log": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/enable-rewrite-log",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-rewrite-log",
+      "markdownDescription": "type: \"true\" or \"false\". see [enable-rewrite-log documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-rewrite-log)"
+    },
+    "nginx.ingress.kubernetes.io/rewrite-target": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/rewrite-target",
+      "description": "type: URI. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rewrite",
+      "markdownDescription": "type: URI. see [rewrite documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#rewrite)"
+    },
+    "nginx.ingress.kubernetes.io/satisfy": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/satisfy",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#satisfy",
+      "markdownDescription": "type: string. see [satisfy documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#satisfy)"
+    },
+    "nginx.ingress.kubernetes.io/server-alias": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/server-alias",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-alias",
+      "markdownDescription": "type: string. see [server-alias documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-alias)"
+    },
+    "nginx.ingress.kubernetes.io/server-snippet": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/server-snippet",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-snippet",
+      "markdownDescription": "type: string. see [server-snippet documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-snippet)"
+    },
+    "nginx.ingress.kubernetes.io/service-upstream": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/service-upstream",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#service-upstream",
+      "markdownDescription": "type: \"true\" or \"false\". see [service-upstream documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#service-upstream)"
+    },
+    "nginx.ingress.kubernetes.io/session-cookie-name": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/session-cookie-name",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity",
+      "markdownDescription": "type: string. see [cookie-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/session-cookie-path": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/session-cookie-path",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity",
+      "markdownDescription": "type: string. see [cookie-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/session-cookie-domain": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/session-cookie-domain",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity",
+      "markdownDescription": "type: string. see [cookie-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/session-cookie-change-on-failure": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/session-cookie-change-on-failure",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity",
+      "markdownDescription": "type: \"true\" or \"false\". see [cookie-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/session-cookie-samesite": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/session-cookie-samesite",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity",
+      "markdownDescription": "type: string. see [cookie-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/session-cookie-conditional-samesite-none": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/session-cookie-conditional-samesite-none",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity",
+      "markdownDescription": "type: \"true\" or \"false\". see [cookie-affinity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#cookie-affinity)"
+    },
+    "nginx.ingress.kubernetes.io/ssl-redirect": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/ssl-redirect",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-side-https-enforcement-through-redirect",
+      "markdownDescription": "type: \"true\" or \"false\". see [server-side-https-enforcement-through-redirect documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#server-side-https-enforcement-through-redirect)"
+    },
+    "nginx.ingress.kubernetes.io/ssl-passthrough": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/ssl-passthrough",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#ssl-passthrough",
+      "markdownDescription": "type: \"true\" or \"false\". see [ssl-passthrough documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#ssl-passthrough)"
+    },
+    "nginx.ingress.kubernetes.io/stream-snippet": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/stream-snippet",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#stream-snippet",
+      "markdownDescription": "type: string. see [stream-snippet documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#stream-snippet)"
+    },
+    "nginx.ingress.kubernetes.io/upstream-hash-by": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/upstream-hash-by",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-nginx-upstream-hashing",
+      "markdownDescription": "type: string. see [custom-nginx-upstream-hashing documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-nginx-upstream-hashing)"
+    },
+    "nginx.ingress.kubernetes.io/x-forwarded-prefix": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/x-forwarded-prefix",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#x-forwarded-prefix-header",
+      "markdownDescription": "type: string. see [x-forwarded-prefix-header documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#x-forwarded-prefix-header)"
+    },
+    "nginx.ingress.kubernetes.io/load-balance": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/load-balance",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-nginx-load-balancing",
+      "markdownDescription": "type: string. see [custom-nginx-load-balancing documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-nginx-load-balancing)"
+    },
+    "nginx.ingress.kubernetes.io/upstream-vhost": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/upstream-vhost",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-nginx-upstream-vhost",
+      "markdownDescription": "type: string. see [custom-nginx-upstream-vhost documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#custom-nginx-upstream-vhost)"
+    },
+    "nginx.ingress.kubernetes.io/denylist-source-range": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/denylist-source-range",
+      "description": "type: CIDR. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#denylist-source-range",
+      "markdownDescription": "type: CIDR. see [denylist-source-range documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#denylist-source-range)"
+    },
+    "nginx.ingress.kubernetes.io/whitelist-source-range": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/whitelist-source-range",
+      "description": "type: CIDR. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#whitelist-source-range",
+      "markdownDescription": "type: CIDR. see [whitelist-source-range documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#whitelist-source-range)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-buffering": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-buffering",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-buffering",
+      "markdownDescription": "type: string. see [proxy-buffering documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-buffering)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-buffers-number": {
+      "type": "number",
+      "title": "nginx.ingress.kubernetes.io/proxy-buffers-number",
+      "description": "type: number. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-buffers-number",
+      "markdownDescription": "type: number. see [proxy-buffers-number documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-buffers-number)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-buffer-size": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-buffer-size",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-buffer-size",
+      "markdownDescription": "type: string. see [proxy-buffer-size documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-buffer-size)"
+    },
+    "nginx.ingress.kubernetes.io/proxy-max-temp-file-size": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/proxy-max-temp-file-size",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-max-temp-file-size",
+      "markdownDescription": "type: string. see [proxy-max-temp-file-size documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#proxy-max-temp-file-size)"
+    },
+    "nginx.ingress.kubernetes.io/ssl-ciphers": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/ssl-ciphers",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#ssl-ciphers",
+      "markdownDescription": "type: string. see [ssl-ciphers documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#ssl-ciphers)"
+    },
+    "nginx.ingress.kubernetes.io/ssl-prefer-server-ciphers": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/ssl-prefer-server-ciphers",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#ssl-ciphers",
+      "markdownDescription": "type: \"true\" or \"false\". see [ssl-ciphers documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#ssl-ciphers)"
+    },
+    "nginx.ingress.kubernetes.io/connection-proxy-header": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/connection-proxy-header",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#connection-proxy-header",
+      "markdownDescription": "type: string. see [connection-proxy-header documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#connection-proxy-header)"
+    },
+    "nginx.ingress.kubernetes.io/enable-access-log": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/enable-access-log",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-access-log",
+      "markdownDescription": "type: \"true\" or \"false\". see [enable-access-log documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-access-log)"
+    },
+    "nginx.ingress.kubernetes.io/enable-opentracing": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/enable-opentracing",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-opentracing",
+      "markdownDescription": "type: \"true\" or \"false\". see [enable-opentracing documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-opentracing)"
+    },
+    "nginx.ingress.kubernetes.io/opentracing-trust-incoming-span": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/opentracing-trust-incoming-span",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#opentracing-trust-incoming-span",
+      "markdownDescription": "type: \"true\" or \"false\". see [opentracing-trust-incoming-span documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#opentracing-trust-incoming-span)"
+    },
+    "nginx.ingress.kubernetes.io/enable-opentelemetry": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/enable-opentelemetry",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-opentelemetry",
+      "markdownDescription": "type: \"true\" or \"false\". see [enable-opentelemetry documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-opentelemetry)"
+    },
+    "nginx.ingress.kubernetes.io/opentelemetry-trust-incoming-span": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/opentelemetry-trust-incoming-span",
+      "description": "type: \"true\" or \"false\". see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#opentelemetry-trust-incoming-spans",
+      "markdownDescription": "type: \"true\" or \"false\". see [opentelemetry-trust-incoming-spans documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#opentelemetry-trust-incoming-spans)"
+    },
+    "nginx.ingress.kubernetes.io/use-regex": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/use-regex",
+      "description": "type: bool. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#use-regex",
+      "markdownDescription": "type: bool. see [use-regex documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#use-regex)"
+    },
+    "nginx.ingress.kubernetes.io/enable-modsecurity": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/enable-modsecurity",
+      "description": "type: bool. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#modsecurity",
+      "markdownDescription": "type: bool. see [modsecurity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#modsecurity)"
+    },
+    "nginx.ingress.kubernetes.io/enable-owasp-core-rules": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/enable-owasp-core-rules",
+      "description": "type: bool. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#modsecurity",
+      "markdownDescription": "type: bool. see [modsecurity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#modsecurity)"
+    },
+    "nginx.ingress.kubernetes.io/modsecurity-transaction-id": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/modsecurity-transaction-id",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#modsecurity",
+      "markdownDescription": "type: string. see [modsecurity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#modsecurity)"
+    },
+    "nginx.ingress.kubernetes.io/modsecurity-snippet": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/modsecurity-snippet",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#modsecurity",
+      "markdownDescription": "type: string. see [modsecurity documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#modsecurity)"
+    },
+    "nginx.ingress.kubernetes.io/mirror-request-body": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/mirror-request-body",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#mirror",
+      "markdownDescription": "type: string. see [mirror documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#mirror)"
+    },
+    "nginx.ingress.kubernetes.io/mirror-target": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/mirror-target",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#mirror",
+      "markdownDescription": "type: string. see [mirror documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#mirror)"
+    },
+    "nginx.ingress.kubernetes.io/mirror-host": {
+      "type": "string",
+      "title": "nginx.ingress.kubernetes.io/mirror-host",
+      "description": "type: string. see https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#mirror",
+      "markdownDescription": "type: string. see [mirror documentation](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#mirror)"
+    }
+  }
+}

@@ -72,7 +72,7 @@ const rows = `
 
 const schema = {
   type: "array",
-  $schema: "https://json-schema.org/draft/2020-12/schema",
+  $schema: "http://json-schema.org/draft-07/schema",
   title:
     "List of Postgres regular extensions. see https://www.postgresql.org/docs/current/contrib.html",
   items: {

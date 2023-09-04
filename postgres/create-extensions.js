@@ -73,6 +73,7 @@ const rows = `
 const schema = {
   type: "array",
   $schema: "http://json-schema.org/draft-07/schema",
+  $id: "https://raw.githubusercontent.com/SocialGouv/json-schemas/main/postgres/extensions.json",
   title:
     "List of Postgres regular extensions. see https://www.postgresql.org/docs/current/contrib.html",
   items: {

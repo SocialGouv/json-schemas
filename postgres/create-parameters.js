@@ -341,7 +341,7 @@ const keys = rows.reduce(
       markdownDescription:
         c[2] +
         `\n\nsee [${c[0]} documentation](https://postgresqlco.nf/doc/en/param/${c[0]}/)`,
-      type: !isNaN(c[1]) ? "number" : "string",
+      type: !isNaN(c[1]) ? ["number", "string"] : "string",
       examples: [c[1]],
     },
   }),

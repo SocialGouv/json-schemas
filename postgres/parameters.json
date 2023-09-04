@@ -35,7 +35,10 @@
       "title": "archive_cleanup_command",
       "description": "Sets the shell command that will be executed at every restart point.\n\nsee https://postgresqlco.nf/doc/en/param/archive_cleanup_command/",
       "markdownDescription": "Sets the shell command that will be executed at every restart point.\n\nsee [archive_cleanup_command documentation](https://postgresqlco.nf/doc/en/param/archive_cleanup_command/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -62,7 +65,10 @@
       "title": "archive_timeout",
       "description": "Forces a switch to the next WAL file if a new file has not been started within N seconds.\n\nsee https://postgresqlco.nf/doc/en/param/archive_timeout/",
       "markdownDescription": "Forces a switch to the next WAL file if a new file has not been started within N seconds.\n\nsee [archive_timeout documentation](https://postgresqlco.nf/doc/en/param/archive_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "300"
       ]
@@ -80,7 +86,10 @@
       "title": "authentication_timeout",
       "description": "Sets the maximum allowed time to complete client authentication.\n\nsee https://postgresqlco.nf/doc/en/param/authentication_timeout/",
       "markdownDescription": "Sets the maximum allowed time to complete client authentication.\n\nsee [authentication_timeout documentation](https://postgresqlco.nf/doc/en/param/authentication_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "60"
       ]
@@ -98,7 +107,10 @@
       "title": "autovacuum_analyze_scale_factor",
       "description": "Number of tuple inserts, updates, or deletes prior to analyze as a fraction of reltuples.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_analyze_scale_factor/",
       "markdownDescription": "Number of tuple inserts, updates, or deletes prior to analyze as a fraction of reltuples.\n\nsee [autovacuum_analyze_scale_factor documentation](https://postgresqlco.nf/doc/en/param/autovacuum_analyze_scale_factor/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.1"
       ]
@@ -107,7 +119,10 @@
       "title": "autovacuum_analyze_threshold",
       "description": "Minimum number of tuple inserts, updates, or deletes prior to analyze.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_analyze_threshold/",
       "markdownDescription": "Minimum number of tuple inserts, updates, or deletes prior to analyze.\n\nsee [autovacuum_analyze_threshold documentation](https://postgresqlco.nf/doc/en/param/autovacuum_analyze_threshold/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "50"
       ]
@@ -116,7 +131,10 @@
       "title": "autovacuum_freeze_max_age",
       "description": "Age at which to autovacuum a table to prevent transaction ID wraparound.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_freeze_max_age/",
       "markdownDescription": "Age at which to autovacuum a table to prevent transaction ID wraparound.\n\nsee [autovacuum_freeze_max_age documentation](https://postgresqlco.nf/doc/en/param/autovacuum_freeze_max_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "200000000"
       ]
@@ -125,7 +143,10 @@
       "title": "autovacuum_max_workers",
       "description": "Sets the maximum number of simultaneously running autovacuum worker processes.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_max_workers/",
       "markdownDescription": "Sets the maximum number of simultaneously running autovacuum worker processes.\n\nsee [autovacuum_max_workers documentation](https://postgresqlco.nf/doc/en/param/autovacuum_max_workers/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "3"
       ]
@@ -134,7 +155,10 @@
       "title": "autovacuum_multixact_freeze_max_age",
       "description": "Multixact age at which to autovacuum a table to prevent multixact wraparound.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_multixact_freeze_max_age/",
       "markdownDescription": "Multixact age at which to autovacuum a table to prevent multixact wraparound.\n\nsee [autovacuum_multixact_freeze_max_age documentation](https://postgresqlco.nf/doc/en/param/autovacuum_multixact_freeze_max_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "400000000"
       ]
@@ -143,7 +167,10 @@
       "title": "autovacuum_naptime",
       "description": "Time to sleep between autovacuum runs.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_naptime/",
       "markdownDescription": "Time to sleep between autovacuum runs.\n\nsee [autovacuum_naptime documentation](https://postgresqlco.nf/doc/en/param/autovacuum_naptime/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "60"
       ]
@@ -152,7 +179,10 @@
       "title": "autovacuum_vacuum_cost_delay",
       "description": "Vacuum cost delay in milliseconds, for autovacuum.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_cost_delay/",
       "markdownDescription": "Vacuum cost delay in milliseconds, for autovacuum.\n\nsee [autovacuum_vacuum_cost_delay documentation](https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_cost_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2"
       ]
@@ -161,7 +191,10 @@
       "title": "autovacuum_vacuum_cost_limit",
       "description": "Vacuum cost amount available before napping, for autovacuum.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_cost_limit/",
       "markdownDescription": "Vacuum cost amount available before napping, for autovacuum.\n\nsee [autovacuum_vacuum_cost_limit documentation](https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_cost_limit/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -170,7 +203,10 @@
       "title": "autovacuum_vacuum_insert_scale_factor",
       "description": "Number of tuple inserts prior to vacuum as a fraction of reltuples.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_insert_scale_factor/",
       "markdownDescription": "Number of tuple inserts prior to vacuum as a fraction of reltuples.\n\nsee [autovacuum_vacuum_insert_scale_factor documentation](https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_insert_scale_factor/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.2"
       ]
@@ -179,7 +215,10 @@
       "title": "autovacuum_vacuum_insert_threshold",
       "description": "Minimum number of tuple inserts prior to vacuum, or -1 to disable insert vacuums.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_insert_threshold/",
       "markdownDescription": "Minimum number of tuple inserts prior to vacuum, or -1 to disable insert vacuums.\n\nsee [autovacuum_vacuum_insert_threshold documentation](https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_insert_threshold/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1000"
       ]
@@ -188,7 +227,10 @@
       "title": "autovacuum_vacuum_scale_factor",
       "description": "Number of tuple updates or deletes prior to vacuum as a fraction of reltuples.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_scale_factor/",
       "markdownDescription": "Number of tuple updates or deletes prior to vacuum as a fraction of reltuples.\n\nsee [autovacuum_vacuum_scale_factor documentation](https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_scale_factor/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.2"
       ]
@@ -197,7 +239,10 @@
       "title": "autovacuum_vacuum_threshold",
       "description": "Minimum number of tuple updates or deletes prior to vacuum.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_threshold/",
       "markdownDescription": "Minimum number of tuple updates or deletes prior to vacuum.\n\nsee [autovacuum_vacuum_threshold documentation](https://postgresqlco.nf/doc/en/param/autovacuum_vacuum_threshold/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "50"
       ]
@@ -206,7 +251,10 @@
       "title": "autovacuum_work_mem",
       "description": "Sets the maximum memory to be used by each autovacuum worker process.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_work_mem/",
       "markdownDescription": "Sets the maximum memory to be used by each autovacuum worker process.\n\nsee [autovacuum_work_mem documentation](https://postgresqlco.nf/doc/en/param/autovacuum_work_mem/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -215,7 +263,10 @@
       "title": "backend_flush_after",
       "description": "Number of pages after which previously performed writes are flushed to disk.\n\nsee https://postgresqlco.nf/doc/en/param/backend_flush_after/",
       "markdownDescription": "Number of pages after which previously performed writes are flushed to disk.\n\nsee [backend_flush_after documentation](https://postgresqlco.nf/doc/en/param/backend_flush_after/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -233,7 +284,10 @@
       "title": "backtrace_functions",
       "description": "Log backtrace for errors in these functions.\n\nsee https://postgresqlco.nf/doc/en/param/backtrace_functions/",
       "markdownDescription": "Log backtrace for errors in these functions.\n\nsee [backtrace_functions documentation](https://postgresqlco.nf/doc/en/param/backtrace_functions/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -242,7 +296,10 @@
       "title": "bgwriter_delay",
       "description": "Background writer sleep time between rounds.\n\nsee https://postgresqlco.nf/doc/en/param/bgwriter_delay/",
       "markdownDescription": "Background writer sleep time between rounds.\n\nsee [bgwriter_delay documentation](https://postgresqlco.nf/doc/en/param/bgwriter_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "200"
       ]
@@ -251,7 +308,10 @@
       "title": "bgwriter_flush_after",
       "description": "Number of pages after which previously performed writes are flushed to disk.\n\nsee https://postgresqlco.nf/doc/en/param/bgwriter_flush_after/",
       "markdownDescription": "Number of pages after which previously performed writes are flushed to disk.\n\nsee [bgwriter_flush_after documentation](https://postgresqlco.nf/doc/en/param/bgwriter_flush_after/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "64"
       ]
@@ -260,7 +320,10 @@
       "title": "bgwriter_lru_maxpages",
       "description": "Background writer maximum number of LRU pages to flush per round.\n\nsee https://postgresqlco.nf/doc/en/param/bgwriter_lru_maxpages/",
       "markdownDescription": "Background writer maximum number of LRU pages to flush per round.\n\nsee [bgwriter_lru_maxpages documentation](https://postgresqlco.nf/doc/en/param/bgwriter_lru_maxpages/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "100"
       ]
@@ -269,7 +332,10 @@
       "title": "bgwriter_lru_multiplier",
       "description": "Multiple of the average buffer usage to free per round.\n\nsee https://postgresqlco.nf/doc/en/param/bgwriter_lru_multiplier/",
       "markdownDescription": "Multiple of the average buffer usage to free per round.\n\nsee [bgwriter_lru_multiplier documentation](https://postgresqlco.nf/doc/en/param/bgwriter_lru_multiplier/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2"
       ]
@@ -278,7 +344,10 @@
       "title": "block_size",
       "description": "Shows the size of a disk block.\n\nsee https://postgresqlco.nf/doc/en/param/block_size/",
       "markdownDescription": "Shows the size of a disk block.\n\nsee [block_size documentation](https://postgresqlco.nf/doc/en/param/block_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "8192"
       ]
@@ -296,7 +365,10 @@
       "title": "bonjour_name",
       "description": "Sets the Bonjour service name.\n\nsee https://postgresqlco.nf/doc/en/param/bonjour_name/",
       "markdownDescription": "Sets the Bonjour service name.\n\nsee [bonjour_name documentation](https://postgresqlco.nf/doc/en/param/bonjour_name/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -323,7 +395,10 @@
       "title": "checkpoint_completion_target",
       "description": "Time spent flushing dirty buffers during checkpoint, as fraction of checkpoint interval.\n\nsee https://postgresqlco.nf/doc/en/param/checkpoint_completion_target/",
       "markdownDescription": "Time spent flushing dirty buffers during checkpoint, as fraction of checkpoint interval.\n\nsee [checkpoint_completion_target documentation](https://postgresqlco.nf/doc/en/param/checkpoint_completion_target/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.9"
       ]
@@ -332,7 +407,10 @@
       "title": "checkpoint_flush_after",
       "description": "Number of pages after which previously performed writes are flushed to disk.\n\nsee https://postgresqlco.nf/doc/en/param/checkpoint_flush_after/",
       "markdownDescription": "Number of pages after which previously performed writes are flushed to disk.\n\nsee [checkpoint_flush_after documentation](https://postgresqlco.nf/doc/en/param/checkpoint_flush_after/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "32"
       ]
@@ -341,7 +419,10 @@
       "title": "checkpoint_timeout",
       "description": "Sets the maximum time between automatic WAL checkpoints.\n\nsee https://postgresqlco.nf/doc/en/param/checkpoint_timeout/",
       "markdownDescription": "Sets the maximum time between automatic WAL checkpoints.\n\nsee [checkpoint_timeout documentation](https://postgresqlco.nf/doc/en/param/checkpoint_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "300"
       ]
@@ -350,7 +431,10 @@
       "title": "checkpoint_warning",
       "description": "Enables warnings if checkpoint segments are filled more frequently than this.\n\nsee https://postgresqlco.nf/doc/en/param/checkpoint_warning/",
       "markdownDescription": "Enables warnings if checkpoint segments are filled more frequently than this.\n\nsee [checkpoint_warning documentation](https://postgresqlco.nf/doc/en/param/checkpoint_warning/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "30"
       ]
@@ -359,7 +443,10 @@
       "title": "client_connection_check_interval",
       "description": "Sets the time interval between checks for disconnection while running queries.\n\nsee https://postgresqlco.nf/doc/en/param/client_connection_check_interval/",
       "markdownDescription": "Sets the time interval between checks for disconnection while running queries.\n\nsee [client_connection_check_interval documentation](https://postgresqlco.nf/doc/en/param/client_connection_check_interval/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -395,7 +482,10 @@
       "title": "commit_delay",
       "description": "Sets the delay in microseconds between transaction commit and flushing WAL to disk.\n\nsee https://postgresqlco.nf/doc/en/param/commit_delay/",
       "markdownDescription": "Sets the delay in microseconds between transaction commit and flushing WAL to disk.\n\nsee [commit_delay documentation](https://postgresqlco.nf/doc/en/param/commit_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -404,7 +494,10 @@
       "title": "commit_siblings",
       "description": "Sets the minimum concurrent open transactions before performing commit_delay.\n\nsee https://postgresqlco.nf/doc/en/param/commit_siblings/",
       "markdownDescription": "Sets the minimum concurrent open transactions before performing commit_delay.\n\nsee [commit_siblings documentation](https://postgresqlco.nf/doc/en/param/commit_siblings/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "5"
       ]
@@ -431,7 +524,10 @@
       "title": "cpu_index_tuple_cost",
       "description": "Sets the planner's estimate of the cost of processing each index entry during an index scan.\n\nsee https://postgresqlco.nf/doc/en/param/cpu_index_tuple_cost/",
       "markdownDescription": "Sets the planner's estimate of the cost of processing each index entry during an index scan.\n\nsee [cpu_index_tuple_cost documentation](https://postgresqlco.nf/doc/en/param/cpu_index_tuple_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.005"
       ]
@@ -440,7 +536,10 @@
       "title": "cpu_operator_cost",
       "description": "Sets the planner's estimate of the cost of processing each operator or function call.\n\nsee https://postgresqlco.nf/doc/en/param/cpu_operator_cost/",
       "markdownDescription": "Sets the planner's estimate of the cost of processing each operator or function call.\n\nsee [cpu_operator_cost documentation](https://postgresqlco.nf/doc/en/param/cpu_operator_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.0025"
       ]
@@ -449,7 +548,10 @@
       "title": "cpu_tuple_cost",
       "description": "Sets the planner's estimate of the cost of processing each tuple (row).\n\nsee https://postgresqlco.nf/doc/en/param/cpu_tuple_cost/",
       "markdownDescription": "Sets the planner's estimate of the cost of processing each tuple (row).\n\nsee [cpu_tuple_cost documentation](https://postgresqlco.nf/doc/en/param/cpu_tuple_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.01"
       ]
@@ -458,7 +560,10 @@
       "title": "cursor_tuple_fraction",
       "description": "Sets the planner's estimate of the fraction of a cursor's rows that will be retrieved.\n\nsee https://postgresqlco.nf/doc/en/param/cursor_tuple_fraction/",
       "markdownDescription": "Sets the planner's estimate of the fraction of a cursor's rows that will be retrieved.\n\nsee [cursor_tuple_fraction documentation](https://postgresqlco.nf/doc/en/param/cursor_tuple_fraction/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.1"
       ]
@@ -476,7 +581,10 @@
       "title": "data_directory_mode",
       "description": "Shows the mode of the data directory.\n\nsee https://postgresqlco.nf/doc/en/param/data_directory_mode/",
       "markdownDescription": "Shows the mode of the data directory.\n\nsee [data_directory_mode documentation](https://postgresqlco.nf/doc/en/param/data_directory_mode/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0700"
       ]
@@ -512,7 +620,10 @@
       "title": "deadlock_timeout",
       "description": "Sets the time to wait on a lock before checking for deadlock.\n\nsee https://postgresqlco.nf/doc/en/param/deadlock_timeout/",
       "markdownDescription": "Sets the time to wait on a lock before checking for deadlock.\n\nsee [deadlock_timeout documentation](https://postgresqlco.nf/doc/en/param/deadlock_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1000"
       ]
@@ -530,7 +641,10 @@
       "title": "debug_discard_caches",
       "description": "Aggressively flush system caches for debugging purposes.\n\nsee https://postgresqlco.nf/doc/en/param/debug_discard_caches/",
       "markdownDescription": "Aggressively flush system caches for debugging purposes.\n\nsee [debug_discard_caches documentation](https://postgresqlco.nf/doc/en/param/debug_discard_caches/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -575,7 +689,10 @@
       "title": "default_statistics_target",
       "description": "Sets the default statistics target.\n\nsee https://postgresqlco.nf/doc/en/param/default_statistics_target/",
       "markdownDescription": "Sets the default statistics target.\n\nsee [default_statistics_target documentation](https://postgresqlco.nf/doc/en/param/default_statistics_target/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "100"
       ]
@@ -593,7 +710,10 @@
       "title": "default_tablespace",
       "description": "Sets the default tablespace to create tables and indexes in.\n\nsee https://postgresqlco.nf/doc/en/param/default_tablespace/",
       "markdownDescription": "Sets the default tablespace to create tables and indexes in.\n\nsee [default_tablespace documentation](https://postgresqlco.nf/doc/en/param/default_tablespace/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -656,7 +776,10 @@
       "title": "effective_cache_size",
       "description": "Sets the planner's assumption about the total size of the data caches.\n\nsee https://postgresqlco.nf/doc/en/param/effective_cache_size/",
       "markdownDescription": "Sets the planner's assumption about the total size of the data caches.\n\nsee [effective_cache_size documentation](https://postgresqlco.nf/doc/en/param/effective_cache_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "524288"
       ]
@@ -665,7 +788,10 @@
       "title": "effective_io_concurrency",
       "description": "Number of simultaneous requests that can be handled efficiently by the disk subsystem.\n\nsee https://postgresqlco.nf/doc/en/param/effective_io_concurrency/",
       "markdownDescription": "Number of simultaneous requests that can be handled efficiently by the disk subsystem.\n\nsee [effective_io_concurrency documentation](https://postgresqlco.nf/doc/en/param/effective_io_concurrency/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1"
       ]
@@ -881,7 +1007,10 @@
       "title": "extra_float_digits",
       "description": "Sets the number of digits displayed for floating-point values.\n\nsee https://postgresqlco.nf/doc/en/param/extra_float_digits/",
       "markdownDescription": "Sets the number of digits displayed for floating-point values.\n\nsee [extra_float_digits documentation](https://postgresqlco.nf/doc/en/param/extra_float_digits/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1"
       ]
@@ -899,7 +1028,10 @@
       "title": "from_collapse_limit",
       "description": "Sets the FROM-list size beyond which subqueries are not collapsed.\n\nsee https://postgresqlco.nf/doc/en/param/from_collapse_limit/",
       "markdownDescription": "Sets the FROM-list size beyond which subqueries are not collapsed.\n\nsee [from_collapse_limit documentation](https://postgresqlco.nf/doc/en/param/from_collapse_limit/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "8"
       ]
@@ -935,7 +1067,10 @@
       "title": "geqo_effort",
       "description": "GEQO: effort is used to set the default for other GEQO parameters.\n\nsee https://postgresqlco.nf/doc/en/param/geqo_effort/",
       "markdownDescription": "GEQO: effort is used to set the default for other GEQO parameters.\n\nsee [geqo_effort documentation](https://postgresqlco.nf/doc/en/param/geqo_effort/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "5"
       ]
@@ -944,7 +1079,10 @@
       "title": "geqo_generations",
       "description": "GEQO: number of iterations of the algorithm.\n\nsee https://postgresqlco.nf/doc/en/param/geqo_generations/",
       "markdownDescription": "GEQO: number of iterations of the algorithm.\n\nsee [geqo_generations documentation](https://postgresqlco.nf/doc/en/param/geqo_generations/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -953,7 +1091,10 @@
       "title": "geqo_pool_size",
       "description": "GEQO: number of individuals in the population.\n\nsee https://postgresqlco.nf/doc/en/param/geqo_pool_size/",
       "markdownDescription": "GEQO: number of individuals in the population.\n\nsee [geqo_pool_size documentation](https://postgresqlco.nf/doc/en/param/geqo_pool_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -962,7 +1103,10 @@
       "title": "geqo_seed",
       "description": "GEQO: seed for random path selection.\n\nsee https://postgresqlco.nf/doc/en/param/geqo_seed/",
       "markdownDescription": "GEQO: seed for random path selection.\n\nsee [geqo_seed documentation](https://postgresqlco.nf/doc/en/param/geqo_seed/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -971,7 +1115,10 @@
       "title": "geqo_selection_bias",
       "description": "GEQO: selective pressure within the population.\n\nsee https://postgresqlco.nf/doc/en/param/geqo_selection_bias/",
       "markdownDescription": "GEQO: selective pressure within the population.\n\nsee [geqo_selection_bias documentation](https://postgresqlco.nf/doc/en/param/geqo_selection_bias/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2"
       ]
@@ -980,7 +1127,10 @@
       "title": "geqo_threshold",
       "description": "Sets the threshold of FROM items beyond which GEQO is used.\n\nsee https://postgresqlco.nf/doc/en/param/geqo_threshold/",
       "markdownDescription": "Sets the threshold of FROM items beyond which GEQO is used.\n\nsee [geqo_threshold documentation](https://postgresqlco.nf/doc/en/param/geqo_threshold/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "12"
       ]
@@ -989,7 +1139,10 @@
       "title": "gin_fuzzy_search_limit",
       "description": "Sets the maximum allowed result for exact search by GIN.\n\nsee https://postgresqlco.nf/doc/en/param/gin_fuzzy_search_limit/",
       "markdownDescription": "Sets the maximum allowed result for exact search by GIN.\n\nsee [gin_fuzzy_search_limit documentation](https://postgresqlco.nf/doc/en/param/gin_fuzzy_search_limit/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -998,7 +1151,10 @@
       "title": "gin_pending_list_limit",
       "description": "Sets the maximum size of the pending list for GIN index.\n\nsee https://postgresqlco.nf/doc/en/param/gin_pending_list_limit/",
       "markdownDescription": "Sets the maximum size of the pending list for GIN index.\n\nsee [gin_pending_list_limit documentation](https://postgresqlco.nf/doc/en/param/gin_pending_list_limit/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "4096"
       ]
@@ -1007,7 +1163,10 @@
       "title": "hash_mem_multiplier",
       "description": "Multiple of work_mem to use for hash tables.\n\nsee https://postgresqlco.nf/doc/en/param/hash_mem_multiplier/",
       "markdownDescription": "Multiple of work_mem to use for hash tables.\n\nsee [hash_mem_multiplier documentation](https://postgresqlco.nf/doc/en/param/hash_mem_multiplier/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1"
       ]
@@ -1034,7 +1193,10 @@
       "title": "huge_page_size",
       "description": "The size of huge page that should be requested.\n\nsee https://postgresqlco.nf/doc/en/param/huge_page_size/",
       "markdownDescription": "The size of huge page that should be requested.\n\nsee [huge_page_size documentation](https://postgresqlco.nf/doc/en/param/huge_page_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1052,7 +1214,10 @@
       "title": "idle_in_transaction_session_timeout",
       "description": "Sets the maximum allowed idle time between queries, when in a transaction.\n\nsee https://postgresqlco.nf/doc/en/param/idle_in_transaction_session_timeout/",
       "markdownDescription": "Sets the maximum allowed idle time between queries, when in a transaction.\n\nsee [idle_in_transaction_session_timeout documentation](https://postgresqlco.nf/doc/en/param/idle_in_transaction_session_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1061,7 +1226,10 @@
       "title": "idle_session_timeout",
       "description": "Sets the maximum allowed idle time between queries, when not in a transaction.\n\nsee https://postgresqlco.nf/doc/en/param/idle_session_timeout/",
       "markdownDescription": "Sets the maximum allowed idle time between queries, when not in a transaction.\n\nsee [idle_session_timeout documentation](https://postgresqlco.nf/doc/en/param/idle_session_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1133,7 +1301,10 @@
       "title": "jit_above_cost",
       "description": "Perform JIT compilation if query is more expensive.\n\nsee https://postgresqlco.nf/doc/en/param/jit_above_cost/",
       "markdownDescription": "Perform JIT compilation if query is more expensive.\n\nsee [jit_above_cost documentation](https://postgresqlco.nf/doc/en/param/jit_above_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "100000"
       ]
@@ -1169,7 +1340,10 @@
       "title": "jit_inline_above_cost",
       "description": "Perform JIT inlining if query is more expensive.\n\nsee https://postgresqlco.nf/doc/en/param/jit_inline_above_cost/",
       "markdownDescription": "Perform JIT inlining if query is more expensive.\n\nsee [jit_inline_above_cost documentation](https://postgresqlco.nf/doc/en/param/jit_inline_above_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "500000"
       ]
@@ -1178,7 +1352,10 @@
       "title": "jit_optimize_above_cost",
       "description": "Optimize JIT-compiled functions if query is more expensive.\n\nsee https://postgresqlco.nf/doc/en/param/jit_optimize_above_cost/",
       "markdownDescription": "Optimize JIT-compiled functions if query is more expensive.\n\nsee [jit_optimize_above_cost documentation](https://postgresqlco.nf/doc/en/param/jit_optimize_above_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "500000"
       ]
@@ -1205,7 +1382,10 @@
       "title": "join_collapse_limit",
       "description": "Sets the FROM-list size beyond which JOIN constructs are not flattened.\n\nsee https://postgresqlco.nf/doc/en/param/join_collapse_limit/",
       "markdownDescription": "Sets the FROM-list size beyond which JOIN constructs are not flattened.\n\nsee [join_collapse_limit documentation](https://postgresqlco.nf/doc/en/param/join_collapse_limit/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "8"
       ]
@@ -1295,7 +1475,10 @@
       "title": "local_preload_libraries",
       "description": "Lists unprivileged shared libraries to preload into each backend.\n\nsee https://postgresqlco.nf/doc/en/param/local_preload_libraries/",
       "markdownDescription": "Lists unprivileged shared libraries to preload into each backend.\n\nsee [local_preload_libraries documentation](https://postgresqlco.nf/doc/en/param/local_preload_libraries/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -1304,7 +1487,10 @@
       "title": "lock_timeout",
       "description": "Sets the maximum allowed duration of any wait for a lock.\n\nsee https://postgresqlco.nf/doc/en/param/lock_timeout/",
       "markdownDescription": "Sets the maximum allowed duration of any wait for a lock.\n\nsee [lock_timeout documentation](https://postgresqlco.nf/doc/en/param/lock_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1313,7 +1499,10 @@
       "title": "log_autovacuum_min_duration",
       "description": "Sets the minimum execution time above which autovacuum actions will be logged.\n\nsee https://postgresqlco.nf/doc/en/param/log_autovacuum_min_duration/",
       "markdownDescription": "Sets the minimum execution time above which autovacuum actions will be logged.\n\nsee [log_autovacuum_min_duration documentation](https://postgresqlco.nf/doc/en/param/log_autovacuum_min_duration/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -1385,7 +1574,10 @@
       "title": "log_file_mode",
       "description": "Sets the file permissions for log files.\n\nsee https://postgresqlco.nf/doc/en/param/log_file_mode/",
       "markdownDescription": "Sets the file permissions for log files.\n\nsee [log_file_mode documentation](https://postgresqlco.nf/doc/en/param/log_file_mode/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0600"
       ]
@@ -1421,7 +1613,10 @@
       "title": "log_min_duration_sample",
       "description": "Sets the minimum execution time above which a sample of statements will be logged. Sampling is determined by log_statement_sample_rate.\n\nsee https://postgresqlco.nf/doc/en/param/log_min_duration_sample/",
       "markdownDescription": "Sets the minimum execution time above which a sample of statements will be logged. Sampling is determined by log_statement_sample_rate.\n\nsee [log_min_duration_sample documentation](https://postgresqlco.nf/doc/en/param/log_min_duration_sample/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -1430,7 +1625,10 @@
       "title": "log_min_duration_statement",
       "description": "Sets the minimum execution time above which all statements will be logged.\n\nsee https://postgresqlco.nf/doc/en/param/log_min_duration_statement/",
       "markdownDescription": "Sets the minimum execution time above which all statements will be logged.\n\nsee [log_min_duration_statement documentation](https://postgresqlco.nf/doc/en/param/log_min_duration_statement/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -1457,7 +1655,10 @@
       "title": "log_parameter_max_length",
       "description": "When logging statements, limit logged parameter values to first N bytes.\n\nsee https://postgresqlco.nf/doc/en/param/log_parameter_max_length/",
       "markdownDescription": "When logging statements, limit logged parameter values to first N bytes.\n\nsee [log_parameter_max_length documentation](https://postgresqlco.nf/doc/en/param/log_parameter_max_length/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -1466,7 +1667,10 @@
       "title": "log_parameter_max_length_on_error",
       "description": "When reporting an error, limit logged parameter values to first N bytes.\n\nsee https://postgresqlco.nf/doc/en/param/log_parameter_max_length_on_error/",
       "markdownDescription": "When reporting an error, limit logged parameter values to first N bytes.\n\nsee [log_parameter_max_length_on_error documentation](https://postgresqlco.nf/doc/en/param/log_parameter_max_length_on_error/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1511,7 +1715,10 @@
       "title": "log_rotation_age",
       "description": "Automatic log file rotation will occur after N minutes.\n\nsee https://postgresqlco.nf/doc/en/param/log_rotation_age/",
       "markdownDescription": "Automatic log file rotation will occur after N minutes.\n\nsee [log_rotation_age documentation](https://postgresqlco.nf/doc/en/param/log_rotation_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1520,7 +1727,10 @@
       "title": "log_rotation_size",
       "description": "Automatic log file rotation will occur after N kilobytes.\n\nsee https://postgresqlco.nf/doc/en/param/log_rotation_size/",
       "markdownDescription": "Automatic log file rotation will occur after N kilobytes.\n\nsee [log_rotation_size documentation](https://postgresqlco.nf/doc/en/param/log_rotation_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1538,7 +1748,10 @@
       "title": "log_statement_sample_rate",
       "description": "Fraction of statements exceeding log_min_duration_sample to be logged.\n\nsee https://postgresqlco.nf/doc/en/param/log_statement_sample_rate/",
       "markdownDescription": "Fraction of statements exceeding log_min_duration_sample to be logged.\n\nsee [log_statement_sample_rate documentation](https://postgresqlco.nf/doc/en/param/log_statement_sample_rate/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1"
       ]
@@ -1556,7 +1769,10 @@
       "title": "log_temp_files",
       "description": "Log the use of temporary files larger than this number of kilobytes.\n\nsee https://postgresqlco.nf/doc/en/param/log_temp_files/",
       "markdownDescription": "Log the use of temporary files larger than this number of kilobytes.\n\nsee [log_temp_files documentation](https://postgresqlco.nf/doc/en/param/log_temp_files/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -1574,7 +1790,10 @@
       "title": "log_transaction_sample_rate",
       "description": "Sets the fraction of transactions from which to log all statements.\n\nsee https://postgresqlco.nf/doc/en/param/log_transaction_sample_rate/",
       "markdownDescription": "Sets the fraction of transactions from which to log all statements.\n\nsee [log_transaction_sample_rate documentation](https://postgresqlco.nf/doc/en/param/log_transaction_sample_rate/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1601,7 +1820,10 @@
       "title": "logical_decoding_work_mem",
       "description": "Sets the maximum memory to be used for logical decoding.\n\nsee https://postgresqlco.nf/doc/en/param/logical_decoding_work_mem/",
       "markdownDescription": "Sets the maximum memory to be used for logical decoding.\n\nsee [logical_decoding_work_mem documentation](https://postgresqlco.nf/doc/en/param/logical_decoding_work_mem/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "65536"
       ]
@@ -1610,7 +1832,10 @@
       "title": "maintenance_io_concurrency",
       "description": "A variant of effective_io_concurrency that is used for maintenance work.\n\nsee https://postgresqlco.nf/doc/en/param/maintenance_io_concurrency/",
       "markdownDescription": "A variant of effective_io_concurrency that is used for maintenance work.\n\nsee [maintenance_io_concurrency documentation](https://postgresqlco.nf/doc/en/param/maintenance_io_concurrency/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "10"
       ]
@@ -1619,7 +1844,10 @@
       "title": "maintenance_work_mem",
       "description": "Sets the maximum memory to be used for maintenance operations.\n\nsee https://postgresqlco.nf/doc/en/param/maintenance_work_mem/",
       "markdownDescription": "Sets the maximum memory to be used for maintenance operations.\n\nsee [maintenance_work_mem documentation](https://postgresqlco.nf/doc/en/param/maintenance_work_mem/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "65536"
       ]
@@ -1628,7 +1856,10 @@
       "title": "max_connections",
       "description": "Sets the maximum number of concurrent connections.\n\nsee https://postgresqlco.nf/doc/en/param/max_connections/",
       "markdownDescription": "Sets the maximum number of concurrent connections.\n\nsee [max_connections documentation](https://postgresqlco.nf/doc/en/param/max_connections/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "100"
       ]
@@ -1637,7 +1868,10 @@
       "title": "max_files_per_process",
       "description": "Sets the maximum number of simultaneously open files for each server process.\n\nsee https://postgresqlco.nf/doc/en/param/max_files_per_process/",
       "markdownDescription": "Sets the maximum number of simultaneously open files for each server process.\n\nsee [max_files_per_process documentation](https://postgresqlco.nf/doc/en/param/max_files_per_process/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1000"
       ]
@@ -1646,7 +1880,10 @@
       "title": "max_function_args",
       "description": "Shows the maximum number of function arguments.\n\nsee https://postgresqlco.nf/doc/en/param/max_function_args/",
       "markdownDescription": "Shows the maximum number of function arguments.\n\nsee [max_function_args documentation](https://postgresqlco.nf/doc/en/param/max_function_args/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "100"
       ]
@@ -1655,7 +1892,10 @@
       "title": "max_identifier_length",
       "description": "Shows the maximum identifier length.\n\nsee https://postgresqlco.nf/doc/en/param/max_identifier_length/",
       "markdownDescription": "Shows the maximum identifier length.\n\nsee [max_identifier_length documentation](https://postgresqlco.nf/doc/en/param/max_identifier_length/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "63"
       ]
@@ -1664,7 +1904,10 @@
       "title": "max_index_keys",
       "description": "Shows the maximum number of index keys.\n\nsee https://postgresqlco.nf/doc/en/param/max_index_keys/",
       "markdownDescription": "Shows the maximum number of index keys.\n\nsee [max_index_keys documentation](https://postgresqlco.nf/doc/en/param/max_index_keys/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "32"
       ]
@@ -1673,7 +1916,10 @@
       "title": "max_locks_per_transaction",
       "description": "Sets the maximum number of locks per transaction.\n\nsee https://postgresqlco.nf/doc/en/param/max_locks_per_transaction/",
       "markdownDescription": "Sets the maximum number of locks per transaction.\n\nsee [max_locks_per_transaction documentation](https://postgresqlco.nf/doc/en/param/max_locks_per_transaction/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "64"
       ]
@@ -1682,7 +1928,10 @@
       "title": "max_logical_replication_workers",
       "description": "Maximum number of logical replication worker processes.\n\nsee https://postgresqlco.nf/doc/en/param/max_logical_replication_workers/",
       "markdownDescription": "Maximum number of logical replication worker processes.\n\nsee [max_logical_replication_workers documentation](https://postgresqlco.nf/doc/en/param/max_logical_replication_workers/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "4"
       ]
@@ -1691,7 +1940,10 @@
       "title": "max_parallel_maintenance_workers",
       "description": "Sets the maximum number of parallel processes per maintenance operation.\n\nsee https://postgresqlco.nf/doc/en/param/max_parallel_maintenance_workers/",
       "markdownDescription": "Sets the maximum number of parallel processes per maintenance operation.\n\nsee [max_parallel_maintenance_workers documentation](https://postgresqlco.nf/doc/en/param/max_parallel_maintenance_workers/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2"
       ]
@@ -1700,7 +1952,10 @@
       "title": "max_parallel_workers",
       "description": "Sets the maximum number of parallel workers that can be active at one time.\n\nsee https://postgresqlco.nf/doc/en/param/max_parallel_workers/",
       "markdownDescription": "Sets the maximum number of parallel workers that can be active at one time.\n\nsee [max_parallel_workers documentation](https://postgresqlco.nf/doc/en/param/max_parallel_workers/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "32"
       ]
@@ -1709,7 +1964,10 @@
       "title": "max_parallel_workers_per_gather",
       "description": "Sets the maximum number of parallel processes per executor node.\n\nsee https://postgresqlco.nf/doc/en/param/max_parallel_workers_per_gather/",
       "markdownDescription": "Sets the maximum number of parallel processes per executor node.\n\nsee [max_parallel_workers_per_gather documentation](https://postgresqlco.nf/doc/en/param/max_parallel_workers_per_gather/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2"
       ]
@@ -1718,7 +1976,10 @@
       "title": "max_pred_locks_per_page",
       "description": "Sets the maximum number of predicate-locked tuples per page.\n\nsee https://postgresqlco.nf/doc/en/param/max_pred_locks_per_page/",
       "markdownDescription": "Sets the maximum number of predicate-locked tuples per page.\n\nsee [max_pred_locks_per_page documentation](https://postgresqlco.nf/doc/en/param/max_pred_locks_per_page/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2"
       ]
@@ -1727,7 +1988,10 @@
       "title": "max_pred_locks_per_relation",
       "description": "Sets the maximum number of predicate-locked pages and tuples per relation.\n\nsee https://postgresqlco.nf/doc/en/param/max_pred_locks_per_relation/",
       "markdownDescription": "Sets the maximum number of predicate-locked pages and tuples per relation.\n\nsee [max_pred_locks_per_relation documentation](https://postgresqlco.nf/doc/en/param/max_pred_locks_per_relation/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-2"
       ]
@@ -1736,7 +2000,10 @@
       "title": "max_pred_locks_per_transaction",
       "description": "Sets the maximum number of predicate locks per transaction.\n\nsee https://postgresqlco.nf/doc/en/param/max_pred_locks_per_transaction/",
       "markdownDescription": "Sets the maximum number of predicate locks per transaction.\n\nsee [max_pred_locks_per_transaction documentation](https://postgresqlco.nf/doc/en/param/max_pred_locks_per_transaction/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "64"
       ]
@@ -1745,7 +2012,10 @@
       "title": "max_prepared_transactions",
       "description": "Sets the maximum number of simultaneously prepared transactions.\n\nsee https://postgresqlco.nf/doc/en/param/max_prepared_transactions/",
       "markdownDescription": "Sets the maximum number of simultaneously prepared transactions.\n\nsee [max_prepared_transactions documentation](https://postgresqlco.nf/doc/en/param/max_prepared_transactions/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1754,7 +2024,10 @@
       "title": "max_replication_slots",
       "description": "Sets the maximum number of simultaneously defined replication slots.\n\nsee https://postgresqlco.nf/doc/en/param/max_replication_slots/",
       "markdownDescription": "Sets the maximum number of simultaneously defined replication slots.\n\nsee [max_replication_slots documentation](https://postgresqlco.nf/doc/en/param/max_replication_slots/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "32"
       ]
@@ -1763,7 +2036,10 @@
       "title": "max_slot_wal_keep_size",
       "description": "Sets the maximum WAL size that can be reserved by replication slots.\n\nsee https://postgresqlco.nf/doc/en/param/max_slot_wal_keep_size/",
       "markdownDescription": "Sets the maximum WAL size that can be reserved by replication slots.\n\nsee [max_slot_wal_keep_size documentation](https://postgresqlco.nf/doc/en/param/max_slot_wal_keep_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -1772,7 +2048,10 @@
       "title": "max_stack_depth",
       "description": "Sets the maximum stack depth, in kilobytes.\n\nsee https://postgresqlco.nf/doc/en/param/max_stack_depth/",
       "markdownDescription": "Sets the maximum stack depth, in kilobytes.\n\nsee [max_stack_depth documentation](https://postgresqlco.nf/doc/en/param/max_stack_depth/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2048"
       ]
@@ -1781,7 +2060,10 @@
       "title": "max_standby_archive_delay",
       "description": "Sets the maximum delay before canceling queries when a hot standby server is processing archived WAL data.\n\nsee https://postgresqlco.nf/doc/en/param/max_standby_archive_delay/",
       "markdownDescription": "Sets the maximum delay before canceling queries when a hot standby server is processing archived WAL data.\n\nsee [max_standby_archive_delay documentation](https://postgresqlco.nf/doc/en/param/max_standby_archive_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "30000"
       ]
@@ -1790,7 +2072,10 @@
       "title": "max_standby_streaming_delay",
       "description": "Sets the maximum delay before canceling queries when a hot standby server is processing streamed WAL data.\n\nsee https://postgresqlco.nf/doc/en/param/max_standby_streaming_delay/",
       "markdownDescription": "Sets the maximum delay before canceling queries when a hot standby server is processing streamed WAL data.\n\nsee [max_standby_streaming_delay documentation](https://postgresqlco.nf/doc/en/param/max_standby_streaming_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "30000"
       ]
@@ -1799,7 +2084,10 @@
       "title": "max_sync_workers_per_subscription",
       "description": "Maximum number of table synchronization workers per subscription.\n\nsee https://postgresqlco.nf/doc/en/param/max_sync_workers_per_subscription/",
       "markdownDescription": "Maximum number of table synchronization workers per subscription.\n\nsee [max_sync_workers_per_subscription documentation](https://postgresqlco.nf/doc/en/param/max_sync_workers_per_subscription/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2"
       ]
@@ -1808,7 +2096,10 @@
       "title": "max_wal_senders",
       "description": "Sets the maximum number of simultaneously running WAL sender processes.\n\nsee https://postgresqlco.nf/doc/en/param/max_wal_senders/",
       "markdownDescription": "Sets the maximum number of simultaneously running WAL sender processes.\n\nsee [max_wal_senders documentation](https://postgresqlco.nf/doc/en/param/max_wal_senders/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "10"
       ]
@@ -1817,7 +2108,10 @@
       "title": "max_wal_size",
       "description": "Sets the WAL size that triggers a checkpoint.\n\nsee https://postgresqlco.nf/doc/en/param/max_wal_size/",
       "markdownDescription": "Sets the WAL size that triggers a checkpoint.\n\nsee [max_wal_size documentation](https://postgresqlco.nf/doc/en/param/max_wal_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1024"
       ]
@@ -1826,7 +2120,10 @@
       "title": "max_worker_processes",
       "description": "Maximum number of concurrent worker processes.\n\nsee https://postgresqlco.nf/doc/en/param/max_worker_processes/",
       "markdownDescription": "Maximum number of concurrent worker processes.\n\nsee [max_worker_processes documentation](https://postgresqlco.nf/doc/en/param/max_worker_processes/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "32"
       ]
@@ -1835,7 +2132,10 @@
       "title": "min_dynamic_shared_memory",
       "description": "Amount of dynamic shared memory reserved at startup.\n\nsee https://postgresqlco.nf/doc/en/param/min_dynamic_shared_memory/",
       "markdownDescription": "Amount of dynamic shared memory reserved at startup.\n\nsee [min_dynamic_shared_memory documentation](https://postgresqlco.nf/doc/en/param/min_dynamic_shared_memory/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1844,7 +2144,10 @@
       "title": "min_parallel_index_scan_size",
       "description": "Sets the minimum amount of index data for a parallel scan.\n\nsee https://postgresqlco.nf/doc/en/param/min_parallel_index_scan_size/",
       "markdownDescription": "Sets the minimum amount of index data for a parallel scan.\n\nsee [min_parallel_index_scan_size documentation](https://postgresqlco.nf/doc/en/param/min_parallel_index_scan_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "64"
       ]
@@ -1853,7 +2156,10 @@
       "title": "min_parallel_table_scan_size",
       "description": "Sets the minimum amount of table data for a parallel scan.\n\nsee https://postgresqlco.nf/doc/en/param/min_parallel_table_scan_size/",
       "markdownDescription": "Sets the minimum amount of table data for a parallel scan.\n\nsee [min_parallel_table_scan_size documentation](https://postgresqlco.nf/doc/en/param/min_parallel_table_scan_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1024"
       ]
@@ -1862,7 +2168,10 @@
       "title": "min_wal_size",
       "description": "Sets the minimum size to shrink the WAL to.\n\nsee https://postgresqlco.nf/doc/en/param/min_wal_size/",
       "markdownDescription": "Sets the minimum size to shrink the WAL to.\n\nsee [min_wal_size documentation](https://postgresqlco.nf/doc/en/param/min_wal_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "80"
       ]
@@ -1871,7 +2180,10 @@
       "title": "old_snapshot_threshold",
       "description": "Time before a snapshot is too old to read pages changed after the snapshot was taken.\n\nsee https://postgresqlco.nf/doc/en/param/old_snapshot_threshold/",
       "markdownDescription": "Time before a snapshot is too old to read pages changed after the snapshot was taken.\n\nsee [old_snapshot_threshold documentation](https://postgresqlco.nf/doc/en/param/old_snapshot_threshold/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -1889,7 +2201,10 @@
       "title": "parallel_setup_cost",
       "description": "Sets the planner's estimate of the cost of starting up worker processes for parallel query.\n\nsee https://postgresqlco.nf/doc/en/param/parallel_setup_cost/",
       "markdownDescription": "Sets the planner's estimate of the cost of starting up worker processes for parallel query.\n\nsee [parallel_setup_cost documentation](https://postgresqlco.nf/doc/en/param/parallel_setup_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1000"
       ]
@@ -1898,7 +2213,10 @@
       "title": "parallel_tuple_cost",
       "description": "Sets the planner's estimate of the cost of passing each tuple (row) from worker to leader backend.\n\nsee https://postgresqlco.nf/doc/en/param/parallel_tuple_cost/",
       "markdownDescription": "Sets the planner's estimate of the cost of passing each tuple (row) from worker to leader backend.\n\nsee [parallel_tuple_cost documentation](https://postgresqlco.nf/doc/en/param/parallel_tuple_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0.1"
       ]
@@ -1925,7 +2243,10 @@
       "title": "port",
       "description": "Sets the TCP port the server listens on.\n\nsee https://postgresqlco.nf/doc/en/param/port/",
       "markdownDescription": "Sets the TCP port the server listens on.\n\nsee [port documentation](https://postgresqlco.nf/doc/en/param/port/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "5432"
       ]
@@ -1934,7 +2255,10 @@
       "title": "post_auth_delay",
       "description": "Waits N seconds on connection startup after authentication.\n\nsee https://postgresqlco.nf/doc/en/param/post_auth_delay/",
       "markdownDescription": "Waits N seconds on connection startup after authentication.\n\nsee [post_auth_delay documentation](https://postgresqlco.nf/doc/en/param/post_auth_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1943,7 +2267,10 @@
       "title": "pre_auth_delay",
       "description": "Waits N seconds on connection startup before authentication.\n\nsee https://postgresqlco.nf/doc/en/param/pre_auth_delay/",
       "markdownDescription": "Waits N seconds on connection startup before authentication.\n\nsee [pre_auth_delay documentation](https://postgresqlco.nf/doc/en/param/pre_auth_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -1952,7 +2279,10 @@
       "title": "primary_slot_name",
       "description": "Sets the name of the replication slot to use on the sending server.\n\nsee https://postgresqlco.nf/doc/en/param/primary_slot_name/",
       "markdownDescription": "Sets the name of the replication slot to use on the sending server.\n\nsee [primary_slot_name documentation](https://postgresqlco.nf/doc/en/param/primary_slot_name/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -1961,7 +2291,10 @@
       "title": "promote_trigger_file",
       "description": "Specifies a file name whose presence ends recovery in the standby.\n\nsee https://postgresqlco.nf/doc/en/param/promote_trigger_file/",
       "markdownDescription": "Specifies a file name whose presence ends recovery in the standby.\n\nsee [promote_trigger_file documentation](https://postgresqlco.nf/doc/en/param/promote_trigger_file/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -1979,7 +2312,10 @@
       "title": "random_page_cost",
       "description": "Sets the planner's estimate of the cost of a nonsequentially fetched disk page.\n\nsee https://postgresqlco.nf/doc/en/param/random_page_cost/",
       "markdownDescription": "Sets the planner's estimate of the cost of a nonsequentially fetched disk page.\n\nsee [random_page_cost documentation](https://postgresqlco.nf/doc/en/param/random_page_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "4"
       ]
@@ -1988,7 +2324,10 @@
       "title": "recovery_end_command",
       "description": "Sets the shell command that will be executed once at the end of recovery.\n\nsee https://postgresqlco.nf/doc/en/param/recovery_end_command/",
       "markdownDescription": "Sets the shell command that will be executed once at the end of recovery.\n\nsee [recovery_end_command documentation](https://postgresqlco.nf/doc/en/param/recovery_end_command/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2006,7 +2345,10 @@
       "title": "recovery_min_apply_delay",
       "description": "Sets the minimum delay for applying changes during recovery.\n\nsee https://postgresqlco.nf/doc/en/param/recovery_min_apply_delay/",
       "markdownDescription": "Sets the minimum delay for applying changes during recovery.\n\nsee [recovery_min_apply_delay documentation](https://postgresqlco.nf/doc/en/param/recovery_min_apply_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -2015,7 +2357,10 @@
       "title": "recovery_target",
       "description": "Set to \"immediate\" to end recovery as soon as a consistent state is reached.\n\nsee https://postgresqlco.nf/doc/en/param/recovery_target/",
       "markdownDescription": "Set to \"immediate\" to end recovery as soon as a consistent state is reached.\n\nsee [recovery_target documentation](https://postgresqlco.nf/doc/en/param/recovery_target/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2042,7 +2387,10 @@
       "title": "recovery_target_lsn",
       "description": "Sets the LSN of the write-ahead log location up to which recovery will proceed.\n\nsee https://postgresqlco.nf/doc/en/param/recovery_target_lsn/",
       "markdownDescription": "Sets the LSN of the write-ahead log location up to which recovery will proceed.\n\nsee [recovery_target_lsn documentation](https://postgresqlco.nf/doc/en/param/recovery_target_lsn/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2051,7 +2399,10 @@
       "title": "recovery_target_name",
       "description": "Sets the named restore point up to which recovery will proceed.\n\nsee https://postgresqlco.nf/doc/en/param/recovery_target_name/",
       "markdownDescription": "Sets the named restore point up to which recovery will proceed.\n\nsee [recovery_target_name documentation](https://postgresqlco.nf/doc/en/param/recovery_target_name/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2060,7 +2411,10 @@
       "title": "recovery_target_time",
       "description": "Sets the time stamp up to which recovery will proceed.\n\nsee https://postgresqlco.nf/doc/en/param/recovery_target_time/",
       "markdownDescription": "Sets the time stamp up to which recovery will proceed.\n\nsee [recovery_target_time documentation](https://postgresqlco.nf/doc/en/param/recovery_target_time/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2078,7 +2432,10 @@
       "title": "recovery_target_xid",
       "description": "Sets the transaction ID up to which recovery will proceed.\n\nsee https://postgresqlco.nf/doc/en/param/recovery_target_xid/",
       "markdownDescription": "Sets the transaction ID up to which recovery will proceed.\n\nsee [recovery_target_xid documentation](https://postgresqlco.nf/doc/en/param/recovery_target_xid/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2132,7 +2489,10 @@
       "title": "segment_size",
       "description": "Shows the number of pages per disk file.\n\nsee https://postgresqlco.nf/doc/en/param/segment_size/",
       "markdownDescription": "Shows the number of pages per disk file.\n\nsee [segment_size documentation](https://postgresqlco.nf/doc/en/param/segment_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "131072"
       ]
@@ -2141,7 +2501,10 @@
       "title": "seq_page_cost",
       "description": "Sets the planner's estimate of the cost of a sequentially fetched disk page.\n\nsee https://postgresqlco.nf/doc/en/param/seq_page_cost/",
       "markdownDescription": "Sets the planner's estimate of the cost of a sequentially fetched disk page.\n\nsee [seq_page_cost documentation](https://postgresqlco.nf/doc/en/param/seq_page_cost/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1"
       ]
@@ -2168,7 +2531,10 @@
       "title": "server_version_num",
       "description": "Shows the server version as an integer.\n\nsee https://postgresqlco.nf/doc/en/param/server_version_num/",
       "markdownDescription": "Shows the server version as an integer.\n\nsee [server_version_num documentation](https://postgresqlco.nf/doc/en/param/server_version_num/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "140009"
       ]
@@ -2186,7 +2552,10 @@
       "title": "shared_buffers",
       "description": "Sets the number of shared memory buffers used by the server.\n\nsee https://postgresqlco.nf/doc/en/param/shared_buffers/",
       "markdownDescription": "Sets the number of shared memory buffers used by the server.\n\nsee [shared_buffers documentation](https://postgresqlco.nf/doc/en/param/shared_buffers/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "16384"
       ]
@@ -2231,7 +2600,10 @@
       "title": "ssl_crl_dir",
       "description": "Location of the SSL certificate revocation list directory.\n\nsee https://postgresqlco.nf/doc/en/param/ssl_crl_dir/",
       "markdownDescription": "Location of the SSL certificate revocation list directory.\n\nsee [ssl_crl_dir documentation](https://postgresqlco.nf/doc/en/param/ssl_crl_dir/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2240,7 +2612,10 @@
       "title": "ssl_crl_file",
       "description": "Location of the SSL certificate revocation list file.\n\nsee https://postgresqlco.nf/doc/en/param/ssl_crl_file/",
       "markdownDescription": "Location of the SSL certificate revocation list file.\n\nsee [ssl_crl_file documentation](https://postgresqlco.nf/doc/en/param/ssl_crl_file/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2294,7 +2669,10 @@
       "title": "statement_timeout",
       "description": "Sets the maximum allowed duration of any statement.\n\nsee https://postgresqlco.nf/doc/en/param/statement_timeout/",
       "markdownDescription": "Sets the maximum allowed duration of any statement.\n\nsee [statement_timeout documentation](https://postgresqlco.nf/doc/en/param/statement_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -2303,7 +2681,10 @@
       "title": "superuser_reserved_connections",
       "description": "Sets the number of connection slots reserved for superusers.\n\nsee https://postgresqlco.nf/doc/en/param/superuser_reserved_connections/",
       "markdownDescription": "Sets the number of connection slots reserved for superusers.\n\nsee [superuser_reserved_connections documentation](https://postgresqlco.nf/doc/en/param/superuser_reserved_connections/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "3"
       ]
@@ -2330,7 +2711,10 @@
       "title": "synchronous_standby_names",
       "description": "Number of synchronous standbys and list of names of potential synchronous ones.\n\nsee https://postgresqlco.nf/doc/en/param/synchronous_standby_names/",
       "markdownDescription": "Number of synchronous standbys and list of names of potential synchronous ones.\n\nsee [synchronous_standby_names documentation](https://postgresqlco.nf/doc/en/param/synchronous_standby_names/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2375,7 +2759,10 @@
       "title": "tcp_keepalives_count",
       "description": "Maximum number of TCP keepalive retransmits.\n\nsee https://postgresqlco.nf/doc/en/param/tcp_keepalives_count/",
       "markdownDescription": "Maximum number of TCP keepalive retransmits.\n\nsee [tcp_keepalives_count documentation](https://postgresqlco.nf/doc/en/param/tcp_keepalives_count/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "9"
       ]
@@ -2384,7 +2771,10 @@
       "title": "tcp_keepalives_idle",
       "description": "Time between issuing TCP keepalives.\n\nsee https://postgresqlco.nf/doc/en/param/tcp_keepalives_idle/",
       "markdownDescription": "Time between issuing TCP keepalives.\n\nsee [tcp_keepalives_idle documentation](https://postgresqlco.nf/doc/en/param/tcp_keepalives_idle/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "7200"
       ]
@@ -2393,7 +2783,10 @@
       "title": "tcp_keepalives_interval",
       "description": "Time between TCP keepalive retransmits.\n\nsee https://postgresqlco.nf/doc/en/param/tcp_keepalives_interval/",
       "markdownDescription": "Time between TCP keepalive retransmits.\n\nsee [tcp_keepalives_interval documentation](https://postgresqlco.nf/doc/en/param/tcp_keepalives_interval/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "75"
       ]
@@ -2402,7 +2795,10 @@
       "title": "tcp_user_timeout",
       "description": "TCP user timeout.\n\nsee https://postgresqlco.nf/doc/en/param/tcp_user_timeout/",
       "markdownDescription": "TCP user timeout.\n\nsee [tcp_user_timeout documentation](https://postgresqlco.nf/doc/en/param/tcp_user_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -2411,7 +2807,10 @@
       "title": "temp_buffers",
       "description": "Sets the maximum number of temporary buffers used by each session.\n\nsee https://postgresqlco.nf/doc/en/param/temp_buffers/",
       "markdownDescription": "Sets the maximum number of temporary buffers used by each session.\n\nsee [temp_buffers documentation](https://postgresqlco.nf/doc/en/param/temp_buffers/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1024"
       ]
@@ -2420,7 +2819,10 @@
       "title": "temp_file_limit",
       "description": "Limits the total size of all temporary files used by each process.\n\nsee https://postgresqlco.nf/doc/en/param/temp_file_limit/",
       "markdownDescription": "Limits the total size of all temporary files used by each process.\n\nsee [temp_file_limit documentation](https://postgresqlco.nf/doc/en/param/temp_file_limit/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "-1"
       ]
@@ -2429,7 +2831,10 @@
       "title": "temp_tablespaces",
       "description": "Sets the tablespace(s) to use for temporary tables and sort files.\n\nsee https://postgresqlco.nf/doc/en/param/temp_tablespaces/",
       "markdownDescription": "Sets the tablespace(s) to use for temporary tables and sort files.\n\nsee [temp_tablespaces documentation](https://postgresqlco.nf/doc/en/param/temp_tablespaces/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2492,7 +2897,10 @@
       "title": "track_activity_query_size",
       "description": "Sets the size reserved for pg_stat_activity.query, in bytes.\n\nsee https://postgresqlco.nf/doc/en/param/track_activity_query_size/",
       "markdownDescription": "Sets the size reserved for pg_stat_activity.query, in bytes.\n\nsee [track_activity_query_size documentation](https://postgresqlco.nf/doc/en/param/track_activity_query_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1024"
       ]
@@ -2582,7 +2990,10 @@
       "title": "unix_socket_group",
       "description": "Sets the owning group of the Unix-domain socket.\n\nsee https://postgresqlco.nf/doc/en/param/unix_socket_group/",
       "markdownDescription": "Sets the owning group of the Unix-domain socket.\n\nsee [unix_socket_group documentation](https://postgresqlco.nf/doc/en/param/unix_socket_group/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2591,7 +3002,10 @@
       "title": "unix_socket_permissions",
       "description": "Sets the access permissions of the Unix-domain socket.\n\nsee https://postgresqlco.nf/doc/en/param/unix_socket_permissions/",
       "markdownDescription": "Sets the access permissions of the Unix-domain socket.\n\nsee [unix_socket_permissions documentation](https://postgresqlco.nf/doc/en/param/unix_socket_permissions/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0777"
       ]
@@ -2609,7 +3023,10 @@
       "title": "vacuum_cost_delay",
       "description": "Vacuum cost delay in milliseconds.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_cost_delay/",
       "markdownDescription": "Vacuum cost delay in milliseconds.\n\nsee [vacuum_cost_delay documentation](https://postgresqlco.nf/doc/en/param/vacuum_cost_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -2618,7 +3035,10 @@
       "title": "vacuum_cost_limit",
       "description": "Vacuum cost amount available before napping.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_cost_limit/",
       "markdownDescription": "Vacuum cost amount available before napping.\n\nsee [vacuum_cost_limit documentation](https://postgresqlco.nf/doc/en/param/vacuum_cost_limit/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "200"
       ]
@@ -2627,7 +3047,10 @@
       "title": "vacuum_cost_page_dirty",
       "description": "Vacuum cost for a page dirtied by vacuum.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_cost_page_dirty/",
       "markdownDescription": "Vacuum cost for a page dirtied by vacuum.\n\nsee [vacuum_cost_page_dirty documentation](https://postgresqlco.nf/doc/en/param/vacuum_cost_page_dirty/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "20"
       ]
@@ -2636,7 +3059,10 @@
       "title": "vacuum_cost_page_hit",
       "description": "Vacuum cost for a page found in the buffer cache.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_cost_page_hit/",
       "markdownDescription": "Vacuum cost for a page found in the buffer cache.\n\nsee [vacuum_cost_page_hit documentation](https://postgresqlco.nf/doc/en/param/vacuum_cost_page_hit/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1"
       ]
@@ -2645,7 +3071,10 @@
       "title": "vacuum_cost_page_miss",
       "description": "Vacuum cost for a page not found in the buffer cache.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_cost_page_miss/",
       "markdownDescription": "Vacuum cost for a page not found in the buffer cache.\n\nsee [vacuum_cost_page_miss documentation](https://postgresqlco.nf/doc/en/param/vacuum_cost_page_miss/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2"
       ]
@@ -2654,7 +3083,10 @@
       "title": "vacuum_defer_cleanup_age",
       "description": "Number of transactions by which VACUUM and HOT cleanup should be deferred, if any.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_defer_cleanup_age/",
       "markdownDescription": "Number of transactions by which VACUUM and HOT cleanup should be deferred, if any.\n\nsee [vacuum_defer_cleanup_age documentation](https://postgresqlco.nf/doc/en/param/vacuum_defer_cleanup_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "0"
       ]
@@ -2663,7 +3095,10 @@
       "title": "vacuum_failsafe_age",
       "description": "Age at which VACUUM should trigger failsafe to avoid a wraparound outage.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_failsafe_age/",
       "markdownDescription": "Age at which VACUUM should trigger failsafe to avoid a wraparound outage.\n\nsee [vacuum_failsafe_age documentation](https://postgresqlco.nf/doc/en/param/vacuum_failsafe_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1600000000"
       ]
@@ -2672,7 +3107,10 @@
       "title": "vacuum_freeze_min_age",
       "description": "Minimum age at which VACUUM should freeze a table row.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_freeze_min_age/",
       "markdownDescription": "Minimum age at which VACUUM should freeze a table row.\n\nsee [vacuum_freeze_min_age documentation](https://postgresqlco.nf/doc/en/param/vacuum_freeze_min_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "50000000"
       ]
@@ -2681,7 +3119,10 @@
       "title": "vacuum_freeze_table_age",
       "description": "Age at which VACUUM should scan whole table to freeze tuples.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_freeze_table_age/",
       "markdownDescription": "Age at which VACUUM should scan whole table to freeze tuples.\n\nsee [vacuum_freeze_table_age documentation](https://postgresqlco.nf/doc/en/param/vacuum_freeze_table_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "150000000"
       ]
@@ -2690,7 +3131,10 @@
       "title": "vacuum_multixact_failsafe_age",
       "description": "Multixact age at which VACUUM should trigger failsafe to avoid a wraparound outage.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_multixact_failsafe_age/",
       "markdownDescription": "Multixact age at which VACUUM should trigger failsafe to avoid a wraparound outage.\n\nsee [vacuum_multixact_failsafe_age documentation](https://postgresqlco.nf/doc/en/param/vacuum_multixact_failsafe_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "1600000000"
       ]
@@ -2699,7 +3143,10 @@
       "title": "vacuum_multixact_freeze_min_age",
       "description": "Minimum age at which VACUUM should freeze a MultiXactId in a table row.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_multixact_freeze_min_age/",
       "markdownDescription": "Minimum age at which VACUUM should freeze a MultiXactId in a table row.\n\nsee [vacuum_multixact_freeze_min_age documentation](https://postgresqlco.nf/doc/en/param/vacuum_multixact_freeze_min_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "5000000"
       ]
@@ -2708,7 +3155,10 @@
       "title": "vacuum_multixact_freeze_table_age",
       "description": "Multixact age at which VACUUM should scan whole table to freeze tuples.\n\nsee https://postgresqlco.nf/doc/en/param/vacuum_multixact_freeze_table_age/",
       "markdownDescription": "Multixact age at which VACUUM should scan whole table to freeze tuples.\n\nsee [vacuum_multixact_freeze_table_age documentation](https://postgresqlco.nf/doc/en/param/vacuum_multixact_freeze_table_age/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "150000000"
       ]
@@ -2717,7 +3167,10 @@
       "title": "wal_block_size",
       "description": "Shows the block size in the write ahead log.\n\nsee https://postgresqlco.nf/doc/en/param/wal_block_size/",
       "markdownDescription": "Shows the block size in the write ahead log.\n\nsee [wal_block_size documentation](https://postgresqlco.nf/doc/en/param/wal_block_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "8192"
       ]
@@ -2726,7 +3179,10 @@
       "title": "wal_buffers",
       "description": "Sets the number of disk-page buffers in shared memory for WAL.\n\nsee https://postgresqlco.nf/doc/en/param/wal_buffers/",
       "markdownDescription": "Sets the number of disk-page buffers in shared memory for WAL.\n\nsee [wal_buffers documentation](https://postgresqlco.nf/doc/en/param/wal_buffers/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "512"
       ]
@@ -2744,7 +3200,10 @@
       "title": "wal_consistency_checking",
       "description": "Sets the WAL resource managers for which WAL consistency checks are done.\n\nsee https://postgresqlco.nf/doc/en/param/wal_consistency_checking/",
       "markdownDescription": "Sets the WAL resource managers for which WAL consistency checks are done.\n\nsee [wal_consistency_checking documentation](https://postgresqlco.nf/doc/en/param/wal_consistency_checking/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         ""
       ]
@@ -2762,7 +3221,10 @@
       "title": "wal_keep_size",
       "description": "Sets the size of WAL files held for standby servers.\n\nsee https://postgresqlco.nf/doc/en/param/wal_keep_size/",
       "markdownDescription": "Sets the size of WAL files held for standby servers.\n\nsee [wal_keep_size documentation](https://postgresqlco.nf/doc/en/param/wal_keep_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "512"
       ]
@@ -2798,7 +3260,10 @@
       "title": "wal_receiver_status_interval",
       "description": "Sets the maximum interval between WAL receiver status reports to the sending server.\n\nsee https://postgresqlco.nf/doc/en/param/wal_receiver_status_interval/",
       "markdownDescription": "Sets the maximum interval between WAL receiver status reports to the sending server.\n\nsee [wal_receiver_status_interval documentation](https://postgresqlco.nf/doc/en/param/wal_receiver_status_interval/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "10"
       ]
@@ -2807,7 +3272,10 @@
       "title": "wal_receiver_timeout",
       "description": "Sets the maximum wait time to receive data from the sending server.\n\nsee https://postgresqlco.nf/doc/en/param/wal_receiver_timeout/",
       "markdownDescription": "Sets the maximum wait time to receive data from the sending server.\n\nsee [wal_receiver_timeout documentation](https://postgresqlco.nf/doc/en/param/wal_receiver_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "5000"
       ]
@@ -2825,7 +3293,10 @@
       "title": "wal_retrieve_retry_interval",
       "description": "Sets the time to wait before retrying to retrieve WAL after a failed attempt.\n\nsee https://postgresqlco.nf/doc/en/param/wal_retrieve_retry_interval/",
       "markdownDescription": "Sets the time to wait before retrying to retrieve WAL after a failed attempt.\n\nsee [wal_retrieve_retry_interval documentation](https://postgresqlco.nf/doc/en/param/wal_retrieve_retry_interval/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "5000"
       ]
@@ -2834,7 +3305,10 @@
       "title": "wal_segment_size",
       "description": "Shows the size of write ahead log segments.\n\nsee https://postgresqlco.nf/doc/en/param/wal_segment_size/",
       "markdownDescription": "Shows the size of write ahead log segments.\n\nsee [wal_segment_size documentation](https://postgresqlco.nf/doc/en/param/wal_segment_size/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "16777216"
       ]
@@ -2843,7 +3317,10 @@
       "title": "wal_sender_timeout",
       "description": "Sets the maximum time to wait for WAL replication.\n\nsee https://postgresqlco.nf/doc/en/param/wal_sender_timeout/",
       "markdownDescription": "Sets the maximum time to wait for WAL replication.\n\nsee [wal_sender_timeout documentation](https://postgresqlco.nf/doc/en/param/wal_sender_timeout/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "5000"
       ]
@@ -2852,7 +3329,10 @@
       "title": "wal_skip_threshold",
       "description": "Minimum size of new file to fsync instead of writing WAL.\n\nsee https://postgresqlco.nf/doc/en/param/wal_skip_threshold/",
       "markdownDescription": "Minimum size of new file to fsync instead of writing WAL.\n\nsee [wal_skip_threshold documentation](https://postgresqlco.nf/doc/en/param/wal_skip_threshold/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "2048"
       ]
@@ -2870,7 +3350,10 @@
       "title": "wal_writer_delay",
       "description": "Time between WAL flushes performed in the WAL writer.\n\nsee https://postgresqlco.nf/doc/en/param/wal_writer_delay/",
       "markdownDescription": "Time between WAL flushes performed in the WAL writer.\n\nsee [wal_writer_delay documentation](https://postgresqlco.nf/doc/en/param/wal_writer_delay/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "200"
       ]
@@ -2879,7 +3362,10 @@
       "title": "wal_writer_flush_after",
       "description": "Amount of WAL written out by WAL writer that triggers a flush.\n\nsee https://postgresqlco.nf/doc/en/param/wal_writer_flush_after/",
       "markdownDescription": "Amount of WAL written out by WAL writer that triggers a flush.\n\nsee [wal_writer_flush_after documentation](https://postgresqlco.nf/doc/en/param/wal_writer_flush_after/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "128"
       ]
@@ -2888,7 +3374,10 @@
       "title": "work_mem",
       "description": "Sets the maximum memory to be used for query workspaces.\n\nsee https://postgresqlco.nf/doc/en/param/work_mem/",
       "markdownDescription": "Sets the maximum memory to be used for query workspaces.\n\nsee [work_mem documentation](https://postgresqlco.nf/doc/en/param/work_mem/)",
-      "type": "number",
+      "type": [
+        "number",
+        "string"
+      ],
       "examples": [
         "524288"
       ]

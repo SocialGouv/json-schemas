@@ -41,6 +41,7 @@ const properties = Array.from(
 
 const schema = {
   $schema: "http://json-schema.org/draft-07/schema#",
+  $id: "https://raw.githubusercontent.com/SocialGouv/json-schemas/main/nginx/annotations.schema.json",
   type: "object",
   title: "List of NGINX ingress annotations.",
   markdownDescription:

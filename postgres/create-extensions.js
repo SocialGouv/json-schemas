@@ -77,11 +77,7 @@ const schema = {
   title:
     "List of Postgres regular extensions. see https://www.postgresql.org/docs/current/contrib.html",
   items: {
-    anyOf: rows.map((row) => ({
-      const: row[0],
-      title: row[0],
-      description: row[3],
-    })),
+    enum: rows.map((row) => row[0]),
   },
 };
 

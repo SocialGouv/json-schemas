@@ -2231,6 +2231,24 @@
         "scram-sha-256"
       ]
     },
+    "pg_stat_statements.track": {
+      "title": "pg_stat_statements.track",
+      "description": "Controls which statements are counted by the module. \n\nsee https://www.postgresql.org/docs/current/pgstatstatements.html#PGSTATSTATEMENTS-CONFIG-PARAMS",
+      "markdownDescription": "Controls which statements are counted by the module.\n\nsee [pg_stat_statements documentation](https://www.postgresql.org/docs/current/pgstatstatements.html#PGSTATSTATEMENTS-CONFIG-PARAMS)",
+      "type": "string",
+      "examples": [
+        "all"
+      ]
+    },
+    "pg_stat_statements.max": {
+      "title": "pg_stat_statements.max",
+      "description": "Maximum number of statements tracked by the module. \n\nsee https://www.postgresql.org/docs/current/pgstatstatements.html#PGSTATSTATEMENTS-CONFIG-PARAMS",
+      "markdownDescription": "Maximum number of statements tracked by the module.\n\nsee [pg_stat_statements documentation](https://www.postgresql.org/docs/current/pgstatstatements.html#PGSTATSTATEMENTS-CONFIG-PARAMS)",
+      "type": "integer",
+      "examples": [
+        5000
+      ]
+    },
     "plan_cache_mode": {
       "title": "plan_cache_mode",
       "description": "Controls the planner's selection of custom or generic plan.\n\nsee https://postgresqlco.nf/doc/en/param/plan_cache_mode/",

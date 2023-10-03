@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=./parameters.json
+
+wal_keep_size: "512"
+seq_page_cost: "87687587587"

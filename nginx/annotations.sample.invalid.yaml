@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=./annotations.schema.json
+
+nginx.ingress.kubernetes.io/affinity: 42
+
+nginx.ingress.kubernetes.io/session-cookie-secure: true
+
+nginx.ingress.kubernetes.io/unknown-annotation: 42

@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=./extensions.json
+
+- address_standardizer
+- hstore
+- pg_prewarm

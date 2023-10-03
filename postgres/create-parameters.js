@@ -369,48 +369,33 @@ const rows = `
 const keys = rows.reduce((a, c) => {
   const [name, vartype, setting, enumvals, min_val, max_val, short_desc] = c;
   const types = {
-    integer: "integer",
+    integer: "string", // CNPG accepts only strings
     bool: "string", // bool are "on" or "off"
     string: "string",
-    real: "number",
+    real: "string", // CNPG accepts only strings
     enum: "string",
   };
-  const examples =
-    vartype === "integer"
-      ? [parseInt(setting)]
-      : vartype === "real"
-      ? [parseFloat(setting)]
-      : setting
-      ? [setting]
-      : [];
+  let description = short_desc;
+  if (min_val) {
+    description += `\n\nMinimum: ${min_val}`;
+  }
+  if (max_val) {
+    description += `\n\nMaximum: ${max_val}`;
+  }
   const newParam = {
     title: name,
     description:
-      short_desc + `\n\nsee https://postgresqlco.nf/doc/en/param/${c[0]}/`,
+      description + `\n\nsee https://postgresqlco.nf/doc/en/param/${c[0]}/`,
     markdownDescription:
-      short_desc +
+      description +
       `\n\nsee [${c[0]} documentation](https://postgresqlco.nf/doc/en/param/${c[0]}/)`,
     type: types[vartype],
-    examples,
   };
+  if (setting) {
+    newParam.examples = [setting];
+  }
   if (enumvals) {
     newParam.enum = enumvals.replace(/^\{([^}]+)\}$/, "$1").split(",");
-  }
-  if (min_val) {
-    newParam.minimum =
-      vartype === "integer"
-        ? parseInt(min_val)
-        : vartype === "real"
-        ? parseFloat(min_val)
-        : min_val;
-  }
-  if (max_val) {
-    newParam.maximum =
-      vartype === "integer"
-        ? parseInt(max_val)
-        : vartype === "real"
-        ? parseFloat(max_val)
-        : max_val;
   }
   return {
     ...a,

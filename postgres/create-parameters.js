@@ -375,6 +375,14 @@ const keys = rows.reduce((a, c) => {
     real: "number",
     enum: "string",
   };
+  const examples =
+    vartype === "integer"
+      ? [parseInt(setting)]
+      : vartype === "real"
+      ? [parseFloat(setting)]
+      : setting
+      ? [setting]
+      : [];
   const newParam = {
     title: name,
     description:
@@ -383,7 +391,7 @@ const keys = rows.reduce((a, c) => {
       short_desc +
       `\n\nsee [${c[0]} documentation](https://postgresqlco.nf/doc/en/param/${c[0]}/)`,
     type: types[vartype],
-    examples: [setting],
+    examples,
   };
   if (enumvals) {
     newParam.enum = enumvals.replace(/^\{([^}]+)\}$/, "$1").split(",");

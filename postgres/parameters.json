@@ -70,8 +70,8 @@
       "examples": [
         300
       ],
-      "minimum": "0",
-      "maximum": "1073741823"
+      "minimum": 0,
+      "maximum": 1073741823
     },
     "array_nulls": {
       "title": "array_nulls",
@@ -90,8 +90,8 @@
       "examples": [
         60
       ],
-      "minimum": "1",
-      "maximum": "600"
+      "minimum": 1,
+      "maximum": 600
     },
     "autovacuum": {
       "title": "autovacuum",
@@ -110,8 +110,8 @@
       "examples": [
         0.1
       ],
-      "minimum": "0",
-      "maximum": "100"
+      "minimum": 0,
+      "maximum": 100
     },
     "autovacuum_analyze_threshold": {
       "title": "autovacuum_analyze_threshold",
@@ -121,8 +121,8 @@
       "examples": [
         50
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "autovacuum_freeze_max_age": {
       "title": "autovacuum_freeze_max_age",
@@ -132,8 +132,8 @@
       "examples": [
         200000000
       ],
-      "minimum": "100000",
-      "maximum": "2000000000"
+      "minimum": 100000,
+      "maximum": 2000000000
     },
     "autovacuum_max_workers": {
       "title": "autovacuum_max_workers",
@@ -143,8 +143,8 @@
       "examples": [
         3
       ],
-      "minimum": "1",
-      "maximum": "262143"
+      "minimum": 1,
+      "maximum": 262143
     },
     "autovacuum_multixact_freeze_max_age": {
       "title": "autovacuum_multixact_freeze_max_age",
@@ -154,8 +154,8 @@
       "examples": [
         400000000
       ],
-      "minimum": "10000",
-      "maximum": "2000000000"
+      "minimum": 10000,
+      "maximum": 2000000000
     },
     "autovacuum_naptime": {
       "title": "autovacuum_naptime",
@@ -165,8 +165,8 @@
       "examples": [
         60
       ],
-      "minimum": "1",
-      "maximum": "2147483"
+      "minimum": 1,
+      "maximum": 2147483
     },
     "autovacuum_vacuum_cost_delay": {
       "title": "autovacuum_vacuum_cost_delay",
@@ -176,8 +176,8 @@
       "examples": [
         2
       ],
-      "minimum": "-1",
-      "maximum": "100"
+      "minimum": -1,
+      "maximum": 100
     },
     "autovacuum_vacuum_cost_limit": {
       "title": "autovacuum_vacuum_cost_limit",
@@ -187,8 +187,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "10000"
+      "minimum": -1,
+      "maximum": 10000
     },
     "autovacuum_vacuum_insert_scale_factor": {
       "title": "autovacuum_vacuum_insert_scale_factor",
@@ -198,8 +198,8 @@
       "examples": [
         0.2
       ],
-      "minimum": "0",
-      "maximum": "100"
+      "minimum": 0,
+      "maximum": 100
     },
     "autovacuum_vacuum_insert_threshold": {
       "title": "autovacuum_vacuum_insert_threshold",
@@ -209,8 +209,8 @@
       "examples": [
         1000
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "autovacuum_vacuum_scale_factor": {
       "title": "autovacuum_vacuum_scale_factor",
@@ -220,8 +220,8 @@
       "examples": [
         0.2
       ],
-      "minimum": "0",
-      "maximum": "100"
+      "minimum": 0,
+      "maximum": 100
     },
     "autovacuum_vacuum_threshold": {
       "title": "autovacuum_vacuum_threshold",
@@ -231,8 +231,8 @@
       "examples": [
         50
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "autovacuum_work_mem": {
       "title": "autovacuum_work_mem",
@@ -242,8 +242,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "backend_flush_after": {
       "title": "backend_flush_after",
@@ -253,8 +253,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "256"
+      "minimum": 0,
+      "maximum": 256
     },
     "backslash_quote": {
       "title": "backslash_quote",
@@ -285,8 +285,8 @@
       "examples": [
         200
       ],
-      "minimum": "10",
-      "maximum": "10000"
+      "minimum": 10,
+      "maximum": 10000
     },
     "bgwriter_flush_after": {
       "title": "bgwriter_flush_after",
@@ -296,8 +296,8 @@
       "examples": [
         64
       ],
-      "minimum": "0",
-      "maximum": "256"
+      "minimum": 0,
+      "maximum": 256
     },
     "bgwriter_lru_maxpages": {
       "title": "bgwriter_lru_maxpages",
@@ -307,8 +307,8 @@
       "examples": [
         100
       ],
-      "minimum": "0",
-      "maximum": "1073741823"
+      "minimum": 0,
+      "maximum": 1073741823
     },
     "bgwriter_lru_multiplier": {
       "title": "bgwriter_lru_multiplier",
@@ -318,8 +318,8 @@
       "examples": [
         2
       ],
-      "minimum": "0",
-      "maximum": "10"
+      "minimum": 0,
+      "maximum": 10
     },
     "block_size": {
       "title": "block_size",
@@ -329,8 +329,8 @@
       "examples": [
         8192
       ],
-      "minimum": "8192",
-      "maximum": "8192"
+      "minimum": 8192,
+      "maximum": 8192
     },
     "bonjour": {
       "title": "bonjour",
@@ -378,8 +378,8 @@
       "examples": [
         0.9
       ],
-      "minimum": "0",
-      "maximum": "1"
+      "minimum": 0,
+      "maximum": 1
     },
     "checkpoint_flush_after": {
       "title": "checkpoint_flush_after",
@@ -389,8 +389,8 @@
       "examples": [
         32
       ],
-      "minimum": "0",
-      "maximum": "256"
+      "minimum": 0,
+      "maximum": 256
     },
     "checkpoint_timeout": {
       "title": "checkpoint_timeout",
@@ -400,8 +400,8 @@
       "examples": [
         300
       ],
-      "minimum": "30",
-      "maximum": "86400"
+      "minimum": 30,
+      "maximum": 86400
     },
     "checkpoint_warning": {
       "title": "checkpoint_warning",
@@ -411,8 +411,8 @@
       "examples": [
         30
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "client_connection_check_interval": {
       "title": "client_connection_check_interval",
@@ -422,8 +422,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "client_encoding": {
       "title": "client_encoding",
@@ -471,8 +471,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "100000"
+      "minimum": 0,
+      "maximum": 100000
     },
     "commit_siblings": {
       "title": "commit_siblings",
@@ -482,8 +482,8 @@
       "examples": [
         5
       ],
-      "minimum": "0",
-      "maximum": "1000"
+      "minimum": 0,
+      "maximum": 1000
     },
     "compute_query_id": {
       "title": "compute_query_id",
@@ -531,8 +531,8 @@
       "examples": [
         0.005
       ],
-      "minimum": "0",
-      "maximum": "1.79769e+308"
+      "minimum": 0,
+      "maximum": 1.79769e+308
     },
     "cpu_operator_cost": {
       "title": "cpu_operator_cost",
@@ -542,8 +542,8 @@
       "examples": [
         0.0025
       ],
-      "minimum": "0",
-      "maximum": "1.79769e+308"
+      "minimum": 0,
+      "maximum": 1.79769e+308
     },
     "cpu_tuple_cost": {
       "title": "cpu_tuple_cost",
@@ -553,8 +553,8 @@
       "examples": [
         0.01
       ],
-      "minimum": "0",
-      "maximum": "1.79769e+308"
+      "minimum": 0,
+      "maximum": 1.79769e+308
     },
     "cursor_tuple_fraction": {
       "title": "cursor_tuple_fraction",
@@ -564,8 +564,8 @@
       "examples": [
         0.1
       ],
-      "minimum": "0",
-      "maximum": "1"
+      "minimum": 0,
+      "maximum": 1
     },
     "data_checksums": {
       "title": "data_checksums",
@@ -593,8 +593,8 @@
       "examples": [
         700
       ],
-      "minimum": "0",
-      "maximum": "511"
+      "minimum": 0,
+      "maximum": 511
     },
     "data_sync_retry": {
       "title": "data_sync_retry",
@@ -631,8 +631,8 @@
       "examples": [
         1000
       ],
-      "minimum": "1",
-      "maximum": "2147483647"
+      "minimum": 1,
+      "maximum": 2147483647
     },
     "debug_assertions": {
       "title": "debug_assertions",
@@ -651,8 +651,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "0"
+      "minimum": 0,
+      "maximum": 0
     },
     "debug_pretty_print": {
       "title": "debug_pretty_print",
@@ -698,8 +698,8 @@
       "examples": [
         100
       ],
-      "minimum": "1",
-      "maximum": "10000"
+      "minimum": 1,
+      "maximum": 10000
     },
     "default_table_access_method": {
       "title": "default_table_access_method",
@@ -803,8 +803,8 @@
       "examples": [
         524288
       ],
-      "minimum": "1",
-      "maximum": "2147483647"
+      "minimum": 1,
+      "maximum": 2147483647
     },
     "effective_io_concurrency": {
       "title": "effective_io_concurrency",
@@ -814,8 +814,8 @@
       "examples": [
         1
       ],
-      "minimum": "0",
-      "maximum": "1000"
+      "minimum": 0,
+      "maximum": 1000
     },
     "enable_async_append": {
       "title": "enable_async_append",
@@ -1046,8 +1046,8 @@
       "examples": [
         1
       ],
-      "minimum": "-15",
-      "maximum": "3"
+      "minimum": -15,
+      "maximum": 3
     },
     "force_parallel_mode": {
       "title": "force_parallel_mode",
@@ -1071,8 +1071,8 @@
       "examples": [
         8
       ],
-      "minimum": "1",
-      "maximum": "2147483647"
+      "minimum": 1,
+      "maximum": 2147483647
     },
     "fsync": {
       "title": "fsync",
@@ -1109,8 +1109,8 @@
       "examples": [
         5
       ],
-      "minimum": "1",
-      "maximum": "10"
+      "minimum": 1,
+      "maximum": 10
     },
     "geqo_generations": {
       "title": "geqo_generations",
@@ -1120,8 +1120,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "geqo_pool_size": {
       "title": "geqo_pool_size",
@@ -1131,8 +1131,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "geqo_seed": {
       "title": "geqo_seed",
@@ -1142,8 +1142,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "1"
+      "minimum": 0,
+      "maximum": 1
     },
     "geqo_selection_bias": {
       "title": "geqo_selection_bias",
@@ -1153,8 +1153,8 @@
       "examples": [
         2
       ],
-      "minimum": "1.5",
-      "maximum": "2"
+      "minimum": 1.5,
+      "maximum": 2
     },
     "geqo_threshold": {
       "title": "geqo_threshold",
@@ -1164,8 +1164,8 @@
       "examples": [
         12
       ],
-      "minimum": "2",
-      "maximum": "2147483647"
+      "minimum": 2,
+      "maximum": 2147483647
     },
     "gin_fuzzy_search_limit": {
       "title": "gin_fuzzy_search_limit",
@@ -1175,8 +1175,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "gin_pending_list_limit": {
       "title": "gin_pending_list_limit",
@@ -1186,8 +1186,8 @@
       "examples": [
         4096
       ],
-      "minimum": "64",
-      "maximum": "2147483647"
+      "minimum": 64,
+      "maximum": 2147483647
     },
     "hash_mem_multiplier": {
       "title": "hash_mem_multiplier",
@@ -1197,8 +1197,8 @@
       "examples": [
         1
       ],
-      "minimum": "1",
-      "maximum": "1000"
+      "minimum": 1,
+      "maximum": 1000
     },
     "hba_file": {
       "title": "hba_file",
@@ -1235,8 +1235,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "huge_pages": {
       "title": "huge_pages",
@@ -1269,8 +1269,8 @@
       "examples": [
         240000
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "idle_session_timeout": {
       "title": "idle_session_timeout",
@@ -1280,8 +1280,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "ignore_checksum_failure": {
       "title": "ignore_checksum_failure",
@@ -1360,8 +1360,8 @@
       "examples": [
         100000
       ],
-      "minimum": "-1",
-      "maximum": "1.79769e+308"
+      "minimum": -1,
+      "maximum": 1.79769e+308
     },
     "jit_debugging_support": {
       "title": "jit_debugging_support",
@@ -1398,8 +1398,8 @@
       "examples": [
         500000
       ],
-      "minimum": "-1",
-      "maximum": "1.79769e+308"
+      "minimum": -1,
+      "maximum": 1.79769e+308
     },
     "jit_optimize_above_cost": {
       "title": "jit_optimize_above_cost",
@@ -1409,8 +1409,8 @@
       "examples": [
         500000
       ],
-      "minimum": "-1",
-      "maximum": "1.79769e+308"
+      "minimum": -1,
+      "maximum": 1.79769e+308
     },
     "jit_profiling_support": {
       "title": "jit_profiling_support",
@@ -1447,8 +1447,8 @@
       "examples": [
         8
       ],
-      "minimum": "1",
-      "maximum": "2147483647"
+      "minimum": 1,
+      "maximum": 2147483647
     },
     "krb_caseins_users": {
       "title": "krb_caseins_users",
@@ -1555,8 +1555,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "log_autovacuum_min_duration": {
       "title": "log_autovacuum_min_duration",
@@ -1566,8 +1566,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "log_checkpoints": {
       "title": "log_checkpoints",
@@ -1654,8 +1654,8 @@
       "examples": [
         600
       ],
-      "minimum": "0",
-      "maximum": "511"
+      "minimum": 0,
+      "maximum": 511
     },
     "log_filename": {
       "title": "log_filename",
@@ -1701,8 +1701,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "log_min_duration_statement": {
       "title": "log_min_duration_statement",
@@ -1712,8 +1712,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "log_min_error_statement": {
       "title": "log_min_error_statement",
@@ -1769,8 +1769,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "1073741823"
+      "minimum": -1,
+      "maximum": 1073741823
     },
     "log_parameter_max_length_on_error": {
       "title": "log_parameter_max_length_on_error",
@@ -1780,8 +1780,8 @@
       "examples": [
         0
       ],
-      "minimum": "-1",
-      "maximum": "1073741823"
+      "minimum": -1,
+      "maximum": 1073741823
     },
     "log_parser_stats": {
       "title": "log_parser_stats",
@@ -1827,8 +1827,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "35791394"
+      "minimum": 0,
+      "maximum": 35791394
     },
     "log_rotation_size": {
       "title": "log_rotation_size",
@@ -1838,8 +1838,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2097151"
+      "minimum": 0,
+      "maximum": 2097151
     },
     "log_statement": {
       "title": "log_statement",
@@ -1864,8 +1864,8 @@
       "examples": [
         1
       ],
-      "minimum": "0",
-      "maximum": "1"
+      "minimum": 0,
+      "maximum": 1
     },
     "log_statement_stats": {
       "title": "log_statement_stats",
@@ -1884,8 +1884,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "log_timezone": {
       "title": "log_timezone",
@@ -1904,8 +1904,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "1"
+      "minimum": 0,
+      "maximum": 1
     },
     "log_truncate_on_rotation": {
       "title": "log_truncate_on_rotation",
@@ -1933,8 +1933,8 @@
       "examples": [
         65536
       ],
-      "minimum": "64",
-      "maximum": "2147483647"
+      "minimum": 64,
+      "maximum": 2147483647
     },
     "maintenance_io_concurrency": {
       "title": "maintenance_io_concurrency",
@@ -1944,8 +1944,8 @@
       "examples": [
         10
       ],
-      "minimum": "0",
-      "maximum": "1000"
+      "minimum": 0,
+      "maximum": 1000
     },
     "maintenance_work_mem": {
       "title": "maintenance_work_mem",
@@ -1955,8 +1955,8 @@
       "examples": [
         65536
       ],
-      "minimum": "1024",
-      "maximum": "2147483647"
+      "minimum": 1024,
+      "maximum": 2147483647
     },
     "max_connections": {
       "title": "max_connections",
@@ -1966,8 +1966,8 @@
       "examples": [
         100
       ],
-      "minimum": "1",
-      "maximum": "262143"
+      "minimum": 1,
+      "maximum": 262143
     },
     "max_files_per_process": {
       "title": "max_files_per_process",
@@ -1977,8 +1977,8 @@
       "examples": [
         1000
       ],
-      "minimum": "64",
-      "maximum": "2147483647"
+      "minimum": 64,
+      "maximum": 2147483647
     },
     "max_function_args": {
       "title": "max_function_args",
@@ -1988,8 +1988,8 @@
       "examples": [
         100
       ],
-      "minimum": "100",
-      "maximum": "100"
+      "minimum": 100,
+      "maximum": 100
     },
     "max_identifier_length": {
       "title": "max_identifier_length",
@@ -1999,8 +1999,8 @@
       "examples": [
         63
       ],
-      "minimum": "63",
-      "maximum": "63"
+      "minimum": 63,
+      "maximum": 63
     },
     "max_index_keys": {
       "title": "max_index_keys",
@@ -2010,8 +2010,8 @@
       "examples": [
         32
       ],
-      "minimum": "32",
-      "maximum": "32"
+      "minimum": 32,
+      "maximum": 32
     },
     "max_locks_per_transaction": {
       "title": "max_locks_per_transaction",
@@ -2021,8 +2021,8 @@
       "examples": [
         64
       ],
-      "minimum": "10",
-      "maximum": "2147483647"
+      "minimum": 10,
+      "maximum": 2147483647
     },
     "max_logical_replication_workers": {
       "title": "max_logical_replication_workers",
@@ -2032,8 +2032,8 @@
       "examples": [
         4
       ],
-      "minimum": "0",
-      "maximum": "262143"
+      "minimum": 0,
+      "maximum": 262143
     },
     "max_parallel_maintenance_workers": {
       "title": "max_parallel_maintenance_workers",
@@ -2043,8 +2043,8 @@
       "examples": [
         2
       ],
-      "minimum": "0",
-      "maximum": "1024"
+      "minimum": 0,
+      "maximum": 1024
     },
     "max_parallel_workers": {
       "title": "max_parallel_workers",
@@ -2054,8 +2054,8 @@
       "examples": [
         32
       ],
-      "minimum": "0",
-      "maximum": "1024"
+      "minimum": 0,
+      "maximum": 1024
     },
     "max_parallel_workers_per_gather": {
       "title": "max_parallel_workers_per_gather",
@@ -2065,8 +2065,8 @@
       "examples": [
         2
       ],
-      "minimum": "0",
-      "maximum": "1024"
+      "minimum": 0,
+      "maximum": 1024
     },
     "max_pred_locks_per_page": {
       "title": "max_pred_locks_per_page",
@@ -2076,8 +2076,8 @@
       "examples": [
         2
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "max_pred_locks_per_relation": {
       "title": "max_pred_locks_per_relation",
@@ -2087,8 +2087,8 @@
       "examples": [
         -2
       ],
-      "minimum": "-2147483648",
-      "maximum": "2147483647"
+      "minimum": -2147483648,
+      "maximum": 2147483647
     },
     "max_pred_locks_per_transaction": {
       "title": "max_pred_locks_per_transaction",
@@ -2098,8 +2098,8 @@
       "examples": [
         64
       ],
-      "minimum": "10",
-      "maximum": "2147483647"
+      "minimum": 10,
+      "maximum": 2147483647
     },
     "max_prepared_transactions": {
       "title": "max_prepared_transactions",
@@ -2109,8 +2109,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "262143"
+      "minimum": 0,
+      "maximum": 262143
     },
     "max_replication_slots": {
       "title": "max_replication_slots",
@@ -2120,8 +2120,8 @@
       "examples": [
         32
       ],
-      "minimum": "0",
-      "maximum": "262143"
+      "minimum": 0,
+      "maximum": 262143
     },
     "max_slot_wal_keep_size": {
       "title": "max_slot_wal_keep_size",
@@ -2131,8 +2131,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "max_stack_depth": {
       "title": "max_stack_depth",
@@ -2142,8 +2142,8 @@
       "examples": [
         2048
       ],
-      "minimum": "100",
-      "maximum": "2147483647"
+      "minimum": 100,
+      "maximum": 2147483647
     },
     "max_standby_archive_delay": {
       "title": "max_standby_archive_delay",
@@ -2153,8 +2153,8 @@
       "examples": [
         30000
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "max_standby_streaming_delay": {
       "title": "max_standby_streaming_delay",
@@ -2164,8 +2164,8 @@
       "examples": [
         30000
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "max_sync_workers_per_subscription": {
       "title": "max_sync_workers_per_subscription",
@@ -2175,8 +2175,8 @@
       "examples": [
         2
       ],
-      "minimum": "0",
-      "maximum": "262143"
+      "minimum": 0,
+      "maximum": 262143
     },
     "max_wal_senders": {
       "title": "max_wal_senders",
@@ -2186,8 +2186,8 @@
       "examples": [
         10
       ],
-      "minimum": "0",
-      "maximum": "262143"
+      "minimum": 0,
+      "maximum": 262143
     },
     "max_wal_size": {
       "title": "max_wal_size",
@@ -2197,8 +2197,8 @@
       "examples": [
         1024
       ],
-      "minimum": "2",
-      "maximum": "2147483647"
+      "minimum": 2,
+      "maximum": 2147483647
     },
     "max_worker_processes": {
       "title": "max_worker_processes",
@@ -2208,8 +2208,8 @@
       "examples": [
         32
       ],
-      "minimum": "0",
-      "maximum": "262143"
+      "minimum": 0,
+      "maximum": 262143
     },
     "min_dynamic_shared_memory": {
       "title": "min_dynamic_shared_memory",
@@ -2219,8 +2219,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "min_parallel_index_scan_size": {
       "title": "min_parallel_index_scan_size",
@@ -2230,8 +2230,8 @@
       "examples": [
         64
       ],
-      "minimum": "0",
-      "maximum": "715827882"
+      "minimum": 0,
+      "maximum": 715827882
     },
     "min_parallel_table_scan_size": {
       "title": "min_parallel_table_scan_size",
@@ -2241,8 +2241,8 @@
       "examples": [
         1024
       ],
-      "minimum": "0",
-      "maximum": "715827882"
+      "minimum": 0,
+      "maximum": 715827882
     },
     "min_wal_size": {
       "title": "min_wal_size",
@@ -2252,8 +2252,8 @@
       "examples": [
         80
       ],
-      "minimum": "2",
-      "maximum": "2147483647"
+      "minimum": 2,
+      "maximum": 2147483647
     },
     "old_snapshot_threshold": {
       "title": "old_snapshot_threshold",
@@ -2263,8 +2263,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "86400"
+      "minimum": -1,
+      "maximum": 86400
     },
     "parallel_leader_participation": {
       "title": "parallel_leader_participation",
@@ -2283,8 +2283,8 @@
       "examples": [
         1000
       ],
-      "minimum": "0",
-      "maximum": "1.79769e+308"
+      "minimum": 0,
+      "maximum": 1.79769e+308
     },
     "parallel_tuple_cost": {
       "title": "parallel_tuple_cost",
@@ -2294,8 +2294,8 @@
       "examples": [
         0.1
       ],
-      "minimum": "0",
-      "maximum": "1.79769e+308"
+      "minimum": 0,
+      "maximum": 1.79769e+308
     },
     "password_encryption": {
       "title": "password_encryption",
@@ -2318,8 +2318,8 @@
       "examples": [
         10000
       ],
-      "minimum": "100",
-      "maximum": "1073741823"
+      "minimum": 100,
+      "maximum": 1073741823
     },
     "pg_stat_statements.save": {
       "title": "pg_stat_statements.save",
@@ -2384,8 +2384,8 @@
       "examples": [
         5432
       ],
-      "minimum": "1",
-      "maximum": "65535"
+      "minimum": 1,
+      "maximum": 65535
     },
     "post_auth_delay": {
       "title": "post_auth_delay",
@@ -2395,8 +2395,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147"
+      "minimum": 0,
+      "maximum": 2147
     },
     "pre_auth_delay": {
       "title": "pre_auth_delay",
@@ -2406,8 +2406,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "60"
+      "minimum": 0,
+      "maximum": 60
     },
     "primary_conninfo": {
       "title": "primary_conninfo",
@@ -2449,8 +2449,8 @@
       "examples": [
         4
       ],
-      "minimum": "0",
-      "maximum": "1.79769e+308"
+      "minimum": 0,
+      "maximum": 1.79769e+308
     },
     "recovery_end_command": {
       "title": "recovery_end_command",
@@ -2480,8 +2480,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "recovery_target": {
       "title": "recovery_target",
@@ -2603,8 +2603,8 @@
       "examples": [
         131072
       ],
-      "minimum": "131072",
-      "maximum": "131072"
+      "minimum": 131072,
+      "maximum": 131072
     },
     "seq_page_cost": {
       "title": "seq_page_cost",
@@ -2614,8 +2614,8 @@
       "examples": [
         1
       ],
-      "minimum": "0",
-      "maximum": "1.79769e+308"
+      "minimum": 0,
+      "maximum": 1.79769e+308
     },
     "server_encoding": {
       "title": "server_encoding",
@@ -2643,8 +2643,8 @@
       "examples": [
         140009
       ],
-      "minimum": "140009",
-      "maximum": "140009"
+      "minimum": 140009,
+      "maximum": 140009
     },
     "session_preload_libraries": {
       "title": "session_preload_libraries",
@@ -2675,8 +2675,8 @@
       "examples": [
         16384
       ],
-      "minimum": "16",
-      "maximum": "1073741823"
+      "minimum": 16,
+      "maximum": 1073741823
     },
     "shared_memory_type": {
       "title": "shared_memory_type",
@@ -2855,8 +2855,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "stats_temp_directory": {
       "title": "stats_temp_directory",
@@ -2875,8 +2875,8 @@
       "examples": [
         3
       ],
-      "minimum": "0",
-      "maximum": "262143"
+      "minimum": 0,
+      "maximum": 262143
     },
     "synchronize_seqscans": {
       "title": "synchronize_seqscans",
@@ -2966,8 +2966,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "tcp_keepalives_idle": {
       "title": "tcp_keepalives_idle",
@@ -2977,8 +2977,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "tcp_keepalives_interval": {
       "title": "tcp_keepalives_interval",
@@ -2988,8 +2988,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "tcp_user_timeout": {
       "title": "tcp_user_timeout",
@@ -2999,8 +2999,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "temp_buffers": {
       "title": "temp_buffers",
@@ -3010,8 +3010,8 @@
       "examples": [
         1024
       ],
-      "minimum": "100",
-      "maximum": "1073741823"
+      "minimum": 100,
+      "maximum": 1073741823
     },
     "temp_file_limit": {
       "title": "temp_file_limit",
@@ -3021,8 +3021,8 @@
       "examples": [
         -1
       ],
-      "minimum": "-1",
-      "maximum": "2147483647"
+      "minimum": -1,
+      "maximum": 2147483647
     },
     "temp_tablespaces": {
       "title": "temp_tablespaces",
@@ -3104,8 +3104,8 @@
       "examples": [
         1024
       ],
-      "minimum": "100",
-      "maximum": "1048576"
+      "minimum": 100,
+      "maximum": 1048576
     },
     "track_commit_timestamp": {
       "title": "track_commit_timestamp",
@@ -3223,8 +3223,8 @@
       "examples": [
         777
       ],
-      "minimum": "0",
-      "maximum": "511"
+      "minimum": 0,
+      "maximum": 511
     },
     "update_process_title": {
       "title": "update_process_title",
@@ -3243,8 +3243,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "100"
+      "minimum": 0,
+      "maximum": 100
     },
     "vacuum_cost_limit": {
       "title": "vacuum_cost_limit",
@@ -3254,8 +3254,8 @@
       "examples": [
         200
       ],
-      "minimum": "1",
-      "maximum": "10000"
+      "minimum": 1,
+      "maximum": 10000
     },
     "vacuum_cost_page_dirty": {
       "title": "vacuum_cost_page_dirty",
@@ -3265,8 +3265,8 @@
       "examples": [
         20
       ],
-      "minimum": "0",
-      "maximum": "10000"
+      "minimum": 0,
+      "maximum": 10000
     },
     "vacuum_cost_page_hit": {
       "title": "vacuum_cost_page_hit",
@@ -3276,8 +3276,8 @@
       "examples": [
         1
       ],
-      "minimum": "0",
-      "maximum": "10000"
+      "minimum": 0,
+      "maximum": 10000
     },
     "vacuum_cost_page_miss": {
       "title": "vacuum_cost_page_miss",
@@ -3287,8 +3287,8 @@
       "examples": [
         2
       ],
-      "minimum": "0",
-      "maximum": "10000"
+      "minimum": 0,
+      "maximum": 10000
     },
     "vacuum_defer_cleanup_age": {
       "title": "vacuum_defer_cleanup_age",
@@ -3298,8 +3298,8 @@
       "examples": [
         0
       ],
-      "minimum": "0",
-      "maximum": "1000000"
+      "minimum": 0,
+      "maximum": 1000000
     },
     "vacuum_failsafe_age": {
       "title": "vacuum_failsafe_age",
@@ -3309,8 +3309,8 @@
       "examples": [
         1600000000
       ],
-      "minimum": "0",
-      "maximum": "2100000000"
+      "minimum": 0,
+      "maximum": 2100000000
     },
     "vacuum_freeze_min_age": {
       "title": "vacuum_freeze_min_age",
@@ -3320,8 +3320,8 @@
       "examples": [
         50000000
       ],
-      "minimum": "0",
-      "maximum": "1000000000"
+      "minimum": 0,
+      "maximum": 1000000000
     },
     "vacuum_freeze_table_age": {
       "title": "vacuum_freeze_table_age",
@@ -3331,8 +3331,8 @@
       "examples": [
         150000000
       ],
-      "minimum": "0",
-      "maximum": "2000000000"
+      "minimum": 0,
+      "maximum": 2000000000
     },
     "vacuum_multixact_failsafe_age": {
       "title": "vacuum_multixact_failsafe_age",
@@ -3342,8 +3342,8 @@
       "examples": [
         1600000000
       ],
-      "minimum": "0",
-      "maximum": "2100000000"
+      "minimum": 0,
+      "maximum": 2100000000
     },
     "vacuum_multixact_freeze_min_age": {
       "title": "vacuum_multixact_freeze_min_age",
@@ -3353,8 +3353,8 @@
       "examples": [
         5000000
       ],
-      "minimum": "0",
-      "maximum": "1000000000"
+      "minimum": 0,
+      "maximum": 1000000000
     },
     "vacuum_multixact_freeze_table_age": {
       "title": "vacuum_multixact_freeze_table_age",
@@ -3364,8 +3364,8 @@
       "examples": [
         150000000
       ],
-      "minimum": "0",
-      "maximum": "2000000000"
+      "minimum": 0,
+      "maximum": 2000000000
     },
     "wal_block_size": {
       "title": "wal_block_size",
@@ -3375,8 +3375,8 @@
       "examples": [
         8192
       ],
-      "minimum": "8192",
-      "maximum": "8192"
+      "minimum": 8192,
+      "maximum": 8192
     },
     "wal_buffers": {
       "title": "wal_buffers",
@@ -3386,8 +3386,8 @@
       "examples": [
         512
       ],
-      "minimum": "-1",
-      "maximum": "262143"
+      "minimum": -1,
+      "maximum": 262143
     },
     "wal_compression": {
       "title": "wal_compression",
@@ -3422,8 +3422,8 @@
       "examples": [
         512
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "wal_level": {
       "title": "wal_level",
@@ -3465,8 +3465,8 @@
       "examples": [
         10
       ],
-      "minimum": "0",
-      "maximum": "2147483"
+      "minimum": 0,
+      "maximum": 2147483
     },
     "wal_receiver_timeout": {
       "title": "wal_receiver_timeout",
@@ -3476,8 +3476,8 @@
       "examples": [
         5000
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "wal_recycle": {
       "title": "wal_recycle",
@@ -3496,8 +3496,8 @@
       "examples": [
         5000
       ],
-      "minimum": "1",
-      "maximum": "2147483647"
+      "minimum": 1,
+      "maximum": 2147483647
     },
     "wal_segment_size": {
       "title": "wal_segment_size",
@@ -3507,8 +3507,8 @@
       "examples": [
         16777216
       ],
-      "minimum": "1048576",
-      "maximum": "1073741824"
+      "minimum": 1048576,
+      "maximum": 1073741824
     },
     "wal_sender_timeout": {
       "title": "wal_sender_timeout",
@@ -3518,8 +3518,8 @@
       "examples": [
         5000
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "wal_skip_threshold": {
       "title": "wal_skip_threshold",
@@ -3529,8 +3529,8 @@
       "examples": [
         2048
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "wal_sync_method": {
       "title": "wal_sync_method",
@@ -3555,8 +3555,8 @@
       "examples": [
         200
       ],
-      "minimum": "1",
-      "maximum": "10000"
+      "minimum": 1,
+      "maximum": 10000
     },
     "wal_writer_flush_after": {
       "title": "wal_writer_flush_after",
@@ -3566,8 +3566,8 @@
       "examples": [
         128
       ],
-      "minimum": "0",
-      "maximum": "2147483647"
+      "minimum": 0,
+      "maximum": 2147483647
     },
     "work_mem": {
       "title": "work_mem",
@@ -3577,8 +3577,8 @@
       "examples": [
         32768
       ],
-      "minimum": "64",
-      "maximum": "2147483647"
+      "minimum": 64,
+      "maximum": 2147483647
     },
     "xmlbinary": {
       "title": "xmlbinary",

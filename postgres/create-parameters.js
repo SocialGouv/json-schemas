@@ -397,10 +397,20 @@ const keys = rows.reduce((a, c) => {
     newParam.enum = enumvals.replace(/^\{([^}]+)\}$/, "$1").split(",");
   }
   if (min_val) {
-    newParam.minimum = min_val;
+    newParam.minimum =
+      vartype === "integer"
+        ? parseInt(min_val)
+        : vartype === "real"
+        ? parseFloat(min_val)
+        : min_val;
   }
   if (max_val) {
-    newParam.maximum = max_val;
+    newParam.maximum =
+      vartype === "integer"
+        ? parseInt(max_val)
+        : vartype === "real"
+        ? parseFloat(max_val)
+        : max_val;
   }
   return {
     ...a,

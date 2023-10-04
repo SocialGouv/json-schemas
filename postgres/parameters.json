@@ -2244,7 +2244,7 @@
       "title": "pg_stat_statements.max",
       "description": "Maximum number of statements tracked by the module. \n\nsee https://www.postgresql.org/docs/current/pgstatstatements.html#PGSTATSTATEMENTS-CONFIG-PARAMS",
       "markdownDescription": "Maximum number of statements tracked by the module.\n\nsee [pg_stat_statements documentation](https://www.postgresql.org/docs/current/pgstatstatements.html#PGSTATSTATEMENTS-CONFIG-PARAMS)",
-      "type": "integer",
+      "type": ["number", "string"],
       "examples": [
         5000
       ]

@@ -1,0 +1,56 @@
+name: ✅ Tests JSON schema 🔲
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "**/values.schema.json"
+      - "**/config.schema.json"
+      - "**/kontinuous.schema.json"
+      - "**/*.values.schema.json"
+      - ".github/jsonschema/**"
+      - ".github/workflows/tests-jsonschema.yml"
+
+concurrency:
+  cancel-in-progress: true
+  group: tests-jsonschema-${{ github.ref_name }}
+
+jobs:
+  tests:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: install
+        run: |
+          pip install pipx
+          pipx install check-jsonschema
+
+      - name: postgres parameters - valid schema
+        run: |
+          check-jsonschema postgres/parameters.sample.valid.yaml --schemafile ./postgres/parameters.json
+
+      - name: postgres parameters - invalid schema
+        run: |
+          ! check-jsonschema postgres/parameters.sample.invalid.yaml --schemafile ./postgres/parameters.json
+
+      - name: postgres extensions - valid schema
+        run: |
+          check-jsonschema postgres/extensions.sample.valid.yaml --schemafile ./postgres/extensions.json
+
+      - name: postgres extensions - invalid schema
+        run: |
+          ! check-jsonschema postgres/extensions.sample.invalid.yaml --schemafile ./postgres/extensions.json
+
+      - name: nginx annotations - valid schema
+        run: |
+          check-jsonschema nginx/annotations.sample.valid.yaml --schemafile ./nginx/annotations.schema.json
+
+      - name: nginx annotations - invalid schema
+        run: |
+          ! check-jsonschema nginx/annotations.sample.invalid.yaml --schemafile ./nginx/annotations.schema.json

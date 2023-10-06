@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=./annotations.schema.json
+
+nginx.ingress.kubernetes.io/affinity: "cookie"
+
+nginx.ingress.kubernetes.io/proxy-read-timeout: 42
+
+nginx.ingress.kubernetes.io/auth-url: "https://something"

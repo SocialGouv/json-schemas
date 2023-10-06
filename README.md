@@ -17,7 +17,7 @@ Notes:
 - With these extentions loaded:
 
 ```
-PG14 et pg_prewarm
+pg_prewarm
 pg_surgery
 seg
 pg_stat_statements

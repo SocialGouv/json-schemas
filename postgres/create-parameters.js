@@ -1,4 +1,6 @@
-// generate JSON schema from pg_settings
+// generate JSON schema from pg_settings and annotated.conf
+
+const annotated = require("./annotated.conf.json");
 
 // result from `select name,vartype,setting,enumvals,min_val,max_val,short_desc from pg_settings;`
 const rows = `
@@ -381,6 +383,10 @@ const keys = rows.reduce((a, c) => {
   }
   if (max_val) {
     description += `\n\nMaximum: ${max_val}`;
+  }
+  const comment = annotated.find((a) => a.name === name);
+  if (comment) {
+    description += `\n\n${comment.comment.replace("  ", "\n")}`;
   }
   const newParam = {
     title: name,

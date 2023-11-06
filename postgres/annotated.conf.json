@@ -1,0 +1,862 @@
+[
+  {
+    "name": "config_file",
+    "comment": "Can only be changed via command-line switch for obvious reasons.  Useful primarily for testing different configuration options, or for automated restart with different configuration options."
+  },
+  {
+    "name": "data_directory",
+    "comment": "Supports the ability to distribute files according to sysadmin or operating system defined schemes, or for launching multiple restart instances using the same binaries.  Most of the time, it's better to use configuration options to define these locations so that all PostgreSQL binaries default to the correct paths."
+  },
+  {
+    "name": "external_pid_file",
+    "comment": "Creates an extra copy of the process ID.  Used for server administration tools which need a copy of the process ID in a specific directory."
+  },
+  {
+    "name": "hba_file",
+    "comment": "Allows you to move the pg_hba file to a sysadmin-specified location."
+  },
+  {
+    "name": "ident_file",
+    "comment": "Allows you to move the pg_ident file to a sysadmin-specified location."
+  },
+  {
+    "name": "db_user_namespace",
+    "comment": "This setting is a hack to work around the lack of per-database users in PostgreSQL.  Unless you desperately need it, avoid this setting as it will eventually be replaced by something more maintainable."
+  },
+  {
+    "name": "krb_caseins_users",
+    "comment": "Speak with your sysadmin or network security about how to set the various kerberos settings to match your local kerberos setup.  Kerberos support must be compiled in to PostgreSQL, and set in pg_hba.conf."
+  },
+  {
+    "name": "password_encryption",
+    "comment": "There is no good reason for this to be set to ‚Äúoff‚Äù."
+  },
+  {
+    "name": "ssl",
+    "comment": "One of several different settings to turn on SSL connections for PostgreSQL.  SSL is a very good idea for highly secure setups.  In addition, you must compile in SSL support and set SSL connections in pg_hba.conf, as well as configuring SSL itself."
+  },
+  {
+    "name": "ssl_ca_file",
+    "comment": "You should always use SSL connections if you can.  However, this does require setting up SSL."
+  },
+  {
+    "name": "ssl_cert_file",
+    "comment": "According to your SSL configuration, which maybe provided by your installer."
+  },
+  {
+    "name": "ssl_ciphers",
+    "comment": "Allows DBAs to require ‚Äústrong enough‚Äù or preset ciphers for SSL connections.  If you have not compiled SSL support, this parameter will not be available."
+  },
+  {
+    "name": "ssl_crl_file",
+    "comment": "According to your SSL configuration, which maybe provided by your installer."
+  },
+  {
+    "name": "ssl_dh_params_file",
+    "comment": "According to your SSL configuration, which maybe provided by your installer."
+  },
+  {
+    "name": "ssl_ecdh_curve",
+    "comment": "According to your SSL configuration, which maybe provided by your installer."
+  },
+  {
+    "name": "ssl_key_file",
+    "comment": "According to your SSL configuration, which maybe provided by your installer."
+  },
+  {
+    "name": "ssl_prefer_server_ciphers",
+    "comment": "According to your SSL configuration, which maybe provided by your installer."
+  },
+  {
+    "name": "bonjour",
+    "comment": "Set to ‚Äúon‚Äù if you've compiled in Bonjour support and have an application which works by autodiscovery of Postgres.  Otherwise, leave off."
+  },
+  {
+    "name": "bonjour_name",
+    "comment": "Bonjour support must be compiled in and activated on the host machine to be live.  You'll want alternate names if you have several instances of PostgreSQL on the same machine."
+  },
+  {
+    "name": "listen_addresses",
+    "comment": "Set your listen_address as restrictively as possible; '*' should only be used for development machines"
+  },
+  {
+    "name": "max_connections",
+    "comment": "Should be set to the maximum number of connections which you expect to need at peak load.  Note that each connection uses shared_buffer memory, as well as additional non-shared memory, so be careful not to run the system out of memory.  In general, if you need more than 200 connections, you should probably be making more use of connection pooling."
+  },
+  {
+    "name": "port",
+    "comment": "Alternate ports are primarily useful for running several versions, or instances, of PostgreSQL on one machine.  However, if you're using an alternate port to support several versions, it's often better to compile in the port number."
+  },
+  {
+    "name": "superuser_reserved_connections",
+    "comment": "You should have at least one superuser connection open for troubleshooting at all times.  So if you run more than two concurrent regular administrative tasks, you'll need more reserved connections.  Note that this number is taken from max_connections, not in addition to it."
+  },
+  {
+    "name": "unix_socket_directories",
+    "comment": "Change to a more secure directory, which many installers do for you."
+  },
+  {
+    "name": "authentication_timeout",
+    "comment": "For production databases, it's important that this value be synchronized with the timeout on the application server side.  Most web applications will want a shorter timeout, like 20s."
+  },
+  {
+    "name": "tcp_keepalives_count",
+    "comment": "The three tcp_keepalive settings help manage a system which tends to have \"undead\" connection/query processes.  For systems which support them, you can regulate checking that connections are still \"live\" end-to-end to kill them off.  Not needed if you're not having a problem.  Should be synchronized with the new TCP keepalive support in libpq on the client side."
+  },
+  {
+    "name": "max_parallel_workers",
+    "comment": "‚Ä¶  if you think you can benefit from parallel query, and even cores/1 for DW systems."
+  },
+  {
+    "name": "max_worker_processes",
+    "comment": "Increase to max_parallel_workers + other workers, such as workers for logical replication and custom background workers.  Not more than your number of cores, though."
+  },
+  {
+    "name": "huge_pages",
+    "comment": "However, for small systems (< 2GB of RAM) may be beneficial to set to ‚Äúoff‚Äù."
+  },
+  {
+    "name": "max_prepared_transactions",
+    "comment": "Most applications do not use XA prepared transactions, so should set this parameter to 0.  If you do require prepared transactions, you should set this equal to max_connections to avoid blocking.  May require increasing kernel memory parameters."
+  },
+  {
+    "name": "shared_buffers",
+    "comment": "A memory quantity defining PostgreSQL's \"dedicated\" RAM, which is used for connection control, active operations, and more.  However, since PostgreSQL also needs free RAM for file system buffers, sorts and maintenance operations, it is not advisable to set shared_buffers to a majority of RAM.   Note that increasing shared_buffers often requires you to increase some  system kernel parameters, most notably SHMMAX and SHMALL.  See  Operating System Environment: Managing Kernel Resources in the PostgreSQL documentation for more details.  Also note that shared_buffers over 2GB is  only supported on 64-bit systems."
+  },
+  {
+    "name": "temp_buffers",
+    "comment": "Currently used only for holding temporary tables in memory.  If your application requires heavy use of temporary tables (many proprietary reporting engines do) then you might want to increase this substantially.  However, be careful because this is non-shared RAM which is allocated per session.  Otherwise, the default is fine."
+  },
+  {
+    "name": "work_mem",
+    "comment": "Sets the limit for the amount of non-shared RAM available for each query operation, including sorts and hashes.  This limit acts as a primitive resource control, preventing the server from going into swap due to overallocation.  Note that this is non-shared RAM per operation, which means large complex queries can use multple times this amount.  Also, work_mem is allocated by powers of two, so round to the nearest binary step.  The second formula is for reporting and DW servers which run a lot of complex queries."
+  },
+  {
+    "name": "max_files_per_process",
+    "comment": "If you have a large database with many partitioned tables, you may want to increase this.  Note that you will probably have to increase ulimits for the postgres user or system as well."
+  },
+  {
+    "name": "max_stack_depth",
+    "comment": "Increase this if you have experienced the relevant error."
+  },
+  {
+    "name": "shared_preload_libraries",
+    "comment": "Primarily used for custom C libraries (data types, stored procedures) which you expect your application to use heavily.  Trades memory overhead for these libraries against load time, so really should only be used for libraries you expect most queries to require."
+  },
+  {
+    "name": "temp_file_limit",
+    "comment": "‚Ä¶ or something which is bigger than your largest possible sort, but not big enough to run you out of disk space."
+  },
+  {
+    "name": "max_wal_size",
+    "comment": "‚Ä¶ except for databases that write more than 1GB/hour of data, in which case increase the size of the log so that it's at least an hour worth of logs"
+  },
+  {
+    "name": "wal_compression",
+    "comment": "‚Ä¶ unless your storage is less constrained than your CPU."
+  },
+  {
+    "name": "archive_command",
+    "comment": "All of the Archiving settings are part of a Point In Time Recovery or Warm Standby configuration.  Please see the Backup and Restore section for more information."
+  },
+  {
+    "name": "archive_mode",
+    "comment": "Requires a restart to change, so if you want to turn archiving on and off, set this to 'on' and change archive_command instead.  Even better, set archive_command to a script which can be disabled by trigger or ENV variable."
+  },
+  {
+    "name": "archive_timeout",
+    "comment": "Dependant on your tradeoff between disk space and letting the standby get behind."
+  },
+  {
+    "name": "wal_buffers",
+    "comment": "On very busy, high-core machines it can be useful to raise this to as much as 128MB."
+  },
+  {
+    "name": "backend_flush_after",
+    "comment": "Unless you have time to tune memory flushing behavior and test for improvements/regressions"
+  },
+  {
+    "name": "fsync",
+    "comment": "Never turn off unless your data is entirely disposable.  Setting fsync=off is the equivalent of saying ‚ÄúI don't care about my data, I can recreate the database from scratch if I have to.‚Äù  If synch activity is a performance concern, see synchronous_commit."
+  },
+  {
+    "name": "full_page_writes",
+    "comment": "This is PostgreSQL's triple-check on transaction log integrity.  Leave it on unless you have enough in-depth knowledge of your filesystem and hardware to be certain that torn page writes of log segments are completely prevented.  Solaris/ZFS users claim to be able to turn this off, but that has not been destruction-tested."
+  },
+  {
+    "name": "synchronous_commit",
+    "comment": "If data integrity is less important to you than response times (for example, if you are running a social networking application or processing logs) you can turn this off, making your transaction logs asynchronous.  This can result in up to wal_buffers or wal_writer_delay * 2 worth of data in an unexpected shutdown, but your database will not be corrupted.  Note that you can also set this on a per-session basis, allowing you to mix ‚Äúlossy‚Äù and ‚Äúsafe‚Äù transactions, which is a better approach for most applications."
+  },
+  {
+    "name": "wal_sync_method",
+    "comment": "On install, PostgreSQL figures out the best method for your OS.  It's pretty good at this point; don't change the default.  Note that the value of \"fsync\" shown in your postgresql.conf file is not necessarily the setting the server is using; try SHOW instead."
+  },
+  {
+    "name": "wal_writer_delay",
+    "comment": "Defines the maximum data (in time) that can be lost if synchronous_commit=off and the database shuts down.  Because of long transactions, actual data lost can be up to twice this time.  Has no effect if synchronous_commit=on.  If you are going to turn synchronous_commit=off server-wide, you should probably lower this to prevent too much data loss."
+  },
+  {
+    "name": "commit_delay",
+    "comment": "A primitive form of group commit without asynchronicity.  Performance testing of this is very mixed; only set to non-zero if you have time to test the specific performance impact on your workload.  Reasonable values are 200 to 1000."
+  },
+  {
+    "name": "commit_siblings",
+    "comment": "See commit_delay.  Reasonable values are 3 to 8"
+  },
+  {
+    "name": "checkpoint_completion_target",
+    "comment": "Defines the fraction of one checkpoint_interval over which to spread checkpoints. The default value works for most users."
+  },
+  {
+    "name": "checkpoint_flush_after",
+    "comment": "Unless you have time to tune memory flushing behavior and test for improvements/regressions"
+  },
+  {
+    "name": "checkpoint_timeout",
+    "comment": "If you do really large ETL batches, you may want to increase this setting to the maximum length of a batch run."
+  },
+  {
+    "name": "bgwriter_delay",
+    "comment": "Thanks to bgwriter autotuning, it should no longer be necessary for most users to touch the bgwriter settings.  Only modify these if you have a demonstrated issue shown by checkpoint spikes and monitoring pg_stat_bgwriter.  Laptop PostgreSQL users may want to increase bgwriter_delay to 60s to decrease I/O activity, since it is no longer possible to turn the bgwriter off."
+  },
+  {
+    "name": "bgwriter_flush_after",
+    "comment": "Unless you have time to tune memory flushing behavior and test for improvements/regressions"
+  },
+  {
+    "name": "max_replication_slots",
+    "comment": "Set to twice as many replicas as you ever expect to have."
+  },
+  {
+    "name": "max_wal_senders",
+    "comment": "If you are replicating, you want to set this to the maximum number of standby servers you might possibly have.  Performance impact when set above zero, but no additional penalty for setting it higher."
+  },
+  {
+    "name": "synchronous_standby_names",
+    "comment": "Special, see syntax for sync standby config.  Don't get into this if you're not sure what you're doing."
+  },
+  {
+    "name": "vacuum_defer_cleanup_age",
+    "comment": "No longer effective thanks to hot_standby_feedback."
+  },
+  {
+    "name": "wal_keep_segments",
+    "comment": "‚Ä¶ if using replication.  Minimum number of WAL log segments to keep in order to support re-synchronizing streaming standby servers which have fallen behind or for an initial sync, a good rule of thumb is 4, or however many segments you go through in 30s, whichever is higher. This is in addition to max_wal_size, so make sure you have enough disk space.  Not required if you are archiving logs."
+  },
+  {
+    "name": "wal_level",
+    "comment": "Level replica is required for binary replication, and level logical is required for logical replication.  This is a setting because raising the level adds more writes to the WAL, so if you‚Äôre not doing replication or archiving at all, set it to minimal."
+  },
+  {
+    "name": "hot_standby",
+    "comment": "Set to ‚Äúon‚Äù, unless you want to specifically prohibit people from running queries on a standby server."
+  },
+  {
+    "name": "hot_standby_feedback",
+    "comment": "Helps avoid query cancel on the replicas in most cases.  Turn it off for a replica which does long-running reports and is allowed to lag."
+  },
+  {
+    "name": "max_logical_replication_workers",
+    "comment": "‚Ä¶ unless logical replication is falling behind and the replica isn't handling other traffic"
+  },
+  {
+    "name": "max_standby_archive_delay",
+    "comment": "If you are replicating primarily for failover, set this to a very low value (like 0) in order to keep the standby as up to date as possible.  If this standby is running queries as its primary role, set to the length of time of the longest-running query you want to allow."
+  },
+  {
+    "name": "max_standby_streaming_delay",
+    "comment": "If you are replicating primarily for failover, set this to a very low value (like 0) in order to keep the standby as up to date as possible.  If this standby is running queries as its primary role, set to the length of time of the longest-running query you want to allow."
+  },
+  {
+    "name": "max_sync_workers_per_subscription",
+    "comment": "Consider raising to cores/2 when initially synchronizing logical replication for a new replica."
+  },
+  {
+    "name": "cpu_index_tuple_cost",
+    "comment": "Decrease this slightly to make your database favor indexes slightly more."
+  },
+  {
+    "name": "cpu_operator_cost",
+    "comment": "Decrease this slightly to make your database favor indexes slightly more."
+  },
+  {
+    "name": "effective_cache_size",
+    "comment": "Tells the PostgreSQL query planner how much RAM is estimated to be available for caching data, in both shared_buffers and in the filesystem cache. This setting just helps the planner make good cost estimates; it does not actually allocate the memory."
+  },
+  {
+    "name": "random_page_cost",
+    "comment": "Sets the ratio of seek to scan time for your database storage.  Should not be altered unless you're using special storage (SSDs, high end SANs, etc.) where seek/scan ratios are actually different.  If you need the database to favor indexes more, tune effective_cache_size and some of the cpu_* costs instead."
+  },
+  {
+    "name": "seq_page_cost",
+    "comment": "The main reason to modify seq_page_cost is to try to get planner costs to more-or-less indicate execution times in milleseconds.  All other costs change relative to this cost automatically."
+  },
+  {
+    "name": "enable_bitmapscan",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_hashagg",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_hashjoin",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_indexscan",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_material",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_mergejoin",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_nestloop",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_seqscan",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_sort",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "enable_tidscan",
+    "comment": "For interactive session use only when troubleshooting queries."
+  },
+  {
+    "name": "geqo_seed",
+    "comment": "If you set this manually, you can force repeatable execution paths for GEQO queries."
+  },
+  {
+    "name": "geqo_threshold",
+    "comment": "With new, faster processors it's tempting to raise the geqo_threshold a little, such as to 16 or 18.  Increasing more than that is unwise as query planning time goes up geometrically."
+  },
+  {
+    "name": "max_parallel_workers_per_gather",
+    "comment": "Increase if you plan to use parallel query to 4 or 8, depending on cores/concurrent sessions. "
+  },
+  {
+    "name": "min_parallel_table_scan_size",
+    "comment": "‚Ä¶ , unless doing IoT or a read-only database.  Raise to 100MB or so if your traffic on the database is very bursty, to prevent the WAL from shrinking too much."
+  },
+  {
+    "name": "constraint_exclusion",
+    "comment": "Default of ‚Äúpartition‚Äù is fine for most users.  Setting it to ‚Äúon‚Äù can allow optimization of UNION queries as well, but deserves testing before production deployment."
+  },
+  {
+    "name": "cursor_tuple_fraction",
+    "comment": "Increase this to 0.9 if most of the time you're using cursors to step through all of the rows of a query result."
+  },
+  {
+    "name": "default_statistics_target",
+    "comment": "Most applications can use the default of 100.    For very small/simple databases, decrease to 10 or 50.  Data warehousing applications generally need to use 500 to 1000.  Otherwise, increase statistics targets on a per-column basis."
+  },
+  {
+    "name": "effective_io_concurrency",
+    "comment": "Set to the number of disks in your RAID array or number of I/O channels.  Available only for platforms with posix_fadvise support (i.e. Linux).  Currently only affects the execution of parallel bitmapscan, but might affect other I/O operations in future versions."
+  },
+  {
+    "name": "from_collapse_limit",
+    "comment": "While it's probably true that newer CPUs could support higher collapse_limits, there's not much incremental benefit to just raising either collapse_limit to 10 or 11."
+  },
+  {
+    "name": "join_collapse_limit",
+    "comment": "If for some reason you wanted to explicitly declare the join order for all of your queries, you could set this to 1.  That is not recommended, though."
+  },
+  {
+    "name": "replacement_sort_tuples",
+    "comment": "Disable, this setting will be removed from Postgres 11."
+  },
+  {
+    "name": "log_executor_stats",
+    "comment": "Used for profiling the query executor."
+  },
+  {
+    "name": "log_parser_stats",
+    "comment": "Used for profiling the query parser."
+  },
+  {
+    "name": "log_planner_stats",
+    "comment": "Used for profiling the query planner."
+  },
+  {
+    "name": "log_statement_stats",
+    "comment": "Used for full query path profiling.  Exclusive of the other three options."
+  },
+  {
+    "name": "stats_temp_directory",
+    "comment": "Useful for extremely high-volume databases; the stats temp directory could be set to a RAMdisk or other high-speed resource (at the cost of potentially losing some stats) as this file gets updated hundreds of times per second.  "
+  },
+  {
+    "name": "track_activity_query_size",
+    "comment": "Sets the truncation threshold of queries in pg_stat_activity (and pg_stat_statements).  Increase it if you have really long queries which are being cut off, but there is significant extra memory usage for keeping longer queries."
+  },
+  {
+    "name": "track_counts",
+    "comment": "Needed for autovacuum to work properly.  Do not turn off."
+  },
+  {
+    "name": "track_functions",
+    "comment": "Set it to 'pl' to collect stats on user-defined functions.  Very useful for stored procedure performance profiling and troubleshooting."
+  },
+  {
+    "name": "track_io_timing",
+    "comment": "Turn it on if you're monitoring disk usage per request."
+  },
+  {
+    "name": "update_process_title",
+    "comment": "Updates the process title on OSes which support this.  Very useful for checking resource usage by currently running queries."
+  },
+  {
+    "name": "maintenance_work_mem",
+    "comment": "Sets the limit for the amount that autovacuum, manual vacuum, bulk index build and other maintenance routines are permitted to use.  Setting it to a moderately high value will increase the efficiency of vacuum and other operations.  Applications which perform large ETL operations may need to allocate up to 1/4 of RAM to support large bulk vacuums.  Note that each autovacuum worker may use this much, so if using multiple autovacuum workers you may want to decrease this value so that they can't claim over 1/8 or 1/4 of available RAM."
+  },
+  {
+    "name": "vacuum_cost_delay",
+    "comment": "Most of the time, you will want manual vacuum to execute without vacuum_delay, especially if you're using it as part of ETL.  If for some reason you can't use autovacuum on an OLTP database, however, you may want to increase this to 20ms to decrease the impact vacuum has on currently running queries.  Will cause vacuum to take up to twice as long to complete."
+  },
+  {
+    "name": "vacuum_freeze_min_age",
+    "comment": "Most users will want to decrease this so that rows which have been cold for a long time get frozen earlier, and avoid an autovacuum_freeze.  The suggestion of 500000 is for a moderately busy database; do not set to less than a few hours worth of XIDs.  Maximum setting is 1/2 of autovaccuum_max_freeze_age."
+  },
+  {
+    "name": "vacuum_freeze_table_age",
+    "comment": "Generally set to 80% of autovacuum_max_freeze age to preempt a full vacuum freeze.  If you can schedule cron vacuums during application slow periods, it might be valuable to lower this value in order to encourage vacuum freezing of tables before they are triggered by autovacuum."
+  },
+  {
+    "name": "vacuum_multixact_freeze_min_age",
+    "comment": "Like freeze_min_age, lower this to somewhere around an hour of XID burn.  Try starting with 500000."
+  },
+  {
+    "name": "vacuum_multixact_freeze_table_age",
+    "comment": "Set to 80% of autovaccum_multixact_freeze_max_age"
+  },
+  {
+    "name": "autovacuum",
+    "comment": "Starts the daemon which cleans up your tables and indexes, preventing bloat and poor response times. The only reason to set it to ‚Äúoff‚Äù is for databases which regularly do large batch operations like ETL.  Note that you can adjust the frequency or stop autovacuum on individual tables by adding rows to the pg_autovacuum system table."
+  },
+  {
+    "name": "autovacuum_analyze_scale_factor",
+    "comment": "This setting should be optimal for most databases.  However, very large tables (1m rows or more) in which rows are added in a skewed fashion may need to be autoanalyzed at a lower percentage, such as 5% or even 1%."
+  },
+  {
+    "name": "autovacuum_freeze_max_age",
+    "comment": "Triggers autovacuum automatically if a table is about to suffer from XID rollover. The setting is very conservative, and should probably be increased to 500million, but not higher."
+  },
+  {
+    "name": "autovacuum_max_workers",
+    "comment": "If you have an installation with many tables (100's to 1000's) or with some tables which autovacuum takes hours to process, you may want to add additional autovacuum workers so that multiple tables can be vacuumed at once.  Be conservative, though, as each autovacuum worker will utilize a separate CPU core, memory and I/O."
+  },
+  {
+    "name": "autovacuum_multixact_freeze_max_age",
+    "comment": "Triggers autovacuum automatically when the oldest ‚Äúmultixact‚Äù (a kind of lock transaction) is more than this old.  Do not raise past 1billion."
+  },
+  {
+    "name": "autovacuum_naptime",
+    "comment": "Decrease this to 30s or 15s if you have a large number (100's) of tables, or if you otherwise see from pg_stat_user_tables that autovacuum is not keeping up."
+  },
+  {
+    "name": "autovacuum_vacuum_cost_delay",
+    "comment": "If autovacuum is having too much of a performance impact on running queries, you might want to increase this setting to 50ms.  However, this will also cause individual vacuum tasks to take longer."
+  },
+  {
+    "name": "autovacuum_work_mem",
+    "comment": "Set a limit on this which is based on the number of autovac workers you expect to have running."
+  },
+  {
+    "name": "log_destination",
+    "comment": "Your choice of log destination depends on your system administration plans and the status of your server.  ‚Äúsyslog‚Äù or ‚Äúeventlog‚Äù (Windows) are good choices for most development servers, because they can support centralized log monitors.  For development and testing, however, ‚Äúcsvlog‚Äù is probably the most useful, as it allows you to run queries against the log contents."
+  },
+  {
+    "name": "log_directory",
+    "comment": "If you are having PostgreSQL keep its own activity logs on a production server, it's probably a good idea to locate them on separate storage from the database and transaction log."
+  },
+  {
+    "name": "log_file_mode",
+    "comment": "‚Ä¶ unless you need to share the log with Postgres' unix group, in which case set it to 660."
+  },
+  {
+    "name": "log_filename",
+    "comment": "If you want your logs to rotate automatically without needing a cron job to delete old logs, try naming them after the days of the week or the month so they overwrite automatically (i.e. 'postgresql-%a' or 'postgresql-%d').  This also helps with log analysis."
+  },
+  {
+    "name": "logging_collector",
+    "comment": "Only relevant for ‚Äúcsvlog‚Äù and ‚Äústderr‚Äù."
+  },
+  {
+    "name": "log_rotation_age",
+    "comment": "1d is generally good for production.  Set to 1h to rotate logs hourly when doing performance analysis."
+  },
+  {
+    "name": "log_rotation_size",
+    "comment": "Default is quite small if you have any extra logging turned on at all.  Increase to avoid the creation of additional log segments with hard-to-predict names."
+  },
+  {
+    "name": "log_truncate_on_rotation",
+    "comment": "Set to ‚Äúon‚Äù for production with a reusable logfile name to limit log accumulation if you don't have a sysadmin script to do so."
+  },
+  {
+    "name": "syslog_facility",
+    "comment": "Change the logserver facility if you are having a conflict with other applications."
+  },
+  {
+    "name": "syslog_ident",
+    "comment": "If using a centralized logserver or if you have multiple Postgres instances, you probably want to identify your postgresql instance by hostname."
+  },
+  {
+    "name": "client_min_messages",
+    "comment": "Unless doing interactive debugging, then you want it set to DEBUG1-5.  If you have a client application which is confused by some of PostgreSQL's WARNINGs then you may want to set this to ERROR."
+  },
+  {
+    "name": "log_autovacuum_min_duration",
+    "comment": "Logs all autovacuum actions which take more than the specified time.  Useful for figuring out if autovacuum is bogging down your system or blocking."
+  },
+  {
+    "name": "log_error_verbosity",
+    "comment": "Unless doing intensive debugging.  Alternately, set to TERSE if managing log volume is becoming a problem."
+  },
+  {
+    "name": "log_min_duration_statement",
+    "comment": "Possibly the most generally useful log setting for troubleshooting performance, especially on a production server.  Records only long-running queries for analysis; since these are often your \"problem\" queries, these are the most useful ones to know about.  Used for pg_fouine."
+  },
+  {
+    "name": "log_min_error_statement",
+    "comment": "Logs SQL statements which error.  If you have an application which routinely generates errors and can't fix it, then raise the level to FATAL or PANIC."
+  },
+  {
+    "name": "log_min_messages",
+    "comment": "Unless doing serious troubleshooting.  If you want to output parses and plans, set to DEBUG1."
+  },
+  {
+    "name": "debug_pretty_print",
+    "comment": "For debugging a testing machine.  Do not set in production."
+  },
+  {
+    "name": "debug_print_parse",
+    "comment": "For debugging a testing machine.  Do not set in production."
+  },
+  {
+    "name": "debug_print_plan",
+    "comment": "For debugging a testing machine.  Do not set in production."
+  },
+  {
+    "name": "debug_print_rewritten",
+    "comment": "For debugging a testing machine.  Do not set in production."
+  },
+  {
+    "name": "log_checkpoints",
+    "comment": "When doing performance analysis, it's often a good idea to turn on most of the logging options and log them to a CSVlog.  "
+  },
+  {
+    "name": "log_connections",
+    "comment": "Useful for performance analysis."
+  },
+  {
+    "name": "log_disconnections",
+    "comment": "Useful for performance analysis."
+  },
+  {
+    "name": "log_duration",
+    "comment": "Useful for performance analysis."
+  },
+  {
+    "name": "log_hostname",
+    "comment": "As this setting requires resolution of each connecting hostname, it's pretty much always too expensive to have on, even when troubleshooting."
+  },
+  {
+    "name": "log_line_prefix",
+    "comment": "Primarily useful for providing extra information when logging to syslog or eventlog.  Try \"%h:%d:%u:%c  %t\" for this."
+  },
+  {
+    "name": "log_lock_waits",
+    "comment": "Useful for performance analysis."
+  },
+  {
+    "name": "log_replication_commands",
+    "comment": "‚Ä¶ assuming you're monitoring replication status, which you should."
+  },
+  {
+    "name": "log_statement",
+    "comment": "For exhaustive performance analysis on test systems, set to 'all'.  Most production setups will just want to use 'ddl' to make sure to record database-altering actions, but very secure setups may want to use 'mod' or even 'all'.  Can produce a lot of log volume."
+  },
+  {
+    "name": "log_temp_files",
+    "comment": "This logger is used for troubleshooting sorts and other activities which are spilling to disk.  If you use it at all, it's probably good to set it a something low like 1kB so that you know each query that spilled to disk, since any disk spill at all causes a dramatic slowdown in the query.  Can be used to see if you need more work_mem, temp_mem or maintenance_work_mem."
+  },
+  {
+    "name": "log_timezone",
+    "comment": "To avoid confusion, it's often useful to log to the timezone where the DBA or sysadmin lives."
+  },
+  {
+    "name": "deadlock_timeout",
+    "comment": "Default is fine, except when you are troubleshooting/monitoring locks.  In that case, you may want to lower it to as little as 50ms."
+  },
+  {
+    "name": "max_locks_per_transaction",
+    "comment": "Some databases with very complex schema or with many long-running tranactions need a higher amount.  This is rare though."
+  },
+  {
+    "name": "max_pred_locks_per_transaction",
+    "comment": "Raise if you have a lot of tables and are seeing some transactions fail, but modestly as a larger transaction table is expensive."
+  },
+  {
+    "name": "DateStyle",
+    "comment": "Should be set according to the format in which you expect to receive date information."
+  },
+  {
+    "name": "extra_float_digits",
+    "comment": "Only significant for applications which do a lot of float calculations, like scientific databases."
+  },
+  {
+    "name": "IntervalStyle",
+    "comment": "This is just in case your applications are expecting something specific in how INTERVAL strings are output."
+  },
+  {
+    "name": "TimeZone",
+    "comment": "To avoid a lot of confusion, make sure this is set to your local timeszone.  If the server covers multiple time zones, then this should be set on a ROLE or connection basis."
+  },
+  {
+    "name": "timezone_abbreviations",
+    "comment": "See appendencies for alternatives."
+  },
+  {
+    "name": "client_encoding",
+    "comment": "Should match server_encoding unless you have a really good reason why not."
+  },
+  {
+    "name": "lc_collate",
+    "comment": "Set at initdb time.  Displayed for information only."
+  },
+  {
+    "name": "lc_ctype",
+    "comment": "Set at initdb time.  Displayed for information only."
+  },
+  {
+    "name": "server_encoding",
+    "comment": "Set at initdb time.  Displayed for information only."
+  },
+  {
+    "name": "application_name",
+    "comment": "Set this to a reasonable default for most user sessions; if in the middle of working over your application to support application names, this might be ‚Äúunknown‚Äù."
+  },
+  {
+    "name": "cluster_name",
+    "comment": "Should be ‚Äúpostgres-1‚Äù or something else identifiable as this specific postmaster."
+  },
+  {
+    "name": "event_source",
+    "comment": "Should be ‚Äúpostgres-1‚Äù or something else identifiable as this specific postmaster."
+  },
+  {
+    "name": "default_tablespace",
+    "comment": "Change this if you want a different tablespace for user-created tables.  Generally, better set on a ROLE or session basis."
+  },
+  {
+    "name": "search_path",
+    "comment": "Most DBAs either use the default or set search_path on a ROLE or database object basis.  The one reason to set it in postgresql.conf is if you are taking the security step of removing the special \"public\" schema in order to lock down your database."
+  },
+  {
+    "name": "temp_tablespaces",
+    "comment": "For applications which create lots of temporary objects, this setting can be used to put the temp space on a faster/separate device, or even a ramdisk.  Because it accepts a list, it can even be used to load balance temp object creation among several tablespaces."
+  },
+  {
+    "name": "dynamic_library_path",
+    "comment": "Primarily useful if you've written lots of custom C libraries for your installation and want to organize them into custom directories."
+  },
+  {
+    "name": "local_preload_libraries",
+    "comment": "This is largely a convenience setting, automatically loading libraries listed without needing an explicit load command.  Has no effect on performance."
+  },
+  {
+    "name": "session_replication_role",
+    "comment": "Only gets changed for databases which are taking part in a replication chain.  In that case, \"origin\" servers fire replication (and other) triggers, and \"replica\" do not.  Part of the generic replication hooks which are used by Slony and Bucardo."
+  },
+  {
+    "name": "default_transaction_deferrable",
+    "comment": "If you use serializable transactions by default, it may be also useful to set this in order to decrease the overhead of long-running transactions."
+  },
+  {
+    "name": "default_transaction_isolation",
+    "comment": "Relates to transaction_isolation.  Better set on a session or transaction basis as transaction_isolation in order to support specific types of transaction conflict resolution."
+  },
+  {
+    "name": "default_transaction_read_only",
+    "comment": "This setting is mainly useful for preventing yourself from accidentally changing data.  It is not really a security setting, as anyone can revoke it on their own session.  Better set on a session or ROLE level.  Will show up as TRUE if you are on a replication standby."
+  },
+  {
+    "name": "statement_timeout",
+    "comment": "Defaults to 0, meaning no timeout.  For most web applications, it's a good idea to set a default timeout, such as 60s to prevent runaway queries from bogging the server.  If set, though, you need to remember to set (at the ROLE or session level) a higher statement_timeout for expected long-running maintenance or batch operations."
+  },
+  {
+    "name": "transaction_isolation",
+    "comment": "Set per session if you need, for example, SERIALIZABLE semantics to prevent data conflicts for multi-step transactions."
+  },
+  {
+    "name": "transaction_read_only",
+    "comment": "Sets the current transaction to read only.  Useful as part of a SQL injection prevention program.  Shows as TRUE on replication standbys."
+  },
+  {
+    "name": "default_text_search_config",
+    "comment": "Set to the most common language used by the users, so that they don't have to pass the language parameter when calling TSearch functions."
+  },
+  {
+    "name": "gin_fuzzy_search_limit",
+    "comment": "If you're going to use GIN queries in a web application, it's generally useful to set a limit on how many rows can be returned from the index just for response times.  However, the maximum number needs to depend on your application; what do users see as an acceptable expression of \"many\"?"
+  },
+  {
+    "name": "xmlbinary",
+    "comment": "Set to whatever your client application supports."
+  },
+  {
+    "name": "check_function_bodies",
+    "comment": "You only really want to turn this off to resolve circular dependancies, and that can be done on a per-session basis.  In general, checking for syntax errors in PL/pgSQL functions is a very good idea."
+  },
+  {
+    "name": "gin_pending_list_limit",
+    "comment": "Unless you have a lot of GIN indexed data and have time to test the performance of fastupdate.  Even then, it's probably better to set it on individual indexes."
+  },
+  {
+    "name": "restart_after_crash",
+    "comment": "‚Ä¶  unless deliberately running postgres in ‚Äúephemeral mode‚Äù"
+  },
+  {
+    "name": "row_security",
+    "comment": "‚Ä¶  except when testing row security policies."
+  },
+  {
+    "name": "session_preload_libraries",
+    "comment": "Special uses for debugging or for loading application-specific extensions."
+  },
+  {
+    "name": "idle_in_transaction_session_timeout",
+    "comment": "Set to 1 hour maximum, or as low as 1 minute if you know your query load well.  Idle transactions are bad news."
+  },
+  {
+    "name": "lock_timeout",
+    "comment": "‚Ä¶ but consider setting this per application or per query for any explicit locking attempts."
+  },
+  {
+    "name": "old_snapshot_threshold",
+    "comment": "‚Ä¶ or the length of the longest transaction you expect to run + 1 hour."
+  },
+  {
+    "name": "block_size",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "data_checksums",
+    "comment": "This has to be set at initdb time, and does create a significant amount of extra I/O.  However, it will save you from a corrupt database down the line, so if you're not performance-constrained, always use it."
+  },
+  {
+    "name": "integer_datetimes",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "max_function_args",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "max_identifier_length",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "max_index_keys",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "segment_size",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "server_version",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "server_version_num",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "wal_block_size",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "wal_segment_size",
+    "comment": "Informational: lets you know of non-standard installation or compile options."
+  },
+  {
+    "name": "transform_null_equals",
+    "comment": "Provided for compatibility with Microsoft Access and similar broken applications which treat \"= NULL\" as the same as \"IS NULL\".  "
+  },
+  {
+    "name": "array_nulls",
+    "comment": "Provided for compatibility with 7.4 behavior."
+  },
+  {
+    "name": "backslash_quote",
+    "comment": "If you have cleaned up your application code, you can set this to 'off' to help lock down the database.  Older PHP applications will require the insecure setting of 'on'."
+  },
+  {
+    "name": "default_with_oids",
+    "comment": "Provided for consistency with 7.3 behavior.  Since this creates an OID for every row, can cause OID wraparound in large databases."
+  },
+  {
+    "name": "escape_string_warning",
+    "comment": "Useful for providing warnings for interpreted-language applications which may be engaging in unsafe string escape behavior.  Unless you are currently porting or upgrading such an application, though, these warnings are not useful and should be turned off."
+  },
+  {
+    "name": "standard_conforming_strings",
+    "comment": "If you can clean up your application code, this disables use of  as an escape character except in escaped (E' ') strings.  This is both safer, and less likely to result in unexpected output for things like Windows filepaths."
+  },
+  {
+    "name": "synchronize_seqscans",
+    "comment": "This new peformance enhancment can also cause rows to be returned in an order other than physical storage order.  For poorly-written older applications, this may break application code; turn it off to disable."
+  },
+  {
+    "name": "allow_system_table_mods",
+    "comment": "Only available in single-user mode; this setting is for initdb and may be used in the future for upgrade-in-place."
+  },
+  {
+    "name": "debug_assertions",
+    "comment": "Used for debugging PostgreSQL code problems; not for production use.  Requires compile options."
+  },
+  {
+    "name": "ignore_checksum_failure",
+    "comment": "For rescuing a corrupt DB"
+  },
+  {
+    "name": "ignore_system_indexes",
+    "comment": "Useful for salvaging data from a corrupted database."
+  },
+  {
+    "name": "post_auth_delay",
+    "comment": "Primarily used for attaching debuggers to sessions."
+  },
+  {
+    "name": "pre_auth_delay",
+    "comment": "Primarily used for attaching debuggers to sessions."
+  },
+  {
+    "name": "trace_notify",
+    "comment": "The various TRACE options are for debugging specific behaviors interactively. Many of them require compile-time options. trace_notice is for debugging listen/notice."
+  },
+  {
+    "name": "trace_recovery_messages",
+    "comment": "For troubleshooting replication/PITR failures."
+  },
+  {
+    "name": "trace_sort",
+    "comment": "For debugging sorts."
+  },
+  {
+    "name": "zero_damaged_pages",
+    "comment": "Used for salvaging data from a known-bad database.  You should always make a binary backup before using this option, and it should not be used while users are allowed to connect.  After damaged pages are erased, other kinds of data intergrity errors may persist (like broken PKs and FKs).  ZDP should generally be used to get your DB to a stage where the data can be dumped and loaded into a new database."
+  }
+]

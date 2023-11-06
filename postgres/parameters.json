@@ -25,8 +25,8 @@
     },
     "application_name": {
       "title": "application_name",
-      "description": "Sets the application name to be reported in statistics and logs.\n\nSet this to a reasonable default for most user sessions; if in the middle of working over your application to support application names, this might be ‚Äúunknown‚Äù.\n\nsee https://postgresqlco.nf/doc/en/param/application_name/",
-      "markdownDescription": "Sets the application name to be reported in statistics and logs.\n\nSet this to a reasonable default for most user sessions; if in the middle of working over your application to support application names, this might be ‚Äúunknown‚Äù.\n\nsee [application_name documentation](https://postgresqlco.nf/doc/en/param/application_name/)",
+      "description": "Sets the application name to be reported in statistics and logs.\n\nSet this to a reasonable default for most user sessions; if in the middle of working over your application to support application names, this might be \"unknown\".\n\nsee https://postgresqlco.nf/doc/en/param/application_name/",
+      "markdownDescription": "Sets the application name to be reported in statistics and logs.\n\nSet this to a reasonable default for most user sessions; if in the middle of working over your application to support application names, this might be \"unknown\".\n\nsee [application_name documentation](https://postgresqlco.nf/doc/en/param/application_name/)",
       "type": "string",
       "examples": [
         "psql"
@@ -90,8 +90,8 @@
     },
     "autovacuum": {
       "title": "autovacuum",
-      "description": "Starts the autovacuum subprocess.\n\nStarts the daemon which cleans up your tables and indexes, preventing bloat and poor response times. The only reason to set it to ‚Äúoff‚Äù is for databases which regularly do large batch operations like ETL.\nNote that you can adjust the frequency or stop autovacuum on individual tables by adding rows to the pg_autovacuum system table.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum/",
-      "markdownDescription": "Starts the autovacuum subprocess.\n\nStarts the daemon which cleans up your tables and indexes, preventing bloat and poor response times. The only reason to set it to ‚Äúoff‚Äù is for databases which regularly do large batch operations like ETL.\nNote that you can adjust the frequency or stop autovacuum on individual tables by adding rows to the pg_autovacuum system table.\n\nsee [autovacuum documentation](https://postgresqlco.nf/doc/en/param/autovacuum/)",
+      "description": "Starts the autovacuum subprocess.\n\nStarts the daemon which cleans up your tables and indexes, preventing bloat and poor response times. The only reason to set it to \"off\" is for databases which regularly do large batch operations like ETL.\nNote that you can adjust the frequency or stop autovacuum on individual tables by adding rows to the pg_autovacuum system table.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum/",
+      "markdownDescription": "Starts the autovacuum subprocess.\n\nStarts the daemon which cleans up your tables and indexes, preventing bloat and poor response times. The only reason to set it to \"off\" is for databases which regularly do large batch operations like ETL.\nNote that you can adjust the frequency or stop autovacuum on individual tables by adding rows to the pg_autovacuum system table.\n\nsee [autovacuum documentation](https://postgresqlco.nf/doc/en/param/autovacuum/)",
       "type": "string",
       "examples": [
         "on"
@@ -135,8 +135,8 @@
     },
     "autovacuum_multixact_freeze_max_age": {
       "title": "autovacuum_multixact_freeze_max_age",
-      "description": "Multixact age at which to autovacuum a table to prevent multixact wraparound.\n\nMinimum: 10000\n\nMaximum: 2000000000\n\nTriggers autovacuum automatically when the oldest ‚Äúmultixact‚Äù (a kind of lock transaction) is more than this old.\nDo not raise past 1billion.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_multixact_freeze_max_age/",
-      "markdownDescription": "Multixact age at which to autovacuum a table to prevent multixact wraparound.\n\nMinimum: 10000\n\nMaximum: 2000000000\n\nTriggers autovacuum automatically when the oldest ‚Äúmultixact‚Äù (a kind of lock transaction) is more than this old.\nDo not raise past 1billion.\n\nsee [autovacuum_multixact_freeze_max_age documentation](https://postgresqlco.nf/doc/en/param/autovacuum_multixact_freeze_max_age/)",
+      "description": "Multixact age at which to autovacuum a table to prevent multixact wraparound.\n\nMinimum: 10000\n\nMaximum: 2000000000\n\nTriggers autovacuum automatically when the oldest \"multixact\" (a kind of lock transaction) is more than this old.\nDo not raise past 1billion.\n\nsee https://postgresqlco.nf/doc/en/param/autovacuum_multixact_freeze_max_age/",
+      "markdownDescription": "Multixact age at which to autovacuum a table to prevent multixact wraparound.\n\nMinimum: 10000\n\nMaximum: 2000000000\n\nTriggers autovacuum automatically when the oldest \"multixact\" (a kind of lock transaction) is more than this old.\nDo not raise past 1billion.\n\nsee [autovacuum_multixact_freeze_max_age documentation](https://postgresqlco.nf/doc/en/param/autovacuum_multixact_freeze_max_age/)",
       "type": "string",
       "examples": [
         "400000000"
@@ -290,8 +290,8 @@
     },
     "bonjour": {
       "title": "bonjour",
-      "description": "Enables advertising the server via Bonjour.\n\nSet to ‚Äúon‚Äù if you've compiled in Bonjour support and have an application which works by autodiscovery of Postgres.\nOtherwise, leave off.\n\nsee https://postgresqlco.nf/doc/en/param/bonjour/",
-      "markdownDescription": "Enables advertising the server via Bonjour.\n\nSet to ‚Äúon‚Äù if you've compiled in Bonjour support and have an application which works by autodiscovery of Postgres.\nOtherwise, leave off.\n\nsee [bonjour documentation](https://postgresqlco.nf/doc/en/param/bonjour/)",
+      "description": "Enables advertising the server via Bonjour.\n\nSet to \"on\" if you've compiled in Bonjour support and have an application which works by autodiscovery of Postgres.\nOtherwise, leave off.\n\nsee https://postgresqlco.nf/doc/en/param/bonjour/",
+      "markdownDescription": "Enables advertising the server via Bonjour.\n\nSet to \"on\" if you've compiled in Bonjour support and have an application which works by autodiscovery of Postgres.\nOtherwise, leave off.\n\nsee [bonjour documentation](https://postgresqlco.nf/doc/en/param/bonjour/)",
       "type": "string",
       "examples": [
         "off"
@@ -401,8 +401,8 @@
     },
     "cluster_name": {
       "title": "cluster_name",
-      "description": "Sets the name of the cluster, which is included in the process title.\n\nShould be ‚Äúpostgres-1‚Äù or something else identifiable as this specific postmaster.\n\nsee https://postgresqlco.nf/doc/en/param/cluster_name/",
-      "markdownDescription": "Sets the name of the cluster, which is included in the process title.\n\nShould be ‚Äúpostgres-1‚Äù or something else identifiable as this specific postmaster.\n\nsee [cluster_name documentation](https://postgresqlco.nf/doc/en/param/cluster_name/)",
+      "description": "Sets the name of the cluster, which is included in the process title.\n\nShould be \"postgres-1\" or something else identifiable as this specific postmaster.\n\nsee https://postgresqlco.nf/doc/en/param/cluster_name/",
+      "markdownDescription": "Sets the name of the cluster, which is included in the process title.\n\nShould be \"postgres-1\" or something else identifiable as this specific postmaster.\n\nsee [cluster_name documentation](https://postgresqlco.nf/doc/en/param/cluster_name/)",
       "type": "string",
       "examples": [
         "pg"
@@ -452,8 +452,8 @@
     },
     "constraint_exclusion": {
       "title": "constraint_exclusion",
-      "description": "Enables the planner to use constraints to optimize queries.\n\nDefault of ‚Äúpartition‚Äù is fine for most users.\nSetting it to ‚Äúon‚Äù can allow optimization of UNION queries as well, but deserves testing before production deployment.\n\nsee https://postgresqlco.nf/doc/en/param/constraint_exclusion/",
-      "markdownDescription": "Enables the planner to use constraints to optimize queries.\n\nDefault of ‚Äúpartition‚Äù is fine for most users.\nSetting it to ‚Äúon‚Äù can allow optimization of UNION queries as well, but deserves testing before production deployment.\n\nsee [constraint_exclusion documentation](https://postgresqlco.nf/doc/en/param/constraint_exclusion/)",
+      "description": "Enables the planner to use constraints to optimize queries.\n\nDefault of \"partition\" is fine for most users.\nSetting it to \"on\" can allow optimization of UNION queries as well, but deserves testing before production deployment.\n\nsee https://postgresqlco.nf/doc/en/param/constraint_exclusion/",
+      "markdownDescription": "Enables the planner to use constraints to optimize queries.\n\nDefault of \"partition\" is fine for most users.\nSetting it to \"on\" can allow optimization of UNION queries as well, but deserves testing before production deployment.\n\nsee [constraint_exclusion documentation](https://postgresqlco.nf/doc/en/param/constraint_exclusion/)",
       "type": "string",
       "examples": [
         "partition"
@@ -928,8 +928,8 @@
     },
     "event_source": {
       "title": "event_source",
-      "description": "Sets the application name used to identify PostgreSQL messages in the event log.\n\nShould be ‚Äúpostgres-1‚Äù or something else identifiable as this specific postmaster.\n\nsee https://postgresqlco.nf/doc/en/param/event_source/",
-      "markdownDescription": "Sets the application name used to identify PostgreSQL messages in the event log.\n\nShould be ‚Äúpostgres-1‚Äù or something else identifiable as this specific postmaster.\n\nsee [event_source documentation](https://postgresqlco.nf/doc/en/param/event_source/)",
+      "description": "Sets the application name used to identify PostgreSQL messages in the event log.\n\nShould be \"postgres-1\" or something else identifiable as this specific postmaster.\n\nsee https://postgresqlco.nf/doc/en/param/event_source/",
+      "markdownDescription": "Sets the application name used to identify PostgreSQL messages in the event log.\n\nShould be \"postgres-1\" or something else identifiable as this specific postmaster.\n\nsee [event_source documentation](https://postgresqlco.nf/doc/en/param/event_source/)",
       "type": "string",
       "examples": [
         "PostgreSQL"
@@ -990,8 +990,8 @@
     },
     "fsync": {
       "title": "fsync",
-      "description": "Forces synchronization of updates to disk.\n\nNever turn off unless your data is entirely disposable.\nSetting fsync=off is the equivalent of saying ‚ÄúI don't care about my data, I can recreate the database from scratch if I have to.‚Äù  If synch activity is a performance concern, see synchronous_commit.\n\nsee https://postgresqlco.nf/doc/en/param/fsync/",
-      "markdownDescription": "Forces synchronization of updates to disk.\n\nNever turn off unless your data is entirely disposable.\nSetting fsync=off is the equivalent of saying ‚ÄúI don't care about my data, I can recreate the database from scratch if I have to.‚Äù  If synch activity is a performance concern, see synchronous_commit.\n\nsee [fsync documentation](https://postgresqlco.nf/doc/en/param/fsync/)",
+      "description": "Forces synchronization of updates to disk.\n\nNever turn off unless your data is entirely disposable.\nSetting fsync=off is the equivalent of saying \" don't care about my data, I can recreate the database from scratch if I have to...  If synch activity is a performance concern, see synchronous_commit.\n\nsee https://postgresqlco.nf/doc/en/param/fsync/",
+      "markdownDescription": "Forces synchronization of updates to disk.\n\nNever turn off unless your data is entirely disposable.\nSetting fsync=off is the equivalent of saying \" don't care about my data, I can recreate the database from scratch if I have to...  If synch activity is a performance concern, see synchronous_commit.\n\nsee [fsync documentation](https://postgresqlco.nf/doc/en/param/fsync/)",
       "type": "string",
       "examples": [
         "on"
@@ -1107,8 +1107,8 @@
     },
     "hot_standby": {
       "title": "hot_standby",
-      "description": "Allows connections and queries during recovery.\n\nSet to ‚Äúon‚Äù, unless you want to specifically prohibit people from running queries on a standby server.\n\nsee https://postgresqlco.nf/doc/en/param/hot_standby/",
-      "markdownDescription": "Allows connections and queries during recovery.\n\nSet to ‚Äúon‚Äù, unless you want to specifically prohibit people from running queries on a standby server.\n\nsee [hot_standby documentation](https://postgresqlco.nf/doc/en/param/hot_standby/)",
+      "description": "Allows connections and queries during recovery.\n\nSet to \"on\", unless you want to specifically prohibit people from running queries on a standby server.\n\nsee https://postgresqlco.nf/doc/en/param/hot_standby/",
+      "markdownDescription": "Allows connections and queries during recovery.\n\nSet to \"on\", unless you want to specifically prohibit people from running queries on a standby server.\n\nsee [hot_standby documentation](https://postgresqlco.nf/doc/en/param/hot_standby/)",
       "type": "string",
       "examples": [
         "on"
@@ -1134,8 +1134,8 @@
     },
     "huge_pages": {
       "title": "huge_pages",
-      "description": "Use of huge pages on Linux or Windows.\n\nHowever, for small systems (< 2GB of RAM) may be beneficial to set to ‚Äúoff‚Äù.\n\nsee https://postgresqlco.nf/doc/en/param/huge_pages/",
-      "markdownDescription": "Use of huge pages on Linux or Windows.\n\nHowever, for small systems (< 2GB of RAM) may be beneficial to set to ‚Äúoff‚Äù.\n\nsee [huge_pages documentation](https://postgresqlco.nf/doc/en/param/huge_pages/)",
+      "description": "Use of huge pages on Linux or Windows.\n\nHowever, for small systems (< 2GB of RAM) may be beneficial to set to \"off\".\n\nsee https://postgresqlco.nf/doc/en/param/huge_pages/",
+      "markdownDescription": "Use of huge pages on Linux or Windows.\n\nHowever, for small systems (< 2GB of RAM) may be beneficial to set to \"off\".\n\nsee [huge_pages documentation](https://postgresqlco.nf/doc/en/param/huge_pages/)",
       "type": "string",
       "examples": [
         "try"
@@ -1430,8 +1430,8 @@
     },
     "lock_timeout": {
       "title": "lock_timeout",
-      "description": "Sets the maximum allowed duration of any wait for a lock.\n\nMinimum: 0\n\nMaximum: 2147483647\n\n‚Ä¶ but consider setting this per application or per query for any explicit locking attempts.\n\nsee https://postgresqlco.nf/doc/en/param/lock_timeout/",
-      "markdownDescription": "Sets the maximum allowed duration of any wait for a lock.\n\nMinimum: 0\n\nMaximum: 2147483647\n\n‚Ä¶ but consider setting this per application or per query for any explicit locking attempts.\n\nsee [lock_timeout documentation](https://postgresqlco.nf/doc/en/param/lock_timeout/)",
+      "description": "Sets the maximum allowed duration of any wait for a lock.\n\nMinimum: 0\n\nMaximum: 2147483647\n\n... but consider setting this per application or per query for any explicit locking attempts.\n\nsee https://postgresqlco.nf/doc/en/param/lock_timeout/",
+      "markdownDescription": "Sets the maximum allowed duration of any wait for a lock.\n\nMinimum: 0\n\nMaximum: 2147483647\n\n... but consider setting this per application or per query for any explicit locking attempts.\n\nsee [lock_timeout documentation](https://postgresqlco.nf/doc/en/param/lock_timeout/)",
       "type": "string",
       "examples": [
         "0"
@@ -1466,8 +1466,8 @@
     },
     "log_destination": {
       "title": "log_destination",
-      "description": "Sets the destination for server log output.\n\nYour choice of log destination depends on your system administration plans and the status of your server.\n‚Äúsyslog‚Äù or ‚Äúeventlog‚Äù (Windows) are good choices for most development servers, because they can support centralized log monitors.  For development and testing, however, ‚Äúcsvlog‚Äù is probably the most useful, as it allows you to run queries against the log contents.\n\nsee https://postgresqlco.nf/doc/en/param/log_destination/",
-      "markdownDescription": "Sets the destination for server log output.\n\nYour choice of log destination depends on your system administration plans and the status of your server.\n‚Äúsyslog‚Äù or ‚Äúeventlog‚Äù (Windows) are good choices for most development servers, because they can support centralized log monitors.  For development and testing, however, ‚Äúcsvlog‚Äù is probably the most useful, as it allows you to run queries against the log contents.\n\nsee [log_destination documentation](https://postgresqlco.nf/doc/en/param/log_destination/)",
+      "description": "Sets the destination for server log output.\n\nYour choice of log destination depends on your system administration plans and the status of your server.\n\"syslog\" or \"eventlog\" (Windows) are good choices for most development servers, because they can support centralized log monitors.  For development and testing, however, \"csvlog\" is probably the most useful, as it allows you to run queries against the log contents.\n\nsee https://postgresqlco.nf/doc/en/param/log_destination/",
+      "markdownDescription": "Sets the destination for server log output.\n\nYour choice of log destination depends on your system administration plans and the status of your server.\n\"syslog\" or \"eventlog\" (Windows) are good choices for most development servers, because they can support centralized log monitors.  For development and testing, however, \"csvlog\" is probably the most useful, as it allows you to run queries against the log contents.\n\nsee [log_destination documentation](https://postgresqlco.nf/doc/en/param/log_destination/)",
       "type": "string",
       "examples": [
         "csvlog"
@@ -1525,8 +1525,8 @@
     },
     "log_file_mode": {
       "title": "log_file_mode",
-      "description": "Sets the file permissions for log files.\n\nMinimum: 0\n\nMaximum: 511\n\n‚Ä¶ unless you need to share the log with Postgres' unix group, in which case set it to 660.\n\nsee https://postgresqlco.nf/doc/en/param/log_file_mode/",
-      "markdownDescription": "Sets the file permissions for log files.\n\nMinimum: 0\n\nMaximum: 511\n\n‚Ä¶ unless you need to share the log with Postgres' unix group, in which case set it to 660.\n\nsee [log_file_mode documentation](https://postgresqlco.nf/doc/en/param/log_file_mode/)",
+      "description": "Sets the file permissions for log files.\n\nMinimum: 0\n\nMaximum: 511\n\n... unless you need to share the log with Postgres' unix group, in which case set it to 660.\n\nsee https://postgresqlco.nf/doc/en/param/log_file_mode/",
+      "markdownDescription": "Sets the file permissions for log files.\n\nMinimum: 0\n\nMaximum: 511\n\n... unless you need to share the log with Postgres' unix group, in which case set it to 660.\n\nsee [log_file_mode documentation](https://postgresqlco.nf/doc/en/param/log_file_mode/)",
       "type": "string",
       "examples": [
         "0600"
@@ -1679,8 +1679,8 @@
     },
     "log_replication_commands": {
       "title": "log_replication_commands",
-      "description": "Logs each replication command.\n\n‚Ä¶ assuming you're monitoring replication status, which you should.\n\nsee https://postgresqlco.nf/doc/en/param/log_replication_commands/",
-      "markdownDescription": "Logs each replication command.\n\n‚Ä¶ assuming you're monitoring replication status, which you should.\n\nsee [log_replication_commands documentation](https://postgresqlco.nf/doc/en/param/log_replication_commands/)",
+      "description": "Logs each replication command.\n\n... assuming you're monitoring replication status, which you should.\n\nsee https://postgresqlco.nf/doc/en/param/log_replication_commands/",
+      "markdownDescription": "Logs each replication command.\n\n... assuming you're monitoring replication status, which you should.\n\nsee [log_replication_commands documentation](https://postgresqlco.nf/doc/en/param/log_replication_commands/)",
       "type": "string",
       "examples": [
         "off"
@@ -1766,8 +1766,8 @@
     },
     "log_truncate_on_rotation": {
       "title": "log_truncate_on_rotation",
-      "description": "Truncate existing log files of same name during log rotation.\n\nSet to ‚Äúon‚Äù for production with a reusable logfile name to limit log accumulation if you don't have a sysadmin script to do so.\n\nsee https://postgresqlco.nf/doc/en/param/log_truncate_on_rotation/",
-      "markdownDescription": "Truncate existing log files of same name during log rotation.\n\nSet to ‚Äúon‚Äù for production with a reusable logfile name to limit log accumulation if you don't have a sysadmin script to do so.\n\nsee [log_truncate_on_rotation documentation](https://postgresqlco.nf/doc/en/param/log_truncate_on_rotation/)",
+      "description": "Truncate existing log files of same name during log rotation.\n\nSet to \"on\" for production with a reusable logfile name to limit log accumulation if you don't have a sysadmin script to do so.\n\nsee https://postgresqlco.nf/doc/en/param/log_truncate_on_rotation/",
+      "markdownDescription": "Truncate existing log files of same name during log rotation.\n\nSet to \"on\" for production with a reusable logfile name to limit log accumulation if you don't have a sysadmin script to do so.\n\nsee [log_truncate_on_rotation documentation](https://postgresqlco.nf/doc/en/param/log_truncate_on_rotation/)",
       "type": "string",
       "examples": [
         "off"
@@ -1775,8 +1775,8 @@
     },
     "logging_collector": {
       "title": "logging_collector",
-      "description": "Start a subprocess to capture stderr output and/or csvlogs into log files.\n\nOnly relevant for ‚Äúcsvlog‚Äù and ‚Äústderr‚Äù.\n\nsee https://postgresqlco.nf/doc/en/param/logging_collector/",
-      "markdownDescription": "Start a subprocess to capture stderr output and/or csvlogs into log files.\n\nOnly relevant for ‚Äúcsvlog‚Äù and ‚Äústderr‚Äù.\n\nsee [logging_collector documentation](https://postgresqlco.nf/doc/en/param/logging_collector/)",
+      "description": "Start a subprocess to capture stderr output and/or csvlogs into log files.\n\nOnly relevant for \"csvlog\" and \"stderr\".\n\nsee https://postgresqlco.nf/doc/en/param/logging_collector/",
+      "markdownDescription": "Start a subprocess to capture stderr output and/or csvlogs into log files.\n\nOnly relevant for \"csvlog\" and \"stderr\".\n\nsee [logging_collector documentation](https://postgresqlco.nf/doc/en/param/logging_collector/)",
       "type": "string",
       "examples": [
         "on"
@@ -1865,8 +1865,8 @@
     },
     "max_logical_replication_workers": {
       "title": "max_logical_replication_workers",
-      "description": "Maximum number of logical replication worker processes.\n\nMinimum: 0\n\nMaximum: 262143\n\n‚Ä¶ unless logical replication is falling behind and the replica isn't handling other traffic\n\nsee https://postgresqlco.nf/doc/en/param/max_logical_replication_workers/",
-      "markdownDescription": "Maximum number of logical replication worker processes.\n\nMinimum: 0\n\nMaximum: 262143\n\n‚Ä¶ unless logical replication is falling behind and the replica isn't handling other traffic\n\nsee [max_logical_replication_workers documentation](https://postgresqlco.nf/doc/en/param/max_logical_replication_workers/)",
+      "description": "Maximum number of logical replication worker processes.\n\nMinimum: 0\n\nMaximum: 262143\n\n... unless logical replication is falling behind and the replica isn't handling other traffic\n\nsee https://postgresqlco.nf/doc/en/param/max_logical_replication_workers/",
+      "markdownDescription": "Maximum number of logical replication worker processes.\n\nMinimum: 0\n\nMaximum: 262143\n\n... unless logical replication is falling behind and the replica isn't handling other traffic\n\nsee [max_logical_replication_workers documentation](https://postgresqlco.nf/doc/en/param/max_logical_replication_workers/)",
       "type": "string",
       "examples": [
         "4"
@@ -1883,8 +1883,8 @@
     },
     "max_parallel_workers": {
       "title": "max_parallel_workers",
-      "description": "Sets the maximum number of parallel workers that can be active at one time.\n\nMinimum: 0\n\nMaximum: 1024\n\n‚Ä¶\nif you think you can benefit from parallel query, and even cores/1 for DW systems.\n\nsee https://postgresqlco.nf/doc/en/param/max_parallel_workers/",
-      "markdownDescription": "Sets the maximum number of parallel workers that can be active at one time.\n\nMinimum: 0\n\nMaximum: 1024\n\n‚Ä¶\nif you think you can benefit from parallel query, and even cores/1 for DW systems.\n\nsee [max_parallel_workers documentation](https://postgresqlco.nf/doc/en/param/max_parallel_workers/)",
+      "description": "Sets the maximum number of parallel workers that can be active at one time.\n\nMinimum: 0\n\nMaximum: 1024\n\n...\nif you think you can benefit from parallel query, and even cores/1 for DW systems.\n\nsee https://postgresqlco.nf/doc/en/param/max_parallel_workers/",
+      "markdownDescription": "Sets the maximum number of parallel workers that can be active at one time.\n\nMinimum: 0\n\nMaximum: 1024\n\n...\nif you think you can benefit from parallel query, and even cores/1 for DW systems.\n\nsee [max_parallel_workers documentation](https://postgresqlco.nf/doc/en/param/max_parallel_workers/)",
       "type": "string",
       "examples": [
         "32"
@@ -2000,8 +2000,8 @@
     },
     "max_wal_size": {
       "title": "max_wal_size",
-      "description": "Sets the WAL size that triggers a checkpoint.\n\nMinimum: 2\n\nMaximum: 2147483647\n\n‚Ä¶ except for databases that write more than 1GB/hour of data, in which case increase the size of the log so that it's at least an hour worth of logs\n\nsee https://postgresqlco.nf/doc/en/param/max_wal_size/",
-      "markdownDescription": "Sets the WAL size that triggers a checkpoint.\n\nMinimum: 2\n\nMaximum: 2147483647\n\n‚Ä¶ except for databases that write more than 1GB/hour of data, in which case increase the size of the log so that it's at least an hour worth of logs\n\nsee [max_wal_size documentation](https://postgresqlco.nf/doc/en/param/max_wal_size/)",
+      "description": "Sets the WAL size that triggers a checkpoint.\n\nMinimum: 2\n\nMaximum: 2147483647\n\n... except for databases that write more than 1GB/hour of data, in which case increase the size of the log so that it's at least an hour worth of logs\n\nsee https://postgresqlco.nf/doc/en/param/max_wal_size/",
+      "markdownDescription": "Sets the WAL size that triggers a checkpoint.\n\nMinimum: 2\n\nMaximum: 2147483647\n\n... except for databases that write more than 1GB/hour of data, in which case increase the size of the log so that it's at least an hour worth of logs\n\nsee [max_wal_size documentation](https://postgresqlco.nf/doc/en/param/max_wal_size/)",
       "type": "string",
       "examples": [
         "1024"
@@ -2036,8 +2036,8 @@
     },
     "min_parallel_table_scan_size": {
       "title": "min_parallel_table_scan_size",
-      "description": "Sets the minimum amount of table data for a parallel scan.\n\nMinimum: 0\n\nMaximum: 715827882\n\n‚Ä¶ , unless doing IoT or a read-only database.\nRaise to 100MB or so if your traffic on the database is very bursty, to prevent the WAL from shrinking too much.\n\nsee https://postgresqlco.nf/doc/en/param/min_parallel_table_scan_size/",
-      "markdownDescription": "Sets the minimum amount of table data for a parallel scan.\n\nMinimum: 0\n\nMaximum: 715827882\n\n‚Ä¶ , unless doing IoT or a read-only database.\nRaise to 100MB or so if your traffic on the database is very bursty, to prevent the WAL from shrinking too much.\n\nsee [min_parallel_table_scan_size documentation](https://postgresqlco.nf/doc/en/param/min_parallel_table_scan_size/)",
+      "description": "Sets the minimum amount of table data for a parallel scan.\n\nMinimum: 0\n\nMaximum: 715827882\n\n... , unless doing IoT or a read-only database.\nRaise to 100MB or so if your traffic on the database is very bursty, to prevent the WAL from shrinking too much.\n\nsee https://postgresqlco.nf/doc/en/param/min_parallel_table_scan_size/",
+      "markdownDescription": "Sets the minimum amount of table data for a parallel scan.\n\nMinimum: 0\n\nMaximum: 715827882\n\n... , unless doing IoT or a read-only database.\nRaise to 100MB or so if your traffic on the database is very bursty, to prevent the WAL from shrinking too much.\n\nsee [min_parallel_table_scan_size documentation](https://postgresqlco.nf/doc/en/param/min_parallel_table_scan_size/)",
       "type": "string",
       "examples": [
         "1024"
@@ -2054,8 +2054,8 @@
     },
     "old_snapshot_threshold": {
       "title": "old_snapshot_threshold",
-      "description": "Time before a snapshot is too old to read pages changed after the snapshot was taken.\n\nMinimum: -1\n\nMaximum: 86400\n\n‚Ä¶ or the length of the longest transaction you expect to run + 1 hour.\n\nsee https://postgresqlco.nf/doc/en/param/old_snapshot_threshold/",
-      "markdownDescription": "Time before a snapshot is too old to read pages changed after the snapshot was taken.\n\nMinimum: -1\n\nMaximum: 86400\n\n‚Ä¶ or the length of the longest transaction you expect to run + 1 hour.\n\nsee [old_snapshot_threshold documentation](https://postgresqlco.nf/doc/en/param/old_snapshot_threshold/)",
+      "description": "Time before a snapshot is too old to read pages changed after the snapshot was taken.\n\nMinimum: -1\n\nMaximum: 86400\n\n... or the length of the longest transaction you expect to run + 1 hour.\n\nsee https://postgresqlco.nf/doc/en/param/old_snapshot_threshold/",
+      "markdownDescription": "Time before a snapshot is too old to read pages changed after the snapshot was taken.\n\nMinimum: -1\n\nMaximum: 86400\n\n... or the length of the longest transaction you expect to run + 1 hour.\n\nsee [old_snapshot_threshold documentation](https://postgresqlco.nf/doc/en/param/old_snapshot_threshold/)",
       "type": "string",
       "examples": [
         "-1"
@@ -2090,8 +2090,8 @@
     },
     "password_encryption": {
       "title": "password_encryption",
-      "description": "Chooses the algorithm for encrypting passwords.\n\nThere is no good reason for this to be set to ‚Äúoff‚Äù.\n\nsee https://postgresqlco.nf/doc/en/param/password_encryption/",
-      "markdownDescription": "Chooses the algorithm for encrypting passwords.\n\nThere is no good reason for this to be set to ‚Äúoff‚Äù.\n\nsee [password_encryption documentation](https://postgresqlco.nf/doc/en/param/password_encryption/)",
+      "description": "Chooses the algorithm for encrypting passwords.\n\nThere is no good reason for this to be set to \"off\".\n\nsee https://postgresqlco.nf/doc/en/param/password_encryption/",
+      "markdownDescription": "Chooses the algorithm for encrypting passwords.\n\nThere is no good reason for this to be set to \"off\".\n\nsee [password_encryption documentation](https://postgresqlco.nf/doc/en/param/password_encryption/)",
       "type": "string",
       "examples": [
         "scram-sha-256"
@@ -2332,8 +2332,8 @@
     },
     "restart_after_crash": {
       "title": "restart_after_crash",
-      "description": "Reinitialize server after backend crash.\n\n‚Ä¶\nunless deliberately running postgres in ‚Äúephemeral mode‚Äù\n\nsee https://postgresqlco.nf/doc/en/param/restart_after_crash/",
-      "markdownDescription": "Reinitialize server after backend crash.\n\n‚Ä¶\nunless deliberately running postgres in ‚Äúephemeral mode‚Äù\n\nsee [restart_after_crash documentation](https://postgresqlco.nf/doc/en/param/restart_after_crash/)",
+      "description": "Reinitialize server after backend crash.\n\n...\nunless deliberately running postgres in \"ephemral\" mode\n\nsee https://postgresqlco.nf/doc/en/param/restart_after_crash/",
+      "markdownDescription": "Reinitialize server after backend crash.\n\n...\nunless deliberately running postgres in \"ephemral\" mode\n\nsee [restart_after_crash documentation](https://postgresqlco.nf/doc/en/param/restart_after_crash/)",
       "type": "string",
       "examples": [
         "off"
@@ -2350,8 +2350,8 @@
     },
     "row_security": {
       "title": "row_security",
-      "description": "Enable row security.\n\n‚Ä¶\nexcept when testing row security policies.\n\nsee https://postgresqlco.nf/doc/en/param/row_security/",
-      "markdownDescription": "Enable row security.\n\n‚Ä¶\nexcept when testing row security policies.\n\nsee [row_security documentation](https://postgresqlco.nf/doc/en/param/row_security/)",
+      "description": "Enable row security.\n\n...\nexcept when testing row security policies.\n\nsee https://postgresqlco.nf/doc/en/param/row_security/",
+      "markdownDescription": "Enable row security.\n\n...\nexcept when testing row security policies.\n\nsee [row_security documentation](https://postgresqlco.nf/doc/en/param/row_security/)",
       "type": "string",
       "examples": [
         "on"
@@ -2491,8 +2491,8 @@
     },
     "ssl_ciphers": {
       "title": "ssl_ciphers",
-      "description": "Sets the list of allowed SSL ciphers.\n\nAllows DBAs to require ‚Äústrong enough‚Äù or preset ciphers for SSL connections.\nIf you have not compiled SSL support, this parameter will not be available.\n\nsee https://postgresqlco.nf/doc/en/param/ssl_ciphers/",
-      "markdownDescription": "Sets the list of allowed SSL ciphers.\n\nAllows DBAs to require ‚Äústrong enough‚Äù or preset ciphers for SSL connections.\nIf you have not compiled SSL support, this parameter will not be available.\n\nsee [ssl_ciphers documentation](https://postgresqlco.nf/doc/en/param/ssl_ciphers/)",
+      "description": "Sets the list of allowed SSL ciphers.\n\nAllows DBAs to require \"str\" enough or preset ciphers for SSL connections.\nIf you have not compiled SSL support, this parameter will not be available.\n\nsee https://postgresqlco.nf/doc/en/param/ssl_ciphers/",
+      "markdownDescription": "Sets the list of allowed SSL ciphers.\n\nAllows DBAs to require \"str\" enough or preset ciphers for SSL connections.\nIf you have not compiled SSL support, this parameter will not be available.\n\nsee [ssl_ciphers documentation](https://postgresqlco.nf/doc/en/param/ssl_ciphers/)",
       "type": "string",
       "examples": [
         "HIGH:MEDIUM:+3DES:!aNULL"
@@ -2642,8 +2642,8 @@
     },
     "synchronous_commit": {
       "title": "synchronous_commit",
-      "description": "Sets the current transaction's synchronization level.\n\nIf data integrity is less important to you than response times (for example, if you are running a social networking application or processing logs) you can turn this off, making your transaction logs asynchronous.\nThis can result in up to wal_buffers or wal_writer_delay * 2 worth of data in an unexpected shutdown, but your database will not be corrupted.  Note that you can also set this on a per-session basis, allowing you to mix ‚Äúlossy‚Äù and ‚Äúsafe‚Äù transactions, which is a better approach for most applications.\n\nsee https://postgresqlco.nf/doc/en/param/synchronous_commit/",
-      "markdownDescription": "Sets the current transaction's synchronization level.\n\nIf data integrity is less important to you than response times (for example, if you are running a social networking application or processing logs) you can turn this off, making your transaction logs asynchronous.\nThis can result in up to wal_buffers or wal_writer_delay * 2 worth of data in an unexpected shutdown, but your database will not be corrupted.  Note that you can also set this on a per-session basis, allowing you to mix ‚Äúlossy‚Äù and ‚Äúsafe‚Äù transactions, which is a better approach for most applications.\n\nsee [synchronous_commit documentation](https://postgresqlco.nf/doc/en/param/synchronous_commit/)",
+      "description": "Sets the current transaction's synchronization level.\n\nIf data integrity is less important to you than response times (for example, if you are running a social networking application or processing logs) you can turn this off, making your transaction logs asynchronous.\nThis can result in up to wal_buffers or wal_writer_delay * 2 worth of data in an unexpected shutdown, but your database will not be corrupted.  Note that you can also set this on a per-session basis, allowing you to mix \"lossy\" and \"safe\" transactions, which is a better approach for most applications.\n\nsee https://postgresqlco.nf/doc/en/param/synchronous_commit/",
+      "markdownDescription": "Sets the current transaction's synchronization level.\n\nIf data integrity is less important to you than response times (for example, if you are running a social networking application or processing logs) you can turn this off, making your transaction logs asynchronous.\nThis can result in up to wal_buffers or wal_writer_delay * 2 worth of data in an unexpected shutdown, but your database will not be corrupted.  Note that you can also set this on a per-session basis, allowing you to mix \"lossy\" and \"safe\" transactions, which is a better approach for most applications.\n\nsee [synchronous_commit documentation](https://postgresqlco.nf/doc/en/param/synchronous_commit/)",
       "type": "string",
       "examples": [
         "on"
@@ -2758,8 +2758,8 @@
     },
     "temp_file_limit": {
       "title": "temp_file_limit",
-      "description": "Limits the total size of all temporary files used by each process.\n\nMinimum: -1\n\nMaximum: 2147483647\n\n‚Ä¶ or something which is bigger than your largest possible sort, but not big enough to run you out of disk space.\n\nsee https://postgresqlco.nf/doc/en/param/temp_file_limit/",
-      "markdownDescription": "Limits the total size of all temporary files used by each process.\n\nMinimum: -1\n\nMaximum: 2147483647\n\n‚Ä¶ or something which is bigger than your largest possible sort, but not big enough to run you out of disk space.\n\nsee [temp_file_limit documentation](https://postgresqlco.nf/doc/en/param/temp_file_limit/)",
+      "description": "Limits the total size of all temporary files used by each process.\n\nMinimum: -1\n\nMaximum: 2147483647\n\n... or something which is bigger than your largest possible sort, but not big enough to run you out of disk space.\n\nsee https://postgresqlco.nf/doc/en/param/temp_file_limit/",
+      "markdownDescription": "Limits the total size of all temporary files used by each process.\n\nMinimum: -1\n\nMaximum: 2147483647\n\n... or something which is bigger than your largest possible sort, but not big enough to run you out of disk space.\n\nsee [temp_file_limit documentation](https://postgresqlco.nf/doc/en/param/temp_file_limit/)",
       "type": "string",
       "examples": [
         "-1"
@@ -3098,8 +3098,8 @@
     },
     "wal_compression": {
       "title": "wal_compression",
-      "description": "Compresses full-page writes written in WAL file.\n\n‚Ä¶ unless your storage is less constrained than your CPU.\n\nsee https://postgresqlco.nf/doc/en/param/wal_compression/",
-      "markdownDescription": "Compresses full-page writes written in WAL file.\n\n‚Ä¶ unless your storage is less constrained than your CPU.\n\nsee [wal_compression documentation](https://postgresqlco.nf/doc/en/param/wal_compression/)",
+      "description": "Compresses full-page writes written in WAL file.\n\n... unless your storage is less constrained than your CPU.\n\nsee https://postgresqlco.nf/doc/en/param/wal_compression/",
+      "markdownDescription": "Compresses full-page writes written in WAL file.\n\n... unless your storage is less constrained than your CPU.\n\nsee [wal_compression documentation](https://postgresqlco.nf/doc/en/param/wal_compression/)",
       "type": "string",
       "examples": [
         "off"
@@ -3131,8 +3131,8 @@
     },
     "wal_level": {
       "title": "wal_level",
-      "description": "Sets the level of information written to the WAL.\n\nLevel replica is required for binary replication, and level logical is required for logical replication.\nThis is a setting because raising the level adds more writes to the WAL, so if you‚Äôre not doing replication or archiving at all, set it to minimal.\n\nsee https://postgresqlco.nf/doc/en/param/wal_level/",
-      "markdownDescription": "Sets the level of information written to the WAL.\n\nLevel replica is required for binary replication, and level logical is required for logical replication.\nThis is a setting because raising the level adds more writes to the WAL, so if you‚Äôre not doing replication or archiving at all, set it to minimal.\n\nsee [wal_level documentation](https://postgresqlco.nf/doc/en/param/wal_level/)",
+      "description": "Sets the level of information written to the WAL.\n\nLevel replica is required for binary replication, and level logical is required for logical replication.\nThis is a setting because raising the level adds more writes to the WAL, so if you're not doing replication or archiving at all, set it to minimal.\n\nsee https://postgresqlco.nf/doc/en/param/wal_level/",
+      "markdownDescription": "Sets the level of information written to the WAL.\n\nLevel replica is required for binary replication, and level logical is required for logical replication.\nThis is a setting because raising the level adds more writes to the WAL, so if you're not doing replication or archiving at all, set it to minimal.\n\nsee [wal_level documentation](https://postgresqlco.nf/doc/en/param/wal_level/)",
       "type": "string",
       "examples": [
         "logical"

@@ -5,6 +5,7 @@
   "title": "List of Postgres regular extensions. see https://www.postgresql.org/docs/current/contrib.html",
   "items": {
     "enum": [
+      "pg_partman",
       "dict_int",
       "file_fdw",
       "dblink",
